@@ -5,6 +5,7 @@ import sqlite3
 import ast
 import logging
 from admin_tools import connection
+
 ###
 ## TO DO :
 
@@ -52,7 +53,8 @@ from admin_tools import connection
 # asyncio.get_event_loop().run_until_complete(main())
 # asyncio.get_event_loop().run_forever()  # it will skip the error and save ob without brakes
 
-logging.basicConfig(filename="logfile.log", format="%(asctime)s.%(msecs)03d %(levelname)s  %(message)s", datefmt='%H:%M:%S')
+logging.basicConfig(filename="logfile.log", format="%(asctime)s.%(msecs)03d %(levelname)s  %(message)s",
+                    datefmt='%H:%M:%S')
 logger = logging.getLogger('wb_logger')
 logger.setLevel(logging.INFO)
 logger.setLevel(logging.ERROR)
@@ -87,20 +89,17 @@ async def main():
                     connection().commit()
 
                 except (Exception, psycopg2.Error) as db_error:
-                        logger.error(
-                            f"{db_error} while saving to database:[ Ob {dict_val['message']['changes'][0]['marketCode']} ; {dict_val['message']['timestamp']} ]")
+                    logger.error(
+                        f"{db_error} while saving to database")
 
             except Exception as websocket_error:
                 logger.error(
                     f"{websocket_error} :[ Ob {dict_val['message']['changes'][0]['marketCode']} ; {dict_val['message']['timestamp']} ]")
 
             logger.info(
-                f"Ob received for {dict_val['message']['changes'][0]['marketCode']} timestamp: {dict_val['message']['timestamp']}")
-
-
-
+                    f"Ob received for {dict_val['message']['changes'][0]['marketCode']} timestamp: {dict_val['message']['timestamp']}")
 
 
 asyncio.get_event_loop().run_until_complete(main())
 asyncio.get_event_loop().run_forever()  # it will skip the error and save ob without brakes
-
+#
