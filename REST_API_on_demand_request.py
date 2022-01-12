@@ -1,9 +1,7 @@
-####
-
+#####
 # This file show simplest on-demand request using REST
 # It returns up to 300 buy and sell offer on current moment
-
-####
+#####
 
 
 import requests
