@@ -2,9 +2,11 @@
 # This script gets the push response of orderbooks that will be needed for bot
 # [ it is the update, the change of first line ],
 # for analytical purposes, it is not necessary to get as complex data.
+
+
 #####
 
-
+### THIS SCRIPT WILL BE USED BY BOT TO GET THE MOST COMPREHENSIVE DATA
 
 import websockets
 import asyncio
