@@ -11,6 +11,7 @@ async def main():
         st = time.time()
         await ws.send('{"action": "ping"}')
         response = await ws.recv()
+
         print(response, f"Execution time: {round((time.time() - st),5)}s")
 
 
