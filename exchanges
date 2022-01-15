@@ -1,0 +1,23 @@
+{
+  "source": [
+    {
+      "name": "zonda",
+      "rest_url": "https://api.zonda.exchange/rest/",
+      "websocket_url": "wss://api.zonda.exchange/websocket/",
+      "api_key": "",
+      "secret_key": "",
+      "coingecko": "https://www.coingecko.com/en/exchanges/bitbay"
+    }
+  ],
+  "currency_mapping": [
+    {
+      "name": "zonda",
+      "symbols": {
+        "btcpln": "BTC-PLN",
+        "ethpln": "ETH-PLN",
+        "lunapln": "LUNA-PLN",
+        "ftmpln" : "FTM-PLN"
+      }
+    }
+  ]
+}

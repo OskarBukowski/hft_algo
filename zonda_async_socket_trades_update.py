@@ -24,7 +24,7 @@ async def main():
                 message_recv = await websocket.recv()
                 dict_val = ast.literal_eval(message_recv)
                 cursor.execute(
-                    f'''INSERT INTO zonda.zonda_rest_trades (id, price, volume, "timestamp")
+                    f'''INSERT INTO zonda.zonda_socket_trades (id, price, volume, "timestamp")
                                                             VALUES (
                                                                 '{str(dict_val['message']['transactions'][0]['id'])}',
                                                                 '{str(dict_val['message']['transactions'][0]['r'])}',

@@ -1,0 +1,14 @@
+!!!! NEVER PUSH .env file !!!!
+
+
+
+PostgreSQL :
+
+tables desc:-----------------------------
+
+zonda_ob --> example rate collection for bot using websocket, it won't be stored into database because of its pace
+
+zonda_rest_ob --> example orderbooks collection using rest api and async function
+
+zonda_socket_trades --> the optimal database with socket connection to last trades, it follows data without looking at the pace
+so it can stay in websocket mode without any threat do database size

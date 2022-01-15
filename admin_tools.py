@@ -46,9 +46,9 @@ class SqlConst:
     """This class should be used to create the standardized tables for new markets"""
     CONN = connection()
 
-    def table_creator(self, exchange_name: str, data_type: str):
+    def table_creator(self, exchange_name: str, market: str, data_type: str):
         cursor = self.CONN
-        cursor.execute(f'''CREATE TABLE {exchange_name}.{exchange_name}_{data_type} (
+        cursor.execute(f'''CREATE TABLE {exchange_name}.{market}_{data_type} (
                                 ask_0 float8 NULL,
                                 ask_vol_0 float8 NULL,
                                 ask_1 float8 NULL,
@@ -74,12 +74,20 @@ class SqlConst:
                        )
 
 
-    def table_creator_2(self, exchange_name: str, data_type: str):
+    def table_creator_2(self, exchange_name: str, market: str, data_type: str):
         cursor = self.CONN
-        cursor.execute(f'''CREATE TABLE {exchange_name}.{exchange_name}_{data_type} (
+        cursor.execute(f'''CREATE TABLE {exchange_name}.{market}_{data_type} (
                             id varchar NULL,
                             price float8 NULL,
                             volume float8 NULL,
                             "timestamp" int8 NULL
                         )'''
                        )
+
+
+# if __name__ == '__main__':
+#     cs = SqlConst()
+#     cs.table_creator_2('zonda', 'btcpln', 'trades')
+#     cs.table_creator_2('zonda', 'ethpln', 'trades')
+#     cs.table_creator_2('zonda', 'lunapln', 'trades')
+#     cs.table_creator_2('zonda', 'ftmpln', 'trades')
