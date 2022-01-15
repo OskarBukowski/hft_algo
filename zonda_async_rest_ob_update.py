@@ -91,6 +91,7 @@ async def main():
                 'ftmpln': "https://api.zonda.exchange/rest/trading/orderbook/FTM-PLN"}
     while True:
         try:
+            start = time.time()
             headers = {'content-type': 'application/json'}
             response_dict = {}
             for k in url_dict.keys():
@@ -131,9 +132,9 @@ async def main():
                 logger_conf().debug(f"Time of saving ob for {k}: {time_after_db_save - time_before_db_save}")
 
 
-            logger_conf().info(f"Ob received and saved into database for {url_dict.keys()} ")
+            logger_conf().info(f"Ob received and saved into database for {[*url_dict]} ")
 
-            time.sleep(5)
+            time.sleep(5 - (time.time() - start))
 
 
 
