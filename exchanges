@@ -6,9 +6,25 @@
       "websocket_url": "wss://api.zonda.exchange/websocket/",
       "api_key": "",
       "secret_key": "",
+      "maker_fee": 0.003,
+      "taker_fee":  0.0043,
       "coingecko": "https://www.coingecko.com/en/exchanges/bitbay"
+    },
+    {
+      "name": "bitkub",
+      "rest_url": "https://api.bitkub.com/api/",
+      "websocket_url": "wss://api.bitkub.com/websocket-api/",
+      "api_key": "",
+      "secret_key": "",
+      "maker_fee": 0.0,
+      "taker_fee":  0.0,
+      "coingecko": "https://www.coingecko.com/en/exchanges/bitkub"
+
+
     }
-  ],
+
+    ],
+
   "currency_mapping": [
     {
       "name": "zonda",
@@ -18,6 +34,18 @@
         "lunapln": "LUNA-PLN",
         "ftmpln" : "FTM-PLN"
       }
+    },
+    {
+      "name": "bitkub",
+      "symbols": {
+        "btcthb": "THB_BTC",
+        "eththb": "THB_ETH",
+        "dogethb": "THB_DOGE",
+        "manathb" : "THB_mana"
+      }
+
+
     }
-  ]
+
+    ]
 }

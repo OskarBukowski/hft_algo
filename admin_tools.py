@@ -87,7 +87,7 @@ class SqlConst:
 
 # if __name__ == '__main__':
 #     cs = SqlConst()
-#     cs.table_creator_2('zonda', 'btcpln', 'trades')
-#     cs.table_creator_2('zonda', 'ethpln', 'trades')
-#     cs.table_creator_2('zonda', 'lunapln', 'trades')
-#     cs.table_creator_2('zonda', 'ftmpln', 'trades')
+#     cs.table_creator_2('bitkub', 'btcthb', 'trades')
+#     cs.table_creator_2('bitkub', 'eththb', 'trades')
+#     cs.table_creator_2('bitkub', 'dogethb', 'trades')
+#     cs.table_creator_2('bitkub', 'manathb', 'trades')
