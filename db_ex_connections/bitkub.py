@@ -4,7 +4,8 @@ import asyncio
 import time
 import ast
 import json
-from admin_tools import connection, logger_conf
+from admin_tools.admin_tools import connection, logger_conf
+import aiohttp
 
 # response model for ob
 
@@ -31,40 +32,77 @@ from admin_tools import connection, logger_conf
 # print(resp.text)
 # print(resp2.text)
 
+# async def main():
+#     cursor = connection()
+#     s = Session()
+#     s.max_redirects = 1000
+#
+#     exchange_spec_dict = json.load(open('../admin_tools/exchanges'))
+#     mapped_currency = exchange_spec_dict['currency_mapping'][1]['symbols']
+#     rest_url = exchange_spec_dict['source'][1]['rest_url']
+#
+#     url_dict = {
+#         'btcthb': [
+#                 f"{rest_url}/market/bids?sym={mapped_currency['btcthb']}&lmt=5",
+#                 f"{rest_url}/market/asks?sym={mapped_currency['btcthb']}&lmt=5"],
+#         'eththb': [
+#                 f"{rest_url}/market/bids?sym={mapped_currency['eththb']}&lmt=5",
+#                 f"{rest_url}/market/asks?sym={mapped_currency['eththb']}&lmt=5"],
+#         'dogethb': [
+#                 f"{rest_url}/market/bids?sym={mapped_currency['dogethb']}&lmt=5",
+#                 f"{rest_url}/market/asks?sym={mapped_currency['dogethb']}&lmt=5"],
+#         'manathb': [
+#                 f"{rest_url}/market/bids?sym={mapped_currency['manathb']}&lmt=5",
+#                 f"{rest_url}/market/asks?sym={mapped_currency['manathb']}&lmt=5"]
+#     }
+#
+#     while True:
+#
+#         start = time.time()
+#         response_dict = {}
+#         for k in url_dict.keys():
+#             """saving to postgres has enough pace to put it here, and make loop :
+#             get() --> save --> next get() --> save() without loosing coherence of data"""
+#
+#             response = await s.get(url_dict[k][0])
+#             response_dict[k] = ast.literal_eval(response)
+#             print(time.time()-start, response_dict[k])
+#
+#
+#
+#
+# asyncio.run(main())
+
+
+
 async def main():
-    # cursor = connection()
-    s = Session()
-    s.max_redirects = 1000
+    cursor = connection()
+    async with aiohttp.ClientSession() as session:
 
-    exchange_spec_dict = json.load(open('../admin_tools/exchanges'))
-    mapped_currency = exchange_spec_dict['currency_mapping'][1]['symbols']
-    rest_url = exchange_spec_dict['source'][1]['rest_url']
+        exchange_spec_dict = json.load(open('../admin_tools/exchanges'))
+        mapped_currency = exchange_spec_dict['currency_mapping'][1]['symbols']
+        rest_url = exchange_spec_dict['source'][1]['rest_url']
 
-    url_dict = {
-        'btcthb': [
-                f"{rest_url}/market/bids?sym={mapped_currency['btcthb']}&lmt=5",
-                f"{rest_url}/market/asks?sym={mapped_currency['btcthb']}&lmt=5"],
-        # 'eththb': [
-        #         f"{rest_url}/market/bids?sym={mapped_currency['eththb']}&lmt=5",
-        #         f"{rest_url}/market/asks?sym={mapped_currency['eththb']}&lmt=5"],
-        # 'dogethb': [
-        #         f"{rest_url}/market/bids?sym={mapped_currency['dogethb']}&lmt=5",
-        #         f"{rest_url}/market/asks?sym={mapped_currency['dogethb']}&lmt=5"],
-        # 'manathb': [
-        #         f"{rest_url}/market/bids?sym={mapped_currency['manathb']}&lmt=5",
-        #         f"{rest_url}/market/asks?sym={mapped_currency['manathb']}&lmt=5"]
-    }
+        url_dict = {
+            'btcthb': [
+                    f"{rest_url}/market/bids?sym={mapped_currency['btcthb']}&lmt=5",
+                    f"{rest_url}/market/asks?sym={mapped_currency['btcthb']}&lmt=5"],
+            'eththb': [
+                    f"{rest_url}/market/bids?sym={mapped_currency['eththb']}&lmt=5",
+                    f"{rest_url}/market/asks?sym={mapped_currency['eththb']}&lmt=5"],
+            'dogethb': [
+                    f"{rest_url}/market/bids?sym={mapped_currency['dogethb']}&lmt=5",
+                    f"{rest_url}/market/asks?sym={mapped_currency['dogethb']}&lmt=5"],
+            'manathb': [
+                    f"{rest_url}/market/bids?sym={mapped_currency['manathb']}&lmt=5",
+                    f"{rest_url}/market/asks?sym={mapped_currency['manathb']}&lmt=5"]
+        }
 
-    while True:
-
-        start = time.time()
-        response_dict = {}
         for k in url_dict.keys():
-            """saving to postgres has enough pace to put it here, and make loop :
-            get() --> save --> next get() --> save() without loosing coherence of data"""
-
-            response_dict[k] = [ast.literal_eval(s.get(url_dict[k][0]).text), ast.literal_eval(s.get(url_dict[k][1]).text)]
-            print(time.time()-start, response_dict[k])
+            for val in range(len(k)):
+                async with session.get(url_dict[k][val]) as response:
+                    d = await response.json()
+                    print(d)
 
 
 
