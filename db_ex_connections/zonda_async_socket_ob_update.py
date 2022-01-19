@@ -11,7 +11,7 @@
 import websockets
 import asyncio
 import ast
-from admin_tools import connection, logger_conf
+from admin_tools.admin_tools import connection, logger_conf
 
 
 ###

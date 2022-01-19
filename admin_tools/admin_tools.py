@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 import os
 import logging
 
-env_path = Path('.') / '.env'
+env_path = Path('..') / '.env'
 load_dotenv(dotenv_path=env_path)
 
 
@@ -32,7 +32,7 @@ def connection():
 
 
 def logger_conf():
-    logging.basicConfig(filename="logfile.log",
+    logging.basicConfig(filename="../db_ex_connections/logfile.log",
                         format="%(asctime)s.%(msecs)03d %(levelname)s  %(message)s",
                         datefmt='%H:%M:%S'
                         )

@@ -36,7 +36,7 @@ async def main():
     s = Session()
     s.max_redirects = 1000
 
-    exchange_spec_dict = json.load(open('exchanges'))
+    exchange_spec_dict = json.load(open('../admin_tools/exchanges'))
     mapped_currency = exchange_spec_dict['currency_mapping'][1]['symbols']
     rest_url = exchange_spec_dict['source'][1]['rest_url']
 

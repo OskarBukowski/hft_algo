@@ -6,7 +6,7 @@
 import json
 
 
-data = json.load(open('exchanges'))
+data = json.load(open('../admin_tools/exchanges'))
 
 print(data['currency_mapping']['symbols']['btcpln'])
 
