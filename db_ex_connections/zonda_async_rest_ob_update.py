@@ -31,7 +31,7 @@ async def main():
     cursor = connection()
     s = Session()
 
-    exchange_spec_dict = json.load(open('exchanges'))
+    exchange_spec_dict = json.load(open('../admin_tools/exchanges'))
     mapped_currency = exchange_spec_dict['currency_mapping'][0]['symbols']
     rest_url = exchange_spec_dict['source'][0]['rest_url']
 
