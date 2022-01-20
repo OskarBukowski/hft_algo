@@ -98,12 +98,15 @@ async def main():
                     f"{rest_url}/market/asks?sym={mapped_currency['manathb']}&lmt=5"]
         }
 
-        for k in url_dict.keys():
-            for val in range(len(k)):
-                async with session.get(url_dict[k][val]) as response:
-                    d = await response.json()
-                    print(d)
-
+        while True:
+            try:
+                for k in url_dict.keys():
+                    for val in range(len(k)):
+                        async with session.get(url_dict[k][val]) as response:
+                            d = await response.json()
+                            print(d)
+            except:
+                print("Error")
 
 
 

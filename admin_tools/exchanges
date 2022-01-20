@@ -21,6 +21,18 @@
       "coingecko": "https://www.coingecko.com/en/exchanges/bitkub"
 
 
+    },
+    {
+      "name": "wazirx",
+      "rest_url": "https://api.wazirx.com/sapi/v1",
+      "websocket_url": "",
+      "api_key": "",
+      "secret_key": "",
+      "maker_fee": 0.0,
+      "taker_fee":  0.0,
+      "coingecko": "https://www.coingecko.com/en/exchanges/wazirx"
+
+
     }
 
     ],
@@ -41,7 +53,16 @@
         "btcthb": "THB_BTC",
         "eththb": "THB_ETH",
         "dogethb": "THB_DOGE",
-        "manathb" : "THB_mana"
+        "manathb": "THB_mana"
+      }
+    },
+      {
+      "name": "wazirx",
+      "symbols": {
+        "btcinr": "btcinr",
+        "ethinr": "ethinr",
+        "dogeinr": "dogeinr",
+        "manainr" : "manainr"
       }
 
 
