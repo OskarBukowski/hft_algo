@@ -31,6 +31,18 @@ def connection():
     return cursor
 
 
+
+def dict_values_getter(d):
+    if isinstance(d, dict):
+        for v in d.values():
+            yield from dict_values_getter(v)
+    elif isinstance(d, list):
+        for v in d:
+            yield from dict_values_getter(v)
+    else:
+        yield d
+
+
 def logger_conf():
     logging.basicConfig(filename="../db_ex_connections/logfile.log",
                         format="%(asctime)s.%(msecs)03d %(levelname)s  %(message)s",
@@ -85,9 +97,11 @@ class SqlConst:
                        )
 
 
-# if __name__ == '__main__':
-#     cs = SqlConst()
-#     cs.table_creator_2('bitkub', 'btcthb', 'trades')
-#     cs.table_creator_2('bitkub', 'eththb', 'trades')
-#     cs.table_creator_2('bitkub', 'dogethb', 'trades')
-#     cs.table_creator_2('bitkub', 'manathb', 'trades')
+if __name__ == '__main__':
+    #     cs = SqlConst()
+    #     cs.table_creator_2('bitkub', 'btcthb', 'trades')
+    #     cs.table_creator_2('bitkub', 'eththb', 'trades')
+    #     cs.table_creator_2('bitkub', 'dogethb', 'trades')
+    #     cs.table_creator_2('bitkub', 'manathb', 'trades')
+
+    print(connection().execute("SELECT * from zonda.zonda_ob;"))

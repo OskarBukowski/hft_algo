@@ -16,7 +16,7 @@ import aiohttp
 
 
 
-async def db_saver(session, url):
+async def single_url_getter(session, url):
     async with session.get(url) as response:
         message = await response.json()
         return message
@@ -37,7 +37,7 @@ async def main():
             tasks = []
             for k, v in url_dict.items():
                 start = time.time()
-                tasks.append(asyncio.ensure_future(db_saver(session, v)))
+                tasks.append(asyncio.ensure_future(single_url_getter(session, v)))
                 end = time.time()
                 await asyncio.sleep(1.5 - (end - start))  # the sleep method to avoid rate limits [ 5 api calls / sec ]
 

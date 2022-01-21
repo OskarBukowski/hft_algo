@@ -8,8 +8,8 @@
 
 import websockets
 import asyncio
-import ast
-from admin_tools import connection, logger_conf
+from admin_tools.admin_tools import connection, logger_conf
+
 
 async def main():
     cursor = connection()
@@ -21,19 +21,18 @@ async def main():
         await websocket.send(message_send)
         while True:
             try:
-                message_recv = await websocket.recv()
-                dict_val = ast.literal_eval(message_recv)
+                message_recv = await websocket.recv().json()
                 cursor.execute(
                     f'''INSERT INTO zonda.zonda_socket_trades (id, price, volume, "timestamp")
                                                             VALUES (
-                                                                '{str(dict_val['message']['transactions'][0]['id'])}',
-                                                                '{str(dict_val['message']['transactions'][0]['r'])}',
-                                                                {float(dict_val['message']['transactions'][0]['a'])},
-                                                                {int(dict_val['timestamp'])}
+                                                                '{str(message_recv['message']['transactions'][0]['id'])}',
+                                                                '{str(message_recv['message']['transactions'][0]['r'])}',
+                                                                {float(message_recv['message']['transactions'][0]['a'])},
+                                                                {int(message_recv['timestamp'])}
                                                         )'''
                 )
-                print(dict_val)
-                logger_conf().info(f"Trades received on timestamp: {dict_val['timestamp']}")
+                print(message_recv)
+                logger_conf().info(f"Trades received on timestamp: {message_recv['timestamp']}")
 
             except Exception as websocket_error:
                 logger_conf().error(f" $$ {websocket_error} $$ ", exc_info=True)
