@@ -22,6 +22,7 @@ from admin_tools.admin_tools import connection, logger_conf
 
 async def main():
     cursor = connection()
+    logger = logger_conf("../algo/zonda_ob.log")
     async with websockets.connect("wss://api.zonda.exchange/websocket/",
                                   ping_timeout=30,
                                   close_timeout=20) as websocket:
@@ -30,23 +31,22 @@ async def main():
         await websocket.send(message_send)
         while True:
             try:
-                message_recv = await websocket.recv()
-                dict_val = ast.literal_eval(message_recv)
+                message_recv = await websocket.recv().json()
                 cursor.execute(
                     f'''INSERT INTO zonda.zonda_ob (symbol, side, rate, "timestamp")
                                             VALUES (
-                                                '{str(dict_val['message']['changes'][0]['marketCode'])}',
-                                                '{str(dict_val['message']['changes'][0]['entryType'])}',
-                                                {float(dict_val['message']['changes'][0]['rate'])},
-                                                {int(dict_val['message']['timestamp'])}
+                                                '{str(message_recv['message']['changes'][0]['marketCode'])}',
+                                                '{str(message_recv['message']['changes'][0]['entryType'])}',
+                                                {float(message_recv['message']['changes'][0]['rate'])},
+                                                {int(message_recv['message']['timestamp'])}
                                         )'''
                 )
                 print(message_recv)
-                logger_conf().info(
-                    f"Ob received for {dict_val['message']['changes'][0]['marketCode']} timestamp: {dict_val['message']['timestamp']}")
+                logger.info(
+                    f"Ob received for {message_recv['message']['changes'][0]['marketCode']} timestamp: {message_recv['message']['timestamp']}")
 
             except KeyError as websocket_error:
-                logger_conf().error(f" $$ {websocket_error} $$ ",
+                logger.error(f" $$ {websocket_error} $$ ",
                                     exc_info=True)  # exc_info=True have to be added, cause without it the loop after error won't save logs any more
 
 

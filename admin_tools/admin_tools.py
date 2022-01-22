@@ -43,8 +43,8 @@ def dict_values_getter(d):
         yield d
 
 
-def logger_conf():
-    logging.basicConfig(filename="../db_ex_connections/logfile.log",
+def logger_conf(logfile_name):
+    logging.basicConfig(filename=logfile_name,
                         format="%(asctime)s.%(msecs)03d %(levelname)s  %(message)s",
                         datefmt='%H:%M:%S'
                         )
