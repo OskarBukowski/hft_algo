@@ -3,11 +3,6 @@
 #####
 
 
-#####
-# TO DO:
-# 1. Prepare the connection function for more log files and more instruments
-# 2. Create here the table creator to avoid doing it manual
-
 import psycopg2
 from pathlib import Path
 from dotenv import load_dotenv
@@ -97,11 +92,24 @@ class SqlConst:
                        )
 
 
-if __name__ == '__main__':
-    #     cs = SqlConst()
-    #     cs.table_creator_2('bitkub', 'btcthb', 'trades')
-    #     cs.table_creator_2('bitkub', 'eththb', 'trades')
-    #     cs.table_creator_2('bitkub', 'dogethb', 'trades')
-    #     cs.table_creator_2('bitkub', 'manathb', 'trades')
-
-    print(connection().execute("SELECT * from zonda.zonda_ob;"))
+# if __name__ == '__main__':
+#         cs = SqlConst()
+#         cs.table_creator_2('bitkub', 'usdtthb', 'trades')
+#         cs.table_creator_2('bitkub', 'adathb', 'trades')
+#         cs.table_creator_2('bitkub', 'sandthb', 'trades')
+#         cs.table_creator_2('bitkub', 'dotthb', 'trades')
+#         cs.table_creator_2('bitkub', 'sushithb', 'trades')
+#         cs.table_creator_2('bitkub', 'galathb', 'trades')
+#         cs.table_creator_2('bitkub', 'yfithb', 'trades')
+#         cs.table_creator_2('bitkub', 'linkthb', 'trades')
+#         cs.table_creator_2('bitkub', 'imxthb', 'trades')
+#
+#         cs.table_creator('bitkub', 'usdtthb', 'ob')
+#         cs.table_creator('bitkub', 'adathb', 'ob')
+#         cs.table_creator('bitkub', 'sandthb', 'ob')
+#         cs.table_creator('bitkub', 'dotthb', 'ob')
+#         cs.table_creator('bitkub', 'sushithb', 'ob')
+#         cs.table_creator('bitkub', 'galathb', 'ob')
+#         cs.table_creator('bitkub', 'yfithb', 'ob')
+#         cs.table_creator('bitkub', 'linkthb', 'ob')
+#         cs.table_creator('bitkub', 'imxthb', 'ob')

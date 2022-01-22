@@ -277,8 +277,24 @@ tr = {"action":"push",
               {"id":"be329f75-7b63-11ec-9be8-0242ac110009","t":"1642842886461","a":"1.12074687","r":"9800.15","ty":"Buy"}]},
       "timestamp":"1642842886461","seqNo":2109232}
 
-print(tr['topic'].split('/')[2].replace("-", ""))
-print(tr['message']['transactions'][0]['id'])
-print(tr['message']['transactions'][0]['r'])
-print(tr['message']['transactions'][0]['a'])
-print(tr['timestamp'])
+# print(tr['topic'].split('/')[2].replace("-", ""))
+# print(tr['message']['transactions'][0]['id'])
+# print(tr['message']['transactions'][0]['r'])
+# print(tr['message']['transactions'][0]['a'])
+# print(tr['timestamp'])
+
+k = {'amt': 16.99318568,
+     'bid': 2852532,
+     'rat': 6.27,
+     'sid': 2665037,
+     'stream': 'market.trade.thb_gala',
+     'sym': 'THB_GALA',
+     'ts': 1642860084,
+     'txn': 'GALASELL0000876211'}
+
+print(k['txn'])
+print(k['rat'])
+print(k['amt'])
+print(k['ts']*1000)
+
+print(f"{k['stream'].split('_')[1]}thb_trades")

@@ -44,7 +44,12 @@
         "btcpln": "BTC-PLN",
         "ethpln": "ETH-PLN",
         "lunapln": "LUNA-PLN",
-        "ftmpln" : "FTM-PLN"
+        "ftmpln" : "FTM-PLN",
+        "btceur" : "BTC-EUR",
+        "xrppln" : "XRP-PLN",
+        "etheur" : "ETH-EUR",
+        "adapln" : "ADA-PLN",
+        "maticpln" : "MATIC-PLN"
       }
     },
     {
@@ -53,7 +58,16 @@
         "btcthb": "THB_BTC",
         "eththb": "THB_ETH",
         "dogethb": "THB_DOGE",
-        "manathb": "THB_mana"
+        "manathb": "THB_MANA",
+        "usdtthb": "THB_USDT",
+        "adathb": "THB_ADA",
+        "sandthb": "THB_SAND",
+        "dotthb": "THB_DOT",
+        "sushithb": "THB_SUSHI",
+        "galathb": "THB_GALA",
+        "yfithb": "THB_YFI",
+        "linkthb": "THB_LINK",
+        "imxthb": "THB_IMX"
       }
     },
       {
@@ -62,7 +76,12 @@
         "btcinr": "btcinr",
         "ethinr": "ethinr",
         "dogeinr": "dogeinr",
-        "manainr" : "manainr"
+        "maticinr" : "maticinr",
+        "adainr" : "adainr",
+        "ftminr" : "ftminr",
+        "xrpinr" : "xrpinr",
+        "sandinr" : "sandinr",
+        "usdtinr" : "usdtinr"
       }
 
 

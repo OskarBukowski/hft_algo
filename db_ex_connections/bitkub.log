@@ -1,0 +1,153 @@
+15:01:02.810 ERROR   $$ Extra data: line 2 column 1 (char 152) $$ 
+Traceback (most recent call last):
+  File "C:/Users/oskar/Desktop/repo/db_ex_connections/bitkub_trades.py", line 72, in single_wss_run
+    response = json.loads(resp)
+  File "C:\Users\oskar\anaconda3\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\oskar\anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 152)
+15:01:02.817 ERROR   $$ Extra data: line 2 column 1 (char 153) $$ 
+Traceback (most recent call last):
+  File "C:/Users/oskar/Desktop/repo/db_ex_connections/bitkub_trades.py", line 72, in single_wss_run
+    response = json.loads(resp)
+  File "C:\Users\oskar\anaconda3\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\oskar\anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 153)
+15:01:02.817 ERROR   $$ Extra data: line 2 column 1 (char 155) $$ 
+Traceback (most recent call last):
+  File "C:/Users/oskar/Desktop/repo/db_ex_connections/bitkub_trades.py", line 72, in single_wss_run
+    response = json.loads(resp)
+  File "C:\Users\oskar\anaconda3\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\oskar\anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 155)
+15:01:02.817 ERROR   $$ Extra data: line 2 column 1 (char 153) $$ 
+Traceback (most recent call last):
+  File "C:/Users/oskar/Desktop/repo/db_ex_connections/bitkub_trades.py", line 72, in single_wss_run
+    response = json.loads(resp)
+  File "C:\Users\oskar\anaconda3\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\oskar\anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 153)
+15:01:02.817 ERROR   $$ Extra data: line 2 column 1 (char 156) $$ 
+Traceback (most recent call last):
+  File "C:/Users/oskar/Desktop/repo/db_ex_connections/bitkub_trades.py", line 72, in single_wss_run
+    response = json.loads(resp)
+  File "C:\Users\oskar\anaconda3\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\oskar\anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 156)
+15:01:02.817 ERROR   $$ Extra data: line 2 column 1 (char 153) $$ 
+Traceback (most recent call last):
+  File "C:/Users/oskar/Desktop/repo/db_ex_connections/bitkub_trades.py", line 72, in single_wss_run
+    response = json.loads(resp)
+  File "C:\Users\oskar\anaconda3\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\oskar\anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 153)
+15:01:02.817 ERROR   $$ Extra data: line 2 column 1 (char 153) $$ 
+Traceback (most recent call last):
+  File "C:/Users/oskar/Desktop/repo/db_ex_connections/bitkub_trades.py", line 72, in single_wss_run
+    response = json.loads(resp)
+  File "C:\Users\oskar\anaconda3\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\oskar\anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 153)
+15:01:05.174 ERROR   $$ Extra data: line 2 column 1 (char 151) $$ 
+Traceback (most recent call last):
+  File "C:/Users/oskar/Desktop/repo/db_ex_connections/bitkub_trades.py", line 72, in single_wss_run
+    response = json.loads(resp)
+  File "C:\Users\oskar\anaconda3\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\oskar\anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 151)
+15:01:18.818 ERROR   $$ Extra data: line 2 column 1 (char 153) $$ 
+Traceback (most recent call last):
+  File "C:/Users/oskar/Desktop/repo/db_ex_connections/bitkub_trades.py", line 72, in single_wss_run
+    response = json.loads(resp)
+  File "C:\Users\oskar\anaconda3\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\oskar\anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 153)
+15:01:18.868 ERROR   $$ Extra data: line 2 column 1 (char 145) $$ 
+Traceback (most recent call last):
+  File "C:/Users/oskar/Desktop/repo/db_ex_connections/bitkub_trades.py", line 72, in single_wss_run
+    response = json.loads(resp)
+  File "C:\Users\oskar\anaconda3\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\oskar\anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 145)
+15:01:20.132 ERROR   $$ Extra data: line 2 column 1 (char 155) $$ 
+Traceback (most recent call last):
+  File "C:/Users/oskar/Desktop/repo/db_ex_connections/bitkub_trades.py", line 72, in single_wss_run
+    response = json.loads(resp)
+  File "C:\Users\oskar\anaconda3\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\oskar\anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 155)
+15:01:20.441 ERROR   $$ Extra data: line 2 column 1 (char 155) $$ 
+Traceback (most recent call last):
+  File "C:/Users/oskar/Desktop/repo/db_ex_connections/bitkub_trades.py", line 72, in single_wss_run
+    response = json.loads(resp)
+  File "C:\Users\oskar\anaconda3\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\oskar\anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 155)
+15:01:21.289 ERROR   $$ Extra data: line 2 column 1 (char 149) $$ 
+Traceback (most recent call last):
+  File "C:/Users/oskar/Desktop/repo/db_ex_connections/bitkub_trades.py", line 72, in single_wss_run
+    response = json.loads(resp)
+  File "C:\Users\oskar\anaconda3\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\oskar\anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 149)
+15:01:21.998 ERROR   $$ Extra data: line 2 column 1 (char 155) $$ 
+Traceback (most recent call last):
+  File "C:/Users/oskar/Desktop/repo/db_ex_connections/bitkub_trades.py", line 72, in single_wss_run
+    response = json.loads(resp)
+  File "C:\Users\oskar\anaconda3\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\oskar\anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 155)
+15:01:30.013 ERROR   $$ Extra data: line 2 column 1 (char 156) $$ 
+Traceback (most recent call last):
+  File "C:/Users/oskar/Desktop/repo/db_ex_connections/bitkub_trades.py", line 72, in single_wss_run
+    response = json.loads(resp)
+  File "C:\Users\oskar\anaconda3\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\oskar\anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 156)
+15:01:33.898 ERROR   $$ Extra data: line 2 column 1 (char 152) $$ 
+Traceback (most recent call last):
+  File "C:/Users/oskar/Desktop/repo/db_ex_connections/bitkub_trades.py", line 72, in single_wss_run
+    response = json.loads(resp)
+  File "C:\Users\oskar\anaconda3\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\oskar\anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 152)
+15:01:35.102 ERROR   $$ Extra data: line 2 column 1 (char 151) $$ 
+Traceback (most recent call last):
+  File "C:/Users/oskar/Desktop/repo/db_ex_connections/bitkub_trades.py", line 72, in single_wss_run
+    response = json.loads(resp)
+  File "C:\Users\oskar\anaconda3\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\oskar\anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 151)
