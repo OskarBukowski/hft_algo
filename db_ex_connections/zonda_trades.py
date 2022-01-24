@@ -41,6 +41,7 @@ async def single_wss_run(message):
                 resp = await wss.recv()
                 response = json.loads(resp)
                 if response['action'] == "push":
+                    print(response)
                     symbol = str(response['topic'].split('/')[2].replace("-", ""))
                     cursor.execute(f"""INSERT INTO zonda.{symbol}_trades (id, price, volume, "timestamp")
                                         VALUES (
@@ -63,7 +64,12 @@ async def main():
         'btcpln': '{"action": "subscribe-public","module": "trading","path": "transactions/btc-pln"}',
         'ethpln': '{"action": "subscribe-public","module": "trading","path": "transactions/eth-pln"}',
         'lunapln': '{"action": "subscribe-public","module": "trading","path": "transactions/luna-pln"}',
-        'ftmpln': '{"action": "subscribe-public","module": "trading","path": "transactions/ftm-pln"}'}
+        'adapln': '{"action": "subscribe-public","module": "trading","path": "transactions/ada-pln"}',
+        'xrppln': '{"action": "subscribe-public","module": "trading","path": "transactions/xrp-pln"}',
+        'maticpln': '{"action": "subscribe-public","module": "trading","path": "transactions/matic-pln"}',
+        'ftmpln': '{"action": "subscribe-public","module": "trading","path": "transactions/ftm-pln"}',
+
+    }
 
     all_connections = [single_wss_run(messages_dict[k]) for (k) in messages_dict.keys()]
     await asyncio.gather(*all_connections)
