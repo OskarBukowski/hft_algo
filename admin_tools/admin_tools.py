@@ -3,18 +3,13 @@
 #####
 
 
-#####
-# TO DO:
-# 1. Prepare the connection function for more log files and more instruments
-# 2. Create here the table creator to avoid doing it manual
-
 import psycopg2
 from pathlib import Path
 from dotenv import load_dotenv
 import os
 import logging
 
-env_path = Path('..') / '.env'
+env_path = Path('../admin_tools/') / '.env'
 load_dotenv(dotenv_path=env_path)
 
 
@@ -31,8 +26,20 @@ def connection():
     return cursor
 
 
-def logger_conf():
-    logging.basicConfig(filename="../db_ex_connections/logfile.log",
+
+def dict_values_getter(d):
+    if isinstance(d, dict):
+        for v in d.values():
+            yield from dict_values_getter(v)
+    elif isinstance(d, list):
+        for v in d:
+            yield from dict_values_getter(v)
+    else:
+        yield d
+
+
+def logger_conf(logfile_name):
+    logging.basicConfig(filename=logfile_name,
                         format="%(asctime)s.%(msecs)03d %(levelname)s  %(message)s",
                         datefmt='%H:%M:%S'
                         )
@@ -86,8 +93,23 @@ class SqlConst:
 
 
 # if __name__ == '__main__':
-#     cs = SqlConst()
-#     cs.table_creator_2('bitkub', 'btcthb', 'trades')
-#     cs.table_creator_2('bitkub', 'eththb', 'trades')
-#     cs.table_creator_2('bitkub', 'dogethb', 'trades')
-#     cs.table_creator_2('bitkub', 'manathb', 'trades')
+#         cs = SqlConst()
+#         cs.table_creator_2('bitkub', 'usdtthb', 'trades')
+#         cs.table_creator_2('bitkub', 'adathb', 'trades')
+#         cs.table_creator_2('bitkub', 'sandthb', 'trades')
+#         cs.table_creator_2('bitkub', 'dotthb', 'trades')
+#         cs.table_creator_2('bitkub', 'sushithb', 'trades')
+#         cs.table_creator_2('bitkub', 'galathb', 'trades')
+#         cs.table_creator_2('bitkub', 'yfithb', 'trades')
+#         cs.table_creator_2('bitkub', 'linkthb', 'trades')
+#         cs.table_creator_2('bitkub', 'imxthb', 'trades')
+#
+#         cs.table_creator('bitkub', 'usdtthb', 'ob')
+#         cs.table_creator('bitkub', 'adathb', 'ob')
+#         cs.table_creator('bitkub', 'sandthb', 'ob')
+#         cs.table_creator('bitkub', 'dotthb', 'ob')
+#         cs.table_creator('bitkub', 'sushithb', 'ob')
+#         cs.table_creator('bitkub', 'galathb', 'ob')
+#         cs.table_creator('bitkub', 'yfithb', 'ob')
+#         cs.table_creator('bitkub', 'linkthb', 'ob')
+#         cs.table_creator('bitkub', 'imxthb', 'ob')
