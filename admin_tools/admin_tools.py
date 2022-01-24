@@ -1,6 +1,6 @@
-#####
+#######
 # The purpose of this script is to keep all administrative elements in one file
-#####
+#######
 
 
 import psycopg2
