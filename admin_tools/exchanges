@@ -50,6 +50,14 @@
         "etheur" : "ETH-EUR",
         "adapln" : "ADA-PLN",
         "maticpln" : "MATIC-PLN",
+        "usdtpln" : "USDT-PLN",
+        "dotpln" : "DOT-PLN",
+        "avaxpln" : "AVAX-PLN",
+        "dogepln" : "DOGE-PLN",
+        "trxpln" : "TRX-PLN",
+        "manapln" : "MANA-PLN",
+        "linkpln" : "LINK-PLN",
+
         ""
       }
     },

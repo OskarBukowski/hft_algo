@@ -36,7 +36,22 @@ async def main():
         url_dict = {'btcpln': f"{rest_url}trading/orderbook-limited/{mapped_currency['btcpln']}/10",
                     'ethpln': f"{rest_url}trading/orderbook-limited/{mapped_currency['ethpln']}/10",
                     'lunapln': f"{rest_url}trading/orderbook-limited/{mapped_currency['lunapln']}/10",
-                    'ftmpln': f"{rest_url}trading/orderbook-limited/{mapped_currency['ftmpln']}/10"}
+                    'ftmpln': f"{rest_url}trading/orderbook-limited/{mapped_currency['ftmpln']}/10",
+                    'btceur': f"{rest_url}trading/orderbook-limited/{mapped_currency['btceur']}/10",
+                    'xrppln': f"{rest_url}trading/orderbook-limited/{mapped_currency['xrppln']}/10",
+                    'etheur': f"{rest_url}trading/orderbook-limited/{mapped_currency['etheur']}/10",
+                    'adapln': f"{rest_url}trading/orderbook-limited/{mapped_currency['adapln']}/10",
+                    'maticpln': f"{rest_url}trading/orderbook-limited/{mapped_currency['maticpln']}/10",
+                    'usdtpln': f"{rest_url}trading/orderbook-limited/{mapped_currency['usdtpln']}/10",
+                    'dotpln': f"{rest_url}trading/orderbook-limited/{mapped_currency['dotpln']}/10",
+                    'avaxpln': f"{rest_url}trading/orderbook-limited/{mapped_currency['avaxpln']}/10",
+                    'dogepln': f"{rest_url}trading/orderbook-limited/{mapped_currency['dogepln']}/10",
+                    'trxpln': f"{rest_url}trading/orderbook-limited/{mapped_currency['trxpln']}/10",
+                    'manapln': f"{rest_url}trading/orderbook-limited/{mapped_currency['manapln']}/10",
+                    'linkpln': f"{rest_url}trading/orderbook-limited/{mapped_currency['linkpln']}/10"
+
+
+                    }
 
         while True:
             try:
@@ -59,25 +74,45 @@ async def main():
                                                     bid_vol_1, bid_vol_2, bid_vol_3,bid_vol_4, "timestamp")
                                                         VALUES (
                                                             {float(responses[i]['sell'][0]['ra'])},
-                                                            {float(responses[i]['sell'][1]['ra'])},
-                                                            {float(responses[i]['sell'][2]['ra'])},
-                                                            {float(responses[i]['sell'][3]['ra'])},
-                                                            {float(responses[i]['sell'][4]['ra'])},
                                                             {float(responses[i]['sell'][0]['ca'])},
+                                                            {float(responses[i]['sell'][1]['ra'])},
                                                             {float(responses[i]['sell'][1]['ca'])},
+                                                            {float(responses[i]['sell'][2]['ra'])},
                                                             {float(responses[i]['sell'][2]['ca'])},
+                                                            {float(responses[i]['sell'][3]['ra'])},
                                                             {float(responses[i]['sell'][3]['ca'])},
+                                                            {float(responses[i]['sell'][4]['ra'])},
                                                             {float(responses[i]['sell'][4]['ca'])},
+                                                            {float(responses[i]['sell'][5]['ra'])},
+                                                            {float(responses[i]['sell'][5]['ca'])},
+                                                            {float(responses[i]['sell'][6]['ra'])},
+                                                            {float(responses[i]['sell'][6]['ca'])},
+                                                            {float(responses[i]['sell'][7]['ra'])},
+                                                            {float(responses[i]['sell'][7]['ca'])},
+                                                            {float(responses[i]['sell'][8]['ra'])},
+                                                            {float(responses[i]['sell'][8]['ca'])},
+                                                            {float(responses[i]['sell'][9]['ra'])},
+                                                            {float(responses[i]['sell'][9]['ca'])},
                                                             {float(responses[i]['buy'][0]['ra'])},
-                                                            {float(responses[i]['buy'][1]['ra'])},
-                                                            {float(responses[i]['buy'][2]['ra'])},
-                                                            {float(responses[i]['buy'][3]['ra'])},
-                                                            {float(responses[i]['buy'][4]['ra'])},
                                                             {float(responses[i]['buy'][0]['ca'])},
+                                                            {float(responses[i]['buy'][1]['ra'])},
                                                             {float(responses[i]['buy'][1]['ca'])},
+                                                            {float(responses[i]['buy'][2]['ra'])},
                                                             {float(responses[i]['buy'][2]['ca'])},
+                                                            {float(responses[i]['buy'][3]['ra'])},
                                                             {float(responses[i]['buy'][3]['ca'])},
+                                                            {float(responses[i]['buy'][4]['ra'])},
                                                             {float(responses[i]['buy'][4]['ca'])},
+                                                            {float(responses[i]['buy'][5]['ra'])},
+                                                            {float(responses[i]['buy'][5]['ca'])},
+                                                            {float(responses[i]['buy'][6]['ra'])},
+                                                            {float(responses[i]['buy'][6]['ca'])},
+                                                            {float(responses[i]['buy'][7]['ra'])},
+                                                            {float(responses[i]['buy'][7]['ca'])},
+                                                            {float(responses[i]['buy'][8]['ra'])},
+                                                            {float(responses[i]['buy'][8]['ca'])},
+                                                            {float(responses[i]['buy'][9]['ra'])},
+                                                            {float(responses[i]['buy'][9]['ca'])},
                                                             {int(responses[i]['timestamp'])});""")
 
                     logger.debug(f"Time of saving ob for {k}: {time.time() - before_db_save}")
