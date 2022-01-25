@@ -66,6 +66,16 @@ class SqlConst:
                                 ask_vol_3 float8 NULL,
                                 ask_4 float8 NULL,
                                 ask_vol_4 float8 NULL,
+                                ask_5 float8 NULL,
+                                ask_vol_5 float8 NULL,
+                                ask_6 float8 NULL,
+                                ask_vol_6 float8 NULL,
+                                ask_7 float8 NULL,
+                                ask_vol_7 float8 NULL,
+                                ask_8 float8 NULL,
+                                ask_vol_8 float8 NULL,
+                                ask_9 float8 NULL,
+                                ask_vol_9 float8 NULL,
                                 bid_0 float8 NULL,
                                 bid_vol_0 float8 NULL,
                                 bid_1 float8 NULL,
@@ -76,6 +86,16 @@ class SqlConst:
                                 bid_vol_3 float8 NULL,
                                 bid_4 float8 NULL,
                                 bid_vol_4 float8 NULL,
+                                bid_5 float8 NULL,
+                                bid_vol_5 float8 NULL,
+                                bid_6 float8 NULL,
+                                bid_vol_6 float8 NULL,
+                                bid_7 float8 NULL,
+                                bid_vol_7 float8 NULL,
+                                bid_8 float8 NULL,
+                                bid_vol_8 float8 NULL,
+                                bid_9 float8 NULL,
+                                bid_vol_9 float8 NULL,
                                 "timestamp" int8 NULL
                         )'''
                        )
@@ -92,24 +112,21 @@ class SqlConst:
                        )
 
 
-# if __name__ == '__main__':
-#         cs = SqlConst()
-#         cs.table_creator_2('bitkub', 'usdtthb', 'trades')
-#         cs.table_creator_2('bitkub', 'adathb', 'trades')
-#         cs.table_creator_2('bitkub', 'sandthb', 'trades')
-#         cs.table_creator_2('bitkub', 'dotthb', 'trades')
-#         cs.table_creator_2('bitkub', 'sushithb', 'trades')
-#         cs.table_creator_2('bitkub', 'galathb', 'trades')
-#         cs.table_creator_2('bitkub', 'yfithb', 'trades')
-#         cs.table_creator_2('bitkub', 'linkthb', 'trades')
-#         cs.table_creator_2('bitkub', 'imxthb', 'trades')
+if __name__ == '__main__':
+        cs = SqlConst()
+
+        # cs.table_creator_2('zonda', 'btceur', 'trades')
+        # cs.table_creator_2('zonda', 'xrppln', 'trades')
+        # cs.table_creator_2('zonda', 'etheur', 'trades')
+        # cs.table_creator_2('zonda', 'adapln', 'trades')
+        # cs.table_creator_2('zonda', 'maticpln', 'trades')
 #
-#         cs.table_creator('bitkub', 'usdtthb', 'ob')
-#         cs.table_creator('bitkub', 'adathb', 'ob')
-#         cs.table_creator('bitkub', 'sandthb', 'ob')
-#         cs.table_creator('bitkub', 'dotthb', 'ob')
-#         cs.table_creator('bitkub', 'sushithb', 'ob')
-#         cs.table_creator('bitkub', 'galathb', 'ob')
-#         cs.table_creator('bitkub', 'yfithb', 'ob')
-#         cs.table_creator('bitkub', 'linkthb', 'ob')
-#         cs.table_creator('bitkub', 'imxthb', 'ob')
+        cs.table_creator('zonda', 'btcpln', 'ob')
+        cs.table_creator('zonda', 'ethpln', 'ob')
+        cs.table_creator('zonda', 'lunapln', 'ob')
+        cs.table_creator('zonda', 'ftmpln', 'ob')
+        cs.table_creator('zonda', 'btceur', 'ob')
+        cs.table_creator('zonda', 'xrppln', 'ob')
+        cs.table_creator('zonda', 'etheur', 'ob')
+        cs.table_creator('zonda', 'adapln', 'ob')
+        cs.table_creator('zonda', 'maticpln', 'ob')
