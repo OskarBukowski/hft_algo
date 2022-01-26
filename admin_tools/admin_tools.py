@@ -48,6 +48,11 @@ def logger_conf(logfile_name):
 
     return logger
 
+def coins_mapping(exchange_name: str, dictionary: dict, url: str):
+    for k, v in dictionary.items():
+
+
+
 
 class SqlConst:
     """This class should be used to create the standardized tables for new markets"""
@@ -112,21 +117,22 @@ class SqlConst:
                        )
 
 
-if __name__ == '__main__':
-        cs = SqlConst()
 
-        cs.table_creator_2('zonda', 'usdtpln', 'trades')
-        cs.table_creator_2('zonda', 'dotpln', 'trades')
-        cs.table_creator_2('zonda', 'avaxpln', 'trades')
-        cs.table_creator_2('zonda', 'dogepln', 'trades')
-        cs.table_creator_2('zonda', 'trxpln', 'trades')
-        cs.table_creator_2('zonda', 'manapln', 'trades')
-        cs.table_creator_2('zonda', 'linkpln', 'trades')
-
-        cs.table_creator('zonda', 'usdtpln', 'ob')
-        cs.table_creator('zonda', 'dotpln', 'ob')
-        cs.table_creator('zonda', 'avaxpln', 'ob')
-        cs.table_creator('zonda', 'dogepln', 'ob')
-        cs.table_creator('zonda', 'trxpln', 'ob')
-        cs.table_creator('zonda', 'manapln', 'ob')
-        cs.table_creator('zonda', 'linkpln', 'ob')
+# if __name__ == '__main__':
+#         cs = SqlConst()
+#
+#         cs.table_creator_2('zonda', 'usdtpln', 'trades')
+#         cs.table_creator_2('zonda', 'dotpln', 'trades')
+#         cs.table_creator_2('zonda', 'avaxpln', 'trades')
+#         cs.table_creator_2('zonda', 'dogepln', 'trades')
+#         cs.table_creator_2('zonda', 'trxpln', 'trades')
+#         cs.table_creator_2('zonda', 'manapln', 'trades')
+#         cs.table_creator_2('zonda', 'linkpln', 'trades')
+#
+#         cs.table_creator('zonda', 'usdtpln', 'ob')
+#         cs.table_creator('zonda', 'dotpln', 'ob')
+#         cs.table_creator('zonda', 'avaxpln', 'ob')
+#         cs.table_creator('zonda', 'dogepln', 'ob')
+#         cs.table_creator('zonda', 'trxpln', 'ob')
+#         cs.table_creator('zonda', 'manapln', 'ob')
+#         cs.table_creator('zonda', 'linkpln', 'ob')
