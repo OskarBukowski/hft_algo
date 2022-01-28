@@ -12,7 +12,7 @@
 
 import aiohttp
 import asyncio
-from admin_tools.admin_tools import connection, logger_conf
+from admin
 import time
 import json
 
@@ -28,7 +28,7 @@ async def main():
     logger = logger_conf("../db_ex_connections/zonda.log")
     async with aiohttp.ClientSession() as session:
 
-        exchange_spec_dict = json.load(open('../admin_tools/exchanges'))
+        exchange_spec_dict = json.load(open('../admin/exchanges'))
         mapped_currency = exchange_spec_dict['currency_mapping'][0]['symbols']
         rest_url = exchange_spec_dict['source'][0]['rest_url']
 

@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 import os
 import logging
 
-env_path = Path('../admin_tools/') / '.env'
+env_path = Path('/') / '.env'
 load_dotenv(dotenv_path=env_path)
 
 
@@ -48,8 +48,8 @@ def logger_conf(logfile_name):
 
     return logger
 
-def coins_mapping(exchange_name: str, dictionary: dict, url: str):
-    for k, v in dictionary.items():
+# def coins_mapping(exchange_name: str, dictionary: dict, url: str):
+#     for k, v in dictionary.items():
 
 
 

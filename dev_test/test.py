@@ -7,14 +7,14 @@
 import json
 
 
-exchange_spec_dict = json.load(open("../admin_tools/exchanges"))
+exchange_spec_dict = json.load(open("../admin/exchanges"))
 
 print(exchange_spec_dict)
 
 
 #
 #
-# data = json.load(open('../admin_tools/exchanges'))
+# data = json.load(open('../admin/exchanges'))
 #
 # print(data['currency_mapping']['symbols']['btcpln'])
 #
