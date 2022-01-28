@@ -10,7 +10,6 @@
 ### MERGE TO MASTER
 
 
-
 import aiohttp
 import asyncio
 from admin_tools.admin_tools import connection, logger_conf
@@ -49,8 +48,6 @@ async def main():
                     'trxpln': f"{rest_url}trading/orderbook-limited/{mapped_currency['trxpln']}/10",
                     'manapln': f"{rest_url}trading/orderbook-limited/{mapped_currency['manapln']}/10",
                     'linkpln': f"{rest_url}trading/orderbook-limited/{mapped_currency['linkpln']}/10"
-
-
                     }
 
         while True:

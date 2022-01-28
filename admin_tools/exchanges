@@ -22,7 +22,7 @@
     },
 
       "wazirx": {
-      "rest_url": "https://api.wazirx.com/sapi/v1",
+      "rest_url": "https://api.wazirx.com/sapi/v1/",
       "websocket_url": "",
       "api_key": "",
       "secret_key": "",
