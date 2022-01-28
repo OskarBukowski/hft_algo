@@ -9,8 +9,9 @@ from dotenv import load_dotenv
 import os
 import logging
 
-env_path = Path('/') / '.env'
+env_path = Path('C:/Users/oskar/Desktop/hft_algo/hft_algo/admin') / '.env'
 load_dotenv(dotenv_path=env_path)
+
 
 
 def connection():
@@ -118,21 +119,42 @@ class SqlConst:
 
 
 
-# if __name__ == '__main__':
-#         cs = SqlConst()
-#
-#         cs.table_creator_2('zonda', 'usdtpln', 'trades')
-#         cs.table_creator_2('zonda', 'dotpln', 'trades')
-#         cs.table_creator_2('zonda', 'avaxpln', 'trades')
-#         cs.table_creator_2('zonda', 'dogepln', 'trades')
-#         cs.table_creator_2('zonda', 'trxpln', 'trades')
-#         cs.table_creator_2('zonda', 'manapln', 'trades')
-#         cs.table_creator_2('zonda', 'linkpln', 'trades')
-#
-#         cs.table_creator('zonda', 'usdtpln', 'ob')
-#         cs.table_creator('zonda', 'dotpln', 'ob')
-#         cs.table_creator('zonda', 'avaxpln', 'ob')
-#         cs.table_creator('zonda', 'dogepln', 'ob')
-#         cs.table_creator('zonda', 'trxpln', 'ob')
-#         cs.table_creator('zonda', 'manapln', 'ob')
-#         cs.table_creator('zonda', 'linkpln', 'ob')
+if __name__ == '__main__':
+        cs = SqlConst()
+
+        cs.table_creator_2('bitkub', 'btcthb', 'trades')
+        cs.table_creator_2('bitkub', 'eththb', 'trades')
+        cs.table_creator_2('bitkub', 'dogethb', 'trades')
+        cs.table_creator_2('bitkub', 'manathb', 'trades')
+        cs.table_creator_2('bitkub', 'usdtthb', 'trades')
+        cs.table_creator_2('bitkub', 'adathb', 'trades')
+        cs.table_creator_2('bitkub', 'sandthb', 'trades')
+        cs.table_creator_2('bitkub', 'dotthb', 'trades')
+        cs.table_creator_2('bitkub', 'sushithb', 'trades')
+        cs.table_creator_2('bitkub', 'galathb', 'trades')
+        cs.table_creator_2('bitkub', 'yfithb', 'trades')
+        cs.table_creator_2('bitkub', 'linkthb', 'trades')
+        cs.table_creator_2('bitkub', 'imxthb', 'trades')
+        cs.table_creator_2('bitkub', 'crvthb', 'trades')
+        cs.table_creator_2('bitkub', 'unithb', 'trades')
+        cs.table_creator_2('bitkub', 'nearthb', 'trades')
+
+
+
+        cs.table_creator('bitkub', 'btcthb', 'ob')
+        cs.table_creator('bitkub', 'eththb', 'ob')
+        cs.table_creator('bitkub', 'dogethb', 'ob')
+        cs.table_creator('bitkub', 'manathb', 'ob')
+        cs.table_creator('bitkub', 'usdtthb', 'ob')
+        cs.table_creator('bitkub', 'adathb', 'ob')
+        cs.table_creator('bitkub', 'sandthb', 'ob')
+        cs.table_creator('bitkub', 'dotthb', 'ob')
+        cs.table_creator('bitkub', 'sushithb', 'ob')
+        cs.table_creator('bitkub', 'galathb', 'ob')
+        cs.table_creator('bitkub', 'yfithb', 'ob')
+        cs.table_creator('bitkub', 'linkthb', 'ob')
+        cs.table_creator('bitkub', 'imxthb', 'ob')
+        cs.table_creator('bitkub', 'crvthb', 'ob')
+        cs.table_creator('bitkub', 'unithb', 'ob')
+        cs.table_creator('bitkub', 'nearthb', 'ob')
+

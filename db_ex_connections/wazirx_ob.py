@@ -7,10 +7,11 @@
 
 # 2. responses are in list type, so we need to map it save properly to db
 
+import sys
+sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
 
 import asyncio
-import ast
-from admin_tools.admin_tools import connection, logger_conf
+from admin.admin_tools import connection, logger_conf
 import time
 import json
 import aiohttp
@@ -23,21 +24,39 @@ async def single_url_getter(session, url):
 
 
 async def main():
+
+    cursor = connection()
+    logger = logger_conf("../db_ex_connections/wazirx.log")
     async with aiohttp.ClientSession() as session:
 
-        url_dict = {'btcinr': "https://api.wazirx.com/sapi/v1/depth?symbol=btcinr&limit=5",
-                    'ethinr': "https://api.wazirx.com/sapi/v1/depth?symbol=ethinr&limit=5",
-                    'dogeinr': "https://api.wazirx.com/sapi/v1/depth?symbol=dogeinr&limit=5",
-                    'manainr': "https://api.wazirx.com/sapi/v1/depth?symbol=manainr&limit=5"}
+        exchange_spec_dict = json.load(open('../admin/exchanges'))
+        mapped_currency = exchange_spec_dict['currency_mapping']['wazirx']
+        rest_url = exchange_spec_dict['source']['wazirx']['rest_url']
+
+        url_dict = {'btcinr': f"{rest_url}depth?symbol={mapped_currency['btcinr']}&limit=10",
+                    'ethinr': f"{rest_url}depth?symbol={mapped_currency['ethinr']}&limit=10",
+                    'dogeinr': f"{rest_url}depth?symbol={mapped_currency['dogeinr']}r&limit=10",
+                    'maticinr': f"{rest_url}depth?symbol={mapped_currency['maticinr']}&limit=10",
+                    'adainr': f"{rest_url}depth?symbol={mapped_currency['adainr']}&limit=10",
+                    'ftminr': f"{rest_url}depth?symbol={mapped_currency['ftminr']}&limit=10",
+                    'xrpinr': f"{rest_url}depth?symbol={mapped_currency['xrpinr']}r&limit=10",
+                    'sandinr': f"{rest_url}depth?symbol={mapped_currency['sandinr']}&limit=10",
+                    'usdtinr': f"{rest_url}depth?symbol={mapped_currency['usdtinr']}&limit=10",
+                    'solinr': f"{rest_url}depth?symbol={mapped_currency['solinr']}&limit=10",
+                    'dotinr': f"{rest_url}depth?symbol={mapped_currency['dotinr']}r&limit=10",
+                    'lunainr': f"{rest_url}depth?symbol={mapped_currency['lunainr']}&limit=10",
+                    'trxinr': f"{rest_url}depth?symbol={mapped_currency['trxinr']}&limit=10",
+                    'vetinr': f"{rest_url}depth?symbol={mapped_currency['vetinr']}&limit=10",
+                    'lunausdt': f"{rest_url}depth?symbol={mapped_currency['lunausdt']}&limit=10",
+                    'ethusdt': f"{rest_url}depth?symbol={mapped_currency['ethusdt']}&limit=10",
+                    }
 
         while True:
-
+            st = time.time()
             tasks = []
-            for k, v in url_dict.items():
-                start = time.time()
-                tasks.append(asyncio.ensure_future(single_url_getter(session, v)))
-                end = time.time()
-                await asyncio.sleep(1.5 - (end - start))  # the sleep method to avoid rate limits [ 5 api calls / sec ]
+            for k in url_dict.keys():
+                tasks.append(asyncio.ensure_future(single_url_getter(session, url_dict[k])))
+                await asyncio.sleep(0.5)
 
             responses = await asyncio.gather(*tasks)
             print(responses)

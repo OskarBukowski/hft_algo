@@ -4,15 +4,18 @@
 #####
 # This file show request using REST API
 # It returns up to 10 buy and sell offer on current moment
-# It saves 5 lines of orderbook
+# It saves 10 lines of orderbook
 #####
 
 ### MERGE TO MASTER
 
+import sys
+sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
 
 import aiohttp
 import asyncio
-from admin
+
+from admin.admin_tools import connection, logger_conf
 import time
 import json
 
@@ -29,8 +32,8 @@ async def main():
     async with aiohttp.ClientSession() as session:
 
         exchange_spec_dict = json.load(open('../admin/exchanges'))
-        mapped_currency = exchange_spec_dict['currency_mapping'][0]['symbols']
-        rest_url = exchange_spec_dict['source'][0]['rest_url']
+        mapped_currency = exchange_spec_dict['currency_mapping']['zonda']
+        rest_url = exchange_spec_dict['source']['zonda']['rest_url']
 
         url_dict = {'btcpln': f"{rest_url}trading/orderbook-limited/{mapped_currency['btcpln']}/10",
                     'ethpln': f"{rest_url}trading/orderbook-limited/{mapped_currency['ethpln']}/10",
@@ -55,20 +58,19 @@ async def main():
                 st = time.time()
                 tasks = []
                 for k in url_dict.keys():
-                    st = time.time()
                     tasks.append(asyncio.create_task(single_url_getter(session, url_dict[k])))
 
                 responses = await asyncio.gather(*tasks)
 
                 if responses[0]['status'] == "Ok":
-                    print(responses)
                     before_db_save = time.time()
 
                     for i in range(0, len(responses)):
-                        cursor.execute(f"""INSERT INTO zonda.{list(url_dict.keys())[i]}_ob (ask_0, ask_1, 
-                                                    ask_2, ask_3, ask_4, ask_vol_0, ask_vol_1, ask_vol_2,
-                                                    ask_vol_3, ask_vol_4, bid_0, bid_1, bid_2, bid_3, bid_4, bid_vol_0, 
-                                                    bid_vol_1, bid_vol_2, bid_vol_3,bid_vol_4, "timestamp")
+                        cursor.execute(f"""INSERT INTO zonda.{list(url_dict.keys())[i]}_ob (
+                        ask_0, ask_vol_0, ask_1, ask_vol_1, ask_2, ask_vol_2, ask_3, ask_vol_3, ask_4, ask_vol_4, 
+                        ask_5, ask_vol_5, ask_6, ask_vol_6, ask_7, ask_vol_7, ask_8, ask_vol_8, ask_9, ask_vol_9, 
+                        bid_0, bid_vol_0, bid_1, bid_vol_1, bid_2, bid_vol_2, bid_3, bid_vol_3, bid_4, bid_vol_4, 
+                        bid_5, bid_vol_5, bid_6, bid_vol_6, bid_7, bid_vol_7, bid_8, bid_vol_8, bid_9, bid_vol_9, "timestamp")
                                                         VALUES (
                                                             {float(responses[i]['sell'][0]['ra'])},
                                                             {float(responses[i]['sell'][0]['ca'])},
