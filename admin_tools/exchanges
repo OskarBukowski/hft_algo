@@ -1,7 +1,7 @@
 {
-  "source": [
+  "source":
     {
-      "name": "zonda",
+    "zonda": {
       "rest_url": "https://api.zonda.exchange/rest/",
       "websocket_url": "wss://api.zonda.exchange/websocket/",
       "api_key": "",
@@ -10,8 +10,8 @@
       "taker_fee":  0.0043,
       "coingecko": "https://www.coingecko.com/en/exchanges/bitbay"
     },
-    {
-      "name": "bitkub",
+
+      "bitkub": {
       "rest_url": "https://api.bitkub.com/api/",
       "websocket_url": "wss://api.bitkub.com/websocket-api/",
       "api_key": "",
@@ -19,28 +19,32 @@
       "maker_fee": 0.0,
       "taker_fee":  0.0,
       "coingecko": "https://www.coingecko.com/en/exchanges/bitkub"
-
-
     },
-    {
-      "name": "wazirx",
-      "rest_url": "https://api.wazirx.com/sapi/v1",
+
+      "wazirx": {
+      "rest_url": "https://api.wazirx.com/sapi/v1/",
       "websocket_url": "",
       "api_key": "",
       "secret_key": "",
       "maker_fee": 0.0,
       "taker_fee":  0.0,
       "coingecko": "https://www.coingecko.com/en/exchanges/wazirx"
+    },
 
-
+      "cex": {
+      "rest_url": "https://cex.io/api/",
+      "websocket_url": "wss://ws.cex.io/ws",
+      "api_key": "",
+      "secret_key": "",
+      "maker_fee": 0.0,
+      "taker_fee":  0.0,
+      "coingecko": "https://www.coingecko.com/en/exchanges/cex"
     }
+  },
 
-    ],
-
-  "currency_mapping": [
+  "currency_mapping":
     {
-      "name": "zonda",
-      "symbols": {
+      "zonda":{
         "btcpln": "BTC-PLN",
         "ethpln": "ETH-PLN",
         "lunapln": "LUNA-PLN",
@@ -50,12 +54,17 @@
         "etheur" : "ETH-EUR",
         "adapln" : "ADA-PLN",
         "maticpln" : "MATIC-PLN",
-        ""
-      }
-    },
-    {
-      "name": "bitkub",
-      "symbols": {
+        "usdtpln" : "USDT-PLN",
+        "dotpln" : "DOT-PLN",
+        "avaxpln" : "AVAX-PLN",
+        "dogepln" : "DOGE-PLN",
+        "trxpln" : "TRX-PLN",
+        "manapln" : "MANA-PLN",
+        "linkpln" : "LINK-PLN",
+
+      },
+
+      "bitkub": {
         "btcthb": "THB_BTC",
         "eththb": "THB_ETH",
         "dogethb": "THB_DOGE",
@@ -68,12 +77,13 @@
         "galathb": "THB_GALA",
         "yfithb": "THB_YFI",
         "linkthb": "THB_LINK",
-        "imxthb": "THB_IMX"
-      }
-    },
-      {
-      "name": "wazirx",
-      "symbols": {
+        "imxthb": "THB_IMX",
+        "nearthb": "THB_NEAR".
+        "crvthb": "THB_CRV",
+        "unithb": "THB_UNI"
+      },
+
+      "wazirx": {
         "btcinr": "btcinr",
         "ethinr": "ethinr",
         "dogeinr": "dogeinr",
@@ -82,11 +92,24 @@
         "ftminr" : "ftminr",
         "xrpinr" : "xrpinr",
         "sandinr" : "sandinr",
-        "usdtinr" : "usdtinr"
+        "usdtinr" : "usdtinr",
+        "solinr": "solinr",
+        "manainr": "manainr",
+        "dotinr": "dotinr",
+        "lunainr": "lunainr",
+        "trxinr": "trxinr",
+        "vetinr": "vetinr",
+        "ftmusdt": "ftmusdt",
+        "ethusdt": "ethusdt"
+
+      },
+
+      "cex": {
+        "btcusd": "BTC/USD"
+
       }
 
 
     }
 
-    ]
 }

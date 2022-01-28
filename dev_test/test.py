@@ -6,6 +6,12 @@
 
 import json
 
+
+exchange_spec_dict = json.load(open("../admin_tools/exchanges"))
+
+print(exchange_spec_dict)
+
+
 #
 #
 # data = json.load(open('../admin_tools/exchanges'))
