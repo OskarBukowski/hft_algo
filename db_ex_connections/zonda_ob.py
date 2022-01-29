@@ -118,12 +118,12 @@ async def main():
                     logger.info(f"Ob received and successfully saved into database for {[*url_dict]} ")
 
                 else:  # {"status": "Fail"} or other unexpected REST API responses
-                    logger.error(f" $$ Connection status: {responses[0]['status']} $$ ", exc_info=True)
+                    logger.error(f" $$ Connection status: {str(responses[0]['status'])} $$ ", exc_info=True)
 
                 await asyncio.sleep(5 - (time.time() - st))
 
             except (KeyError, RuntimeError) as rest_error:
-                logger.error(f" $$ {rest_error} $$ ", exc_info=True)
+                logger.error(f" $$ {str(rest_error)} $$ ", exc_info=True)
 
 
 asyncio.run(main())
