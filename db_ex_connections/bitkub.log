@@ -1,0 +1,379 @@
+19:54:06.730 ERROR   $$ Extra data: line 2 column 1 (char 148) $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\bitkub_trades.py", line 53, in single_wss_run
+    response = json.loads(resp)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 148)
+19:54:20.202 ERROR   $$ Extra data: line 2 column 1 (char 155) $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\bitkub_trades.py", line 53, in single_wss_run
+    response = json.loads(resp)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 155)
+20:04:55.209 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x0000018EC846E5B0>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:04:55.224 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x0000018EC847FF40>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:04:55.224 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x0000018EC847F040>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:04:55.240 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x0000018EC847FB50>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:05:41.551 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x00000228116E4370>
+transport: <_ProactorSocketTransport fd=676 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:05:41.551 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x00000228116EE430>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:05:41.551 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x00000228116EEAC0>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:05:41.567 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x00000228116EEC70>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:05:41.567 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x0000022811706F40>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:05:41.567 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x0000022811706910>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:06:17.975 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000001668D694F70>
+transport: <_ProactorSocketTransport fd=660 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:06:17.990 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000001668D694910>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:06:17.990 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000001668D69E8B0>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:06:17.990 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000001668D69E700>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:07:52.747 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000002C72092FFA0>
+transport: <_ProactorSocketTransport fd=952 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:07:52.763 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000002C720927F40>
+transport: <_ProactorSocketTransport fd=680 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:07:52.763 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000002C7209276A0>
+transport: <_ProactorSocketTransport fd=652 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:07:52.779 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000002C72091E820>
+transport: <_ProactorSocketTransport fd=724 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:07:52.779 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000002C72091E430>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:07:52.779 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000002C72090B0A0>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:07:52.794 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000002C7209142B0>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:07:52.794 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000002C720957100>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:07:52.794 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000002C7209572E0>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:09:11.610 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000001DDD64A48E0>
+transport: <_ProactorSocketTransport fd=668 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:09:11.626 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000001DDD64A4970>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:09:11.626 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000001DDD64A4880>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:09:11.641 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000001DDD64AEF40>
+transport: <_ProactorSocketTransport fd=700 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:09:11.641 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000001DDD64AE130>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:09:11.641 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000001DDD64AEC40>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:09:11.657 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000001DDD64C6FD0>
+transport: <_ProactorSocketTransport fd=756 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:09:11.657 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000001DDD64C6340>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:09:11.657 ERROR  Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000001DDD64C6D30>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\sslproto.py", line 684, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 359, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\proactor_events.py", line 395, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+20:09:42.157 ERROR   $$ Extra data: line 2 column 1 (char 157) $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\bitkub_trades.py", line 24, in single_wss_run
+    response = json.loads(resp)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 157)

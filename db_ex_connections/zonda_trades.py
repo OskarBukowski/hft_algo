@@ -9,7 +9,6 @@
 ### SCRIPT WORKS --> SAVES TO POSTGRES --> SAVES TO LOGFILE
 
 import sys
-
 sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
 
 import websockets
@@ -61,6 +60,7 @@ async def single_wss_run(message):
                                                 );""")
 
                     logger.debug(f"Trade received on timestamp: {response['timestamp']} for {symbol}")
+                    logger.debug(f"Saving in database time: {time.time() - st} for {symbol}")
                     timer()
                 else:
                     continue

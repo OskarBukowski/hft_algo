@@ -23,7 +23,7 @@
 
       "wazirx": {
       "rest_url": "https://api.wazirx.com/sapi/v1/",
-      "websocket_url": "",
+      "websocket_url": "wss://stream.wazirx.com/stream",
       "api_key": "",
       "secret_key": "",
       "maker_fee": 0.0,

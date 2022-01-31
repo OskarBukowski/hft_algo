@@ -1632,3 +1632,457 @@
 11:20:36.199 INFO  Trades succesfully received on timestamp: 1643451115667
 11:20:37.393 INFO  Trades succesfully received on timestamp: 1643451116899
 11:20:37.456 INFO  Trades succesfully received on timestamp: 1643451507272
+19:51:20.885 INFO  Trades succesfully received on timestamp: 1643655082895
+19:51:39.078 INFO  Trades succesfully received on timestamp: 1643655101068
+19:51:39.235 INFO  Trades succesfully received on timestamp: 1643655101198
+19:51:39.598 INFO  Trades succesfully received on timestamp: 1643655101600
+19:51:42.651 INFO  Trades succesfully received on timestamp: 1643655104646
+19:51:42.651 INFO  Trades succesfully received on timestamp: 1643655104646
+19:51:50.900 INFO  Trades succesfully received on timestamp: 1643655104646
+19:51:53.212 INFO  Trades succesfully received on timestamp: 1643655115140
+19:51:54.666 INFO  Trades succesfully received on timestamp: 1643655116704
+19:51:54.681 INFO  Trades succesfully received on timestamp: 1643655116704
+19:52:03.748 INFO  Trades succesfully received on timestamp: 1643655125717
+19:52:08.138 INFO  Trades succesfully received on timestamp: 1643655130089
+19:52:09.085 INFO  Trades succesfully received on timestamp: 1643655101600
+19:52:09.242 INFO  Trades succesfully received on timestamp: 1643655116704
+19:52:09.601 INFO  Trades succesfully received on timestamp: 1643655101600
+19:52:10.315 INFO  Trades succesfully received on timestamp: 1643655132274
+19:52:12.664 INFO  Trades succesfully received on timestamp: 1643655132274
+19:52:12.664 INFO  Trades succesfully received on timestamp: 1643655132274
+19:52:20.904 INFO  Trades succesfully received on timestamp: 1643655132274
+19:52:23.237 INFO  Trades succesfully received on timestamp: 1643655115140
+19:52:24.145 INFO  Trades succesfully received on timestamp: 1643655146148
+19:52:24.676 INFO  Trades succesfully received on timestamp: 1643655116704
+19:52:24.707 INFO  Trades succesfully received on timestamp: 1643655116704
+19:52:25.771 INFO  Trades succesfully received on timestamp: 1643655147744
+19:52:30.031 INFO  Trades succesfully received on timestamp: 1643655151955
+19:52:32.064 INFO  Trades succesfully received on timestamp: 1643655153999
+19:52:32.064 INFO  Trades succesfully received on timestamp: 1643655153999
+19:52:32.064 INFO  Trades succesfully received on timestamp: 1643655153999
+19:52:33.769 INFO  Trades succesfully received on timestamp: 1643655153999
+19:52:38.155 INFO  Trades succesfully received on timestamp: 1643655130089
+19:52:39.098 INFO  Trades succesfully received on timestamp: 1643655101600
+19:52:39.254 INFO  Trades succesfully received on timestamp: 1643655116704
+19:52:39.613 INFO  Trades succesfully received on timestamp: 1643655101600
+19:52:40.317 INFO  Trades succesfully received on timestamp: 1643655153999
+21:38:48.774 ERROR   $$ 'code' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 123, in main
+    logger.error(f"$$ Code: {response['data']['code']}, message: {response['data']['message']} $$")
+KeyError: 'code'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 125, in main
+    logger.warning(f"{response['code']}")
+KeyError: 'code'
+21:38:48.978 ERROR   $$ 'code' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 123, in main
+    logger.error(f"$$ Code: {response['data']['code']}, message: {response['data']['message']} $$")
+KeyError: 'code'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 125, in main
+    logger.warning(f"{response['code']}")
+KeyError: 'code'
+21:38:49.181 ERROR   $$ 'code' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 123, in main
+    logger.error(f"$$ Code: {response['data']['code']}, message: {response['data']['message']} $$")
+KeyError: 'code'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 125, in main
+    logger.warning(f"{response['code']}")
+KeyError: 'code'
+21:38:49.181 ERROR   $$ 'code' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 123, in main
+    logger.error(f"$$ Code: {response['data']['code']}, message: {response['data']['message']} $$")
+KeyError: 'code'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 125, in main
+    logger.warning(f"{response['code']}")
+KeyError: 'code'
+21:38:49.181 ERROR   $$ 'code' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 123, in main
+    logger.error(f"$$ Code: {response['data']['code']}, message: {response['data']['message']} $$")
+KeyError: 'code'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 125, in main
+    logger.warning(f"{response['code']}")
+KeyError: 'code'
+21:38:54.680 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:38:57.863 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:38:57.863 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:38:57.879 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:04.102 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:04.227 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:08.720 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:09.353 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:10.343 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:10.359 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:13.759 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:14.372 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:17.986 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:18.422 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:18.817 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:21.111 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:21.142 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:23.909 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:24.448 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:24.543 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:25.558 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:37.071 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:39.847 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:41.661 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:49.442 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:53.429 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:53.969 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:53.969 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:59.758 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:39:59.804 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:02.739 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:03.411 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:11.368 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:14.144 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:16.077 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:16.291 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:18.734 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:18.738 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:19.232 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:21.482 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:21.498 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:31.156 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:31.375 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:31.951 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:33.355 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:34.885 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:36.559 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:41.591 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:41.625 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:43.124 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:43.371 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:44.750 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:51.504 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:55.380 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:55.520 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:40:55.599 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:41:01.752 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 111, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:41:30.921 ERROR   $$ 'code' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 124, in main
+    logger.error(f"$$ Code: {response['data']['code']}, message: {response['data']['message']} $$")
+KeyError: 'code'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 126, in main
+    logger.warning(f"{response['code']}")
+KeyError: 'code'
+21:41:31.132 ERROR   $$ 'code' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 124, in main
+    logger.error(f"$$ Code: {response['data']['code']}, message: {response['data']['message']} $$")
+KeyError: 'code'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 126, in main
+    logger.warning(f"{response['code']}")
+KeyError: 'code'
+21:41:31.335 ERROR   $$ 'code' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 124, in main
+    logger.error(f"$$ Code: {response['data']['code']}, message: {response['data']['message']} $$")
+KeyError: 'code'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 126, in main
+    logger.warning(f"{response['code']}")
+KeyError: 'code'
+21:41:31.335 ERROR   $$ 'code' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 124, in main
+    logger.error(f"$$ Code: {response['data']['code']}, message: {response['data']['message']} $$")
+KeyError: 'code'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 126, in main
+    logger.warning(f"{response['code']}")
+KeyError: 'code'
+21:41:31.335 ERROR   $$ 'code' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 124, in main
+    logger.error(f"$$ Code: {response['data']['code']}, message: {response['data']['message']} $$")
+KeyError: 'code'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 126, in main
+    logger.warning(f"{response['code']}")
+KeyError: 'code'
+21:41:33.401 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 112, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:41:35.518 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 112, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'
+21:41:43.210 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 112, in main
+    '{str(response['message']['transactions'][0]['id'])}',
+KeyError: 'message'

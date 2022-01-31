@@ -1,40 +1,13 @@
 #!/usr/bin/env python3
 
+import sys
+sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
 
 import websockets
 import asyncio
-from admin_tools.admin_tools import connection, logger_conf
+from admin.admin_tools import connection, logger_conf
 import json
 
-
-# async def single_wss_run(socket, message):
-#     cursor = connection()
-#     logger = logger_conf("../db_ex_connections/bitkub.log")
-#
-#     async with websockets.connect(socket,
-#                                   ping_timeout=30,
-#                                   close_timeout=20) as wss:
-#
-#         while True:
-#             try:
-#                 resp = await wss.recv()
-#                 response = json.loads(resp)
-#                 if response['action'] == "push":
-#                     cursor.execute(f"""INSERT INTO bitkub.{symbol}_trades (id, price, volume, "timestamp")
-#                                         VALUES (
-#                                                 '{str(response['message']['transactions'][0]['id'])}',
-#                                                 {float(response['message']['transactions'][0]['r'])},
-#                                                 {float(response['message']['transactions'][0]['a'])},
-#                                                 {int(response['timestamp'])}
-#                                                 );""")
-#
-#                     logger.info(f"Trades received on timestamp: {response['timestamp']}")
-#                 else:
-#                     continue
-#
-#             except (Exception, websockets.ConnectionClosedOK, websockets.InvalidStatusCode) as websocket_error:
-#                 logger.error(f" $$ {str(websocket_error)} $$ ", exc_info=True)
-#
 
 
 async def single_wss_run(socket):
@@ -57,8 +30,7 @@ async def single_wss_run(socket):
                                  '{str(response['txn'])}',
                                  {float(response['rat'])},
                                  {float(response['amt'])},
-                                 {int(response['ts']*1000)});""")
-
+                                 {int(response['ts'] * 1000)});""")
 
             except (Exception, websockets.ConnectionClosedOK, websockets.InvalidStatusCode) as websocket_error:
                 logger.error(f" $$ {str(websocket_error)} $$ ", exc_info=True)
