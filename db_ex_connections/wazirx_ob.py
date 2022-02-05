@@ -7,7 +7,6 @@
 
 
 import sys
-
 sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
 
 import asyncio

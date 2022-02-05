@@ -2086,3 +2086,20 @@ Traceback (most recent call last):
   File "C:\Users\oskar\Desktop\hft_algo\hft_algo\db_ex_connections\wazirx_trades.py", line 112, in main
     '{str(response['message']['transactions'][0]['id'])}',
 KeyError: 'message'
+13:39:46.851 INFO  Trades succesfully received on timestamp: 1644064786776
+13:39:52.885 INFO  Trades succesfully received on timestamp: 1644064792873
+13:39:53.226 INFO  Trades succesfully received on timestamp: 1644064793205
+15:01:10.467 INFO  Trade received for xrppln
+15:01:20.614 INFO  Trade received for ethpln
+15:01:31.409 INFO  Trade received for manapln
+15:01:31.409 INFO  Trade received for manapln
+15:01:31.409 INFO  Trade received for manapln
+15:01:54.955 INFO  Trade received for ethpln
+15:02:02.980 INFO  Trade received for ethpln
+15:02:04.475 INFO  Trade received for ethpln
+15:02:04.798 INFO  Trade received for ethpln
+15:02:38.861 INFO  Trade received for btcpln
+15:02:38.861 INFO  Trade received for btcpln
+15:02:45.729 INFO  Trade received for lunapln
+15:03:10.801 INFO  Trade received for btcpln
+15:03:10.801 INFO  Trade received for btcpln

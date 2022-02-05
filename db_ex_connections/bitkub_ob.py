@@ -10,9 +10,6 @@ from admin.admin_tools import connection, logger_conf, dict_values_getter
 import aiohttp
 
 
-### MERGE TO MASTER
-
-
 async def single_url_getter(session, url):
     async with session.get(url) as response:
         return await response.json()
@@ -95,7 +92,7 @@ async def main():
                 responses = await multiple_ulr_getter(session, urls)
                 if responses[0]['error'] == 0:
                     before_db_save = time.time()
-                    for i in range(len(responses)-1):
+                    for i in range(len(responses) - 1):
                         cursor.execute(f"""INSERT INTO bitkub.{list(url_dict.keys())[int(i / 2)]}_ob (
                         ask_0, ask_vol_0, ask_1, ask_vol_1, ask_2, ask_vol_2, ask_3, ask_vol_3, ask_4, ask_vol_4,
                         ask_5, ask_vol_5, ask_6, ask_vol_6, ask_7, ask_vol_7, ask_8, ask_vol_8, ask_9, ask_vol_9,

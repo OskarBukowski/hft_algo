@@ -1,14 +1,5 @@
 #!/usr/bin/env python3
 
-
-#####
-# This file show request using REST API
-# It returns up to 10 buy and sell offer on current moment
-# It saves 10 lines of orderbook
-#####
-
-### MERGE TO MASTER
-
 import sys
 sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
 

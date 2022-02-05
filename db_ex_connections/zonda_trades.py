@@ -1,13 +1,5 @@
 #!/usr/bin/env python3
 
-
-#####
-# This script will use push in websocket API to get the update of last trades
-# logs of this script will be saved into the same file like orderbooks to keep
-# the clarity of data, and reduce the infrastructure complexity
-
-### SCRIPT WORKS --> SAVES TO POSTGRES --> SAVES TO LOGFILE
-
 import sys
 sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
 
@@ -15,7 +7,6 @@ import websockets
 import asyncio
 from admin.admin_tools import connection, logger_conf
 import json
-import threading
 import time
 
 
@@ -28,15 +19,9 @@ async def heartbeat_check(session, message):
         raise Exception('No heartbeat')
 
 
-
-
 async def single_wss_run(message):
     cursor = connection()
     logger = logger_conf("../db_ex_connections/zonda.log")
-
-    def timer():
-        threading.Timer(30.0, timer).start()
-        logger.info(f"Trades succesfully received on timestamp: {response['timestamp']}")
 
     async with websockets.connect("wss://api.zonda.exchange/websocket/",
                                   ping_timeout=30,
@@ -49,7 +34,6 @@ async def single_wss_run(message):
                 resp = await wss.recv()
                 response = json.loads(resp)
                 if response['action'] == "push":
-                    print(response)
                     symbol = str(response['topic'].split('/')[2].replace("-", ""))
                     cursor.execute(f"""INSERT INTO zonda.{symbol}_trades (id, price, volume, "timestamp")
                                         VALUES (
@@ -59,9 +43,10 @@ async def single_wss_run(message):
                                                 {int(response['timestamp'])}
                                                 );""")
 
-                    logger.debug(f"Trade received on timestamp: {response['timestamp']} for {symbol}")
+                    logger.info(f"Trade received for {symbol}")
+
+                    logger.debug(f"Trade received on timestamp: {response['timestamp']} for {symbol}, seqNo: {response['seqNo']}")
                     logger.debug(f"Saving in database time: {time.time() - st} for {symbol}")
-                    timer()
                 else:
                     continue
 
