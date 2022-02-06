@@ -4,7 +4,8 @@
 # TO DO:
 ###
 
-# 1. connection is automatically closed after 15 min, so it needs to reconnect to keep websocket working
+# 1. connection is automatically closed after 30 min, so it needs to reconnect to keep websocket working
+# message: {'message': 'HeartBeat message not received, closing the connection', 'status': 'error'}
 
 import sys
 
@@ -51,6 +52,7 @@ async def main():
                 st = time.time()
                 resp = await wss.recv()
                 response = json.loads(resp)
+                print(response)
                 if list(response.keys()) == ['data', 'stream']:
                     cursor.execute(f"""INSERT INTO wazirx.{response['data']['trades'][0]['s']}_trades (id, price, volume, "timestamp")
                                         VALUES (

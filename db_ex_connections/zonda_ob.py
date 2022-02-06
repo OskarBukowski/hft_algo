@@ -53,6 +53,7 @@ async def main():
                 responses = await asyncio.gather(*tasks)
 
                 if responses[0]['status'] == "Ok":
+                    print(responses)
                     before_db_save = time.time()
 
                     for i in range(0, len(responses)):

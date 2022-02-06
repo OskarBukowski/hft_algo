@@ -4,6 +4,8 @@
 # The purpose of this script is to keep all administrative elements in one file
 #######
 
+import sys
+sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
 
 import psycopg2
 from pathlib import Path
@@ -19,15 +21,27 @@ load_dotenv(dotenv_path=env_path)
 
 def connection():
     conn = psycopg2.connect(
-        host=os.environ['HOST'],
-        database=os.environ['DATABASE'],
-        user=os.environ['USER'],
-        password=os.environ['PASSWORD'],
+        host='127.0.0.1',
+        database='postgres',
+        user='postgres',
+        password='remiksow',
     )
     conn.autocommit = True
     cursor = conn.cursor()
 
     return cursor
+
+# def connection():
+#     conn = psycopg2.connect(
+#         host=os.environ['HOST'],
+#         database=os.environ['DATABASE'],
+#         user=os.environ['USER'],
+#         password=os.environ['PASSWORD'],
+#     )
+#     conn.autocommit = True
+#     cursor = conn.cursor()
+#
+#     return cursor
 
 
 # def remote_connection():

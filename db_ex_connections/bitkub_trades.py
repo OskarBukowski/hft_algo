@@ -1,63 +1,26 @@
 #!/usr/bin/env python3
 
-import sys
-sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
+#To do:
 
-# There is an issue that json cannot load multiple websocket responses
+#1. Add safety connection close
+
+# from logs: websockets.exceptions.ConnectionClosedError
+
+import sys
+
+sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
 
 import websockets
 import asyncio
-from admin.admin_tools import connection, logger_conf
 import json
+import time
 from json.decoder import JSONDecodeError
-
-
-async def single_wss_run(socket):
-    cursor = connection()
-    logger = logger_conf("../db_ex_connections/bitkub.log")
-
-    async with websockets.connect(socket,
-                                  ping_timeout=30,
-                                  close_timeout=20) as wss:
-
-        while True:
-            try:
-                response = await wss.recv()
-                resp = json.loads(json.dumps(response))
-
-                cursor.execute(
-                    f"""INSERT INTO bitkub.{resp['stream'].split('_')[1]}thb_trades (id, price, volume, "timestamp")
-                        VALUES (
-                                 '{str(resp['txn'])}',
-                                 {float(resp['rat'])},
-                                 {float(resp['amt'])},
-                                 {int(resp['ts'] * 1000)});""")
-
-            except (Exception,
-                    JSONDecodeError,
-                    websockets.ConnectionClosedOK,
-                    websockets.InvalidStatusCode) as websocket_error:
-
-                logger.error(f" $$ {str(repr(websocket_error))} $$ ", exc_info=True)
-
-
+from admin.admin_tools import connection, logger_conf
 
 
 async def main():
-    # url_dict = {
-    #     'btcthb': 'wss://api.bitkub.com/websocket-api/market.trade.thb_btc',
-    #     'eththb': 'wss://api.bitkub.com/websocket-api/market.trade.thb_eth',
-    #     'dogethb': 'wss://api.bitkub.com/websocket-api/market.trade.thb_doge',
-    #     'usdtthb': 'wss://api.bitkub.com/websocket-api/market.trade.thb_usdt',
-    #     'adathb': 'wss://api.bitkub.com/websocket-api/market.trade.thb_ada',
-    #     'sandthb': 'wss://api.bitkub.com/websocket-api/market.trade.thb_sand',
-    #     'dotthb': 'wss://api.bitkub.com/websocket-api/market.trade.thb_dot',
-    #     'sushithb': 'wss://api.bitkub.com/websocket-api/market.trade.thb_sushi',
-    #     'galathb': 'wss://api.bitkub.com/websocket-api/market.trade.thb_gala',
-    #     'yfithb': 'wss://api.bitkub.com/websocket-api/market.trade.thb_yfi',
-    #     'linkthb': 'wss://api.bitkub.com/websocket-api/market.trade.thb_link',
-    #     'imxthb': 'wss://api.bitkub.com/websocket-api/market.trade.thb_imx',
-    #     'manathb': 'wss://api.bitkub.com/websocket-api/market.trade.thb_mana'}
+    cursor = connection()
+    logger = logger_conf("../db_ex_connections/bitkub.log")
 
     markets = ['market.trade.thb_btc',
                'market.trade.thb_eth',
@@ -74,8 +37,41 @@ async def main():
                'market.trade.thb_mana']
 
     url = "wss://api.bitkub.com/websocket-api/{},{},{},{},{},{},{},{},{},{},{},{},{}"
-    all_connections = [single_wss_run(url.format(*markets))]
-    await asyncio.gather(*all_connections)
+
+    async with websockets.connect(url.format(*markets),
+                                  ping_timeout=30,
+                                  close_timeout=20) as wss:
+
+        while True:
+            try:
+                st = time.time()
+                resp = await wss.recv()
+                response = json.loads(json.dumps(resp.split("\n")))
+
+                for r in response:
+                    r = json.loads(r)
+                    print(r)
+                    cursor.execute(
+                        f"""INSERT INTO bitkub.{r['stream'].split('_')[1]}thb_trades (id, price, volume, "timestamp")
+                            VALUES (
+                                     '{str(r['txn'])}',
+                                     {float(r['rat'])},
+                                     {float(r['amt'])},
+                                     {int(r['ts'] * 1000)});""")
+
+                    logger.info(f"Trade received for {r['stream'].split('_')[1]}")
+
+                    logger.debug(
+                        f"Trade received on timestamp: {int(r['ts'] * 1000)} for {r['stream'].split('_')[1]}")
+                    logger.debug(f"Saving in database time: {time.time() - st} for {r['stream'].split('_')[1]}")
+
+            except (Exception,
+                    TypeError,
+                    JSONDecodeError,
+                    websockets.ConnectionClosedOK,
+                    websockets.InvalidStatusCode) as websocket_error:
+
+                logger.error(f" $$ {str(repr(websocket_error))} $$ ", exc_info=True)
 
 
 asyncio.run(main())
