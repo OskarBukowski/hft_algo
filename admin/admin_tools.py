@@ -15,6 +15,8 @@ env_path = Path('C:/Users/oskar/Desktop/hft_algo/hft_algo/admin') / '.env'
 load_dotenv(dotenv_path=env_path)
 
 
+
+
 def connection():
     conn = psycopg2.connect(
         host=os.environ['HOST'],
@@ -28,17 +30,17 @@ def connection():
     return cursor
 
 
-def remote_connection():
-    conn = psycopg2.connect(
-        host='192.168.0.52',
-        database='postgres',
-        user='postgres',
-        password='remiksow',
-    )
-    conn.autocommit = True
-    cursor = conn.cursor()
-
-    return cursor
+# def remote_connection():
+#     conn = psycopg2.connect(
+#         host='192.168.0.52',
+#         database='postgres',
+#         user='postgres',
+#         password='remiksow',
+#     )
+#     conn.autocommit = True
+#     cursor = conn.cursor()
+#
+#     return cursor
 
 
 def dict_values_getter(d):
@@ -136,6 +138,4 @@ class SqlConst:
 if __name__ == '__main__':
     cs = SqlConst()
 
-    r = remote_connection()
 
-    r.execute("SELECT * from zonda.btcpln_trades")

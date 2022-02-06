@@ -5,9 +5,9 @@ sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
 
 import websockets
 import asyncio
-from admin.admin_tools import connection, logger_conf
 import json
 import time
+from admin.admin_tools import connection, logger_conf
 
 
 async def heartbeat_check(session, message):
@@ -45,7 +45,8 @@ async def single_wss_run(message):
 
                     logger.info(f"Trade received for {symbol}")
 
-                    logger.debug(f"Trade received on timestamp: {response['timestamp']} for {symbol}, seqNo: {response['seqNo']}")
+                    logger.debug(
+                        f"Trade received on timestamp: {response['timestamp']} for {symbol}, seqNo: {response['seqNo']}")
                     logger.debug(f"Saving in database time: {time.time() - st} for {symbol}")
                 else:
                     continue
