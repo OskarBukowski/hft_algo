@@ -1,5 +1,7 @@
 !!!! NEVER PUSH .env file !!!!
 
+To add [ global ]:
+1. time of response for ob with rest method time = "response.elapsed.total_seconds()"
 
 
 PostgreSQL :

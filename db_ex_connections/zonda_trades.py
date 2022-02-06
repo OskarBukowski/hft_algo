@@ -1,21 +1,13 @@
 #!/usr/bin/env python3
 
-
-#####
-# This script will use push in websocket API to get the update of last trades
-# logs of this script will be saved into the same file like orderbooks to keep
-# the clarity of data, and reduce the infrastructure complexity
-
-### SCRIPT WORKS --> SAVES TO POSTGRES --> SAVES TO LOGFILE
-
+import sys
+sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
 
 import websockets
 import asyncio
-from admin_tools.admin_tools import connection, logger_conf
+from admin.admin_tools import connection, logger_conf
 import json
-
-
-
+import time
 
 
 async def heartbeat_check(session, message):
@@ -27,7 +19,6 @@ async def heartbeat_check(session, message):
         raise Exception('No heartbeat')
 
 
-
 async def single_wss_run(message):
     cursor = connection()
     logger = logger_conf("../db_ex_connections/zonda.log")
@@ -37,11 +28,12 @@ async def single_wss_run(message):
                                   close_timeout=20) as wss:
         await heartbeat_check(wss, message)
         while True:
+
             try:
+                st = time.time()
                 resp = await wss.recv()
                 response = json.loads(resp)
                 if response['action'] == "push":
-                    print(response)
                     symbol = str(response['topic'].split('/')[2].replace("-", ""))
                     cursor.execute(f"""INSERT INTO zonda.{symbol}_trades (id, price, volume, "timestamp")
                                         VALUES (
@@ -51,7 +43,10 @@ async def single_wss_run(message):
                                                 {int(response['timestamp'])}
                                                 );""")
 
-                    logger.info(f"Trades received on timestamp: {response['timestamp']}")
+                    logger.info(f"Trade received for {symbol}")
+
+                    logger.debug(f"Trade received on timestamp: {response['timestamp']} for {symbol}, seqNo: {response['seqNo']}")
+                    logger.debug(f"Saving in database time: {time.time() - st} for {symbol}")
                 else:
                     continue
 
@@ -60,18 +55,26 @@ async def single_wss_run(message):
 
 
 async def main():
-    messages_dict = {
+    urls_dict = {
         'btcpln': '{"action": "subscribe-public","module": "trading","path": "transactions/btc-pln"}',
         'ethpln': '{"action": "subscribe-public","module": "trading","path": "transactions/eth-pln"}',
         'lunapln': '{"action": "subscribe-public","module": "trading","path": "transactions/luna-pln"}',
-        'adapln': '{"action": "subscribe-public","module": "trading","path": "transactions/ada-pln"}',
-        'xrppln': '{"action": "subscribe-public","module": "trading","path": "transactions/xrp-pln"}',
-        'maticpln': '{"action": "subscribe-public","module": "trading","path": "transactions/matic-pln"}',
         'ftmpln': '{"action": "subscribe-public","module": "trading","path": "transactions/ftm-pln"}',
-
+        'btceur': '{"action": "subscribe-public","module": "trading","path": "transactions/btc-eur"}',
+        'xrppln': '{"action": "subscribe-public","module": "trading","path": "transactions/xrp-pln"}',
+        'etheur': '{"action": "subscribe-public","module": "trading","path": "transactions/eth-eur"}',
+        'adapln': '{"action": "subscribe-public","module": "trading","path": "transactions/ada-pln"}',
+        'maticpln': '{"action": "subscribe-public","module": "trading","path": "transactions/matic-pln"}',
+        'usdtpln': '{"action": "subscribe-public","module": "trading","path": "transactions/usdt-pln"}',
+        'dotpln': '{"action": "subscribe-public","module": "trading","path": "transactions/dot-pln"}',
+        'avaxpln': '{"action": "subscribe-public","module": "trading","path": "transactions/avax-pln"}',
+        'dogepln': '{"action": "subscribe-public","module": "trading","path": "transactions/doge-pln"}',
+        'trxpln': '{"action": "subscribe-public","module": "trading","path": "transactions/trx-pln"}',
+        'manapln': '{"action": "subscribe-public","module": "trading","path": "transactions/mana-pln"}',
+        'linkpln': '{"action": "subscribe-public","module": "trading","path": "transactions/link-pln"}'
     }
 
-    all_connections = [single_wss_run(messages_dict[k]) for (k) in messages_dict.keys()]
+    all_connections = [single_wss_run(urls_dict[k]) for (k) in urls_dict.keys()]
     await asyncio.gather(*all_connections)
 
 

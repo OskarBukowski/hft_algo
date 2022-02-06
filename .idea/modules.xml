@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/algorytm.iml" filepath="$PROJECT_DIR$/.idea/algorytm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/hft_algo.iml" filepath="$PROJECT_DIR$/.idea/hft_algo.iml" />
     </modules>
   </component>
 </project>

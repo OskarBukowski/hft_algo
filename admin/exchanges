@@ -23,7 +23,7 @@
 
       "wazirx": {
       "rest_url": "https://api.wazirx.com/sapi/v1/",
-      "websocket_url": "",
+      "websocket_url": "wss://stream.wazirx.com/stream",
       "api_key": "",
       "secret_key": "",
       "maker_fee": 0.0,
@@ -60,9 +60,7 @@
         "dogepln" : "DOGE-PLN",
         "trxpln" : "TRX-PLN",
         "manapln" : "MANA-PLN",
-        "linkpln" : "LINK-PLN",
-
-      },
+        "linkpln" : "LINK-PLN"},
 
       "bitkub": {
         "btcthb": "THB_BTC",
@@ -78,10 +76,9 @@
         "yfithb": "THB_YFI",
         "linkthb": "THB_LINK",
         "imxthb": "THB_IMX",
-        "nearthb": "THB_NEAR".
+        "nearthb": "THB_NEAR",
         "crvthb": "THB_CRV",
-        "unithb": "THB_UNI"
-      },
+        "unithb": "THB_UNI"},
 
       "wazirx": {
         "btcinr": "btcinr",
@@ -99,7 +96,7 @@
         "lunainr": "lunainr",
         "trxinr": "trxinr",
         "vetinr": "vetinr",
-        "ftmusdt": "ftmusdt",
+        "lunausdt": "lunausdt",
         "ethusdt": "ethusdt"
 
       },
