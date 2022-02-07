@@ -14,6 +14,7 @@ from admin.admin_tools import connection, logger_conf
 import time
 import json
 import aiohttp
+from aiohttp import ContentTypeError
 
 
 async def single_url_getter(session, url):
@@ -120,7 +121,7 @@ async def main():
 
                 await asyncio.sleep(5 - (time.time() - st))
 
-            except (KeyError, RuntimeError) as rest_error:
+            except (KeyError, RuntimeError,ContentTypeError) as rest_error:
                 logger.error(f" $$ {str(rest_error)} $$ ", exc_info=True)
 
 
