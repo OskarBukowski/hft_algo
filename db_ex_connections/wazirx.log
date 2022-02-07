@@ -1,0 +1,13 @@
+05:45:21.689 INFO  Starting ... {'timeout_duration': 1800}
+05:45:21.892 INFO  Starting ... {'streams': ['btcinr@trades', 'ethinr@trades', 'dogeinr@trades', 'maticinr@trades', 'adainr@trades']}
+05:45:21.923 INFO  Trade received for dogeinr
+05:45:22.096 INFO  Starting ... {'streams': ['ftminr@trades', 'xrpinr@trades', 'sandinr@trades', 'usdtinr@trades', 'solinr@trades']}
+05:45:22.096 INFO  Starting ... {'streams': ['manainr@trades', 'dotinr@trades', 'lunainr@trades', 'trxinr@trades', 'vetinr@trades']}
+05:45:22.096 INFO  Starting ... {'streams': ['lunausdt@trades', 'ethusdt@trades']}
+05:45:23.626 INFO  Trade received for btcinr
+05:45:23.626 INFO  Trade received for btcinr
+05:45:23.626 INFO  Trade received for btcinr
+05:45:23.674 INFO  Trade received for btcinr
+05:45:23.989 INFO  Trade received for trxinr
+05:45:24.351 INFO  Trade received for adainr
+05:45:24.351 INFO  Trade received for adainr

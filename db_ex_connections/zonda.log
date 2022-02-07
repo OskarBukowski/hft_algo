@@ -2121,3 +2121,6 @@ KeyError: 'message'
 11:22:54.906 INFO  Ob received and successfully saved into database for ['btcpln', 'ethpln', 'lunapln', 'ftmpln', 'btceur', 'xrppln', 'etheur', 'adapln', 'maticpln', 'usdtpln', 'dotpln', 'avaxpln', 'dogepln', 'trxpln', 'manapln', 'linkpln'] 
 11:22:59.985 INFO  Ob received and successfully saved into database for ['btcpln', 'ethpln', 'lunapln', 'ftmpln', 'btceur', 'xrppln', 'etheur', 'adapln', 'maticpln', 'usdtpln', 'dotpln', 'avaxpln', 'dogepln', 'trxpln', 'manapln', 'linkpln'] 
 11:23:04.962 INFO  Ob received and successfully saved into database for ['btcpln', 'ethpln', 'lunapln', 'ftmpln', 'btceur', 'xrppln', 'etheur', 'adapln', 'maticpln', 'usdtpln', 'dotpln', 'avaxpln', 'dogepln', 'trxpln', 'manapln', 'linkpln'] 
+06:19:56.391 INFO  Trade received for btcpln
+06:20:42.079 INFO  Trade received for usdtpln
+06:21:22.372 INFO  Trade received for btceur

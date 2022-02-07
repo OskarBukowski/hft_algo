@@ -33,6 +33,7 @@ async def single_wss_run(message):
                 st = time.time()
                 resp = await wss.recv()
                 response = json.loads(resp)
+                print(response)
                 if response['action'] == "push":
                     symbol = str(response['topic'].split('/')[2].replace("-", ""))
                     cursor.execute(f"""INSERT INTO zonda.{symbol}_trades (id, price, volume, "timestamp")

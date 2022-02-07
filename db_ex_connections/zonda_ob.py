@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 
+#To do:
+#1. Add exception "ContentTypeError"
+
 import sys
 sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
 
 import aiohttp
+from aiohttp import ContentTypeError
 import asyncio
 import time
 import json
@@ -113,7 +117,7 @@ async def main():
 
                 await asyncio.sleep(5 - (time.time() - st))
 
-            except (KeyError, RuntimeError) as rest_error:
+            except (KeyError, RuntimeError, ContentTypeError) as rest_error:
                 logger.error(f" $$ {str(rest_error)} $$ ", exc_info=True)
 
 
