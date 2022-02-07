@@ -5,10 +5,9 @@ sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
 
 import aiohttp
 import asyncio
-
-from admin.admin_tools import connection, logger_conf
 import time
 import json
+from admin.admin_tools import connection, logger_conf
 
 
 async def single_url_getter(session, url):
@@ -54,6 +53,7 @@ async def main():
                 responses = await asyncio.gather(*tasks)
 
                 if responses[0]['status'] == "Ok":
+                    print(responses)
                     before_db_save = time.time()
 
                     for i in range(0, len(responses)):
