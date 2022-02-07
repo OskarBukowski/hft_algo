@@ -1,21 +1,12 @@
 #!/usr/bin/env python3
 
-###
-# TO DO:
-###
-
-# 1. connection is automatically closed after 30 min, so it needs to reconnect to keep websocket working
-# message: {'message': 'HeartBeat message not received, closing the connection', 'status': 'error'}
-
 import sys
-
 sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
 
 import websockets
 import asyncio
 from admin.admin_tools import connection, logger_conf
 import json
-import threading
 import time
 
 

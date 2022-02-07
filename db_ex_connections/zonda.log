@@ -2124,3 +2124,7 @@ KeyError: 'message'
 06:19:56.391 INFO  Trade received for btcpln
 06:20:42.079 INFO  Trade received for usdtpln
 06:21:22.372 INFO  Trade received for btceur
+20:19:51.919 INFO  Trade received for maticpln
+20:19:59.259 INFO  Trade received for maticpln
+20:20:09.866 INFO  Trade received for btceur
+20:20:13.616 INFO  Trade received for xrppln

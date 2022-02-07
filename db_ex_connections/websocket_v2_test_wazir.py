@@ -92,7 +92,8 @@ class Websocket:
             time.sleep(10.0)
 
     def closed_connection(self, error_variable):
-        self.LOGGER.error(f" $$ {str(repr(error_variable))} $$ ", exc_info=True)
+        self.LOGGER.debug(f" $$ {str(repr(error_variable))} $$ ", exc_info=True)
+        self.LOGGER.warning("Received standard closing message")
         self.LOGGER.warning("Connection is closed, waiting 5sec to reconnect")
         time.sleep(5.0)
 
@@ -112,8 +113,8 @@ async def main():
                 print(response)
                 socket_class.perform_actions(response)
 
-        except (ConnectionClosedError, ConnectionClosedOK) as websocket_connetion_error:
-            socket_class.closed_connection(websocket_connetion_error)
+        except (ConnectionClosedError, ConnectionClosedOK) as websocket_connection_error:
+            socket_class.closed_connection(websocket_connection_error)
             continue
 
         except KeyboardInterrupt as stop_on_demand_error:

@@ -152,4 +152,24 @@ class SqlConst:
 if __name__ == '__main__':
     cs = SqlConst()
 
+    # cs.table_creator('gemini', 'lrcusd', 'ob')
+    # cs.table_creator('gemini', 'galausd', 'ob')
+    # cs.table_creator('gemini', 'crvusd', 'ob')
+    # cs.table_creator('gemini', 'aaveusd', 'ob')
+    # cs.table_creator('gemini', 'adausd', 'ob')
+    # cs.table_creator('gemini', 'ftmusd', 'ob')
+    # cs.table_creator('gemini', 'xrpusd', 'ob')
+    # cs.table_creator('gemini', 'sandusd', 'ob')
+    # cs.table_creator('gemini', 'filusd', 'ob')
+    # cs.table_creator('gemini', 'solusd', 'ob')
+    # cs.table_creator('gemini', 'manausd', 'ob')
+    # cs.table_creator('gemini', 'dotusd', 'ob')
+    # cs.table_creator('gemini', 'lunausd', 'ob')
+    # cs.table_creator('gemini', 'trxusd', 'ob')
+    # cs.table_creator('gemini', 'vetusd', 'ob')
+    # cs.table_creator('gemini', 'uniusd', 'ob')
+    # cs.table_creator('gemini', 'axsusd', 'ob')
+
+
+
 

@@ -121,7 +121,7 @@ async def main():
 
                 await asyncio.sleep(5 - (time.time() - st))
 
-            except (KeyError, RuntimeError,ContentTypeError) as rest_error:
+            except (KeyError, RuntimeError, ContentTypeError) as rest_error:
                 logger.error(f" $$ {str(rest_error)} $$ ", exc_info=True)
 
 
