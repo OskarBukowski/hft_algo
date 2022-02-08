@@ -142,23 +142,23 @@
         "axsusd": "axsusd"},
 
       "huobi": {
-        "btcinr": "btcinr",
-        "ethinr": "ethinr",
-        "dogeinr": "dogeinr",
-        "maticinr" : "maticinr",
-        "adainr" : "adainr",
-        "ftminr" : "ftminr",
-        "xrpinr" : "xrpinr",
-        "sandinr" : "sandinr",
-        "usdtinr" : "usdtinr",
-        "solinr": "solinr",
-        "manainr": "manainr",
-        "dotinr": "dotinr",
-        "lunainr": "lunainr",
-        "trxinr": "trxinr",
-        "vetinr": "vetinr",
+        "btcusdt": "btcusdt",
+        "ethusdt": "ethusdt",
+        "shibusdt": "shibusdt",
+        "avaxusdt" : "avaxusdt",
+        "filusdt" : "filusdt",
+        "adausdt" : "adausdt",
+        "solusdt" : "solusdt",
+        "xrpusdt" : "xrpusdt",
+        "trxusdt" : "trxusdt",
+        "galausdt": "galausdt",
+        "manausdt": "manausdt",
+        "dotusdt": "dotusdt",
         "lunausdt": "lunausdt",
-        "ethusdt": "ethusdt"}
+        "sandusdt": "sandusdt",
+        "dogeusdt": "dogeusdt",
+        "axsusdt": "axsusdt",
+        "maticusdt": "maticusdt"}
 
 
     }

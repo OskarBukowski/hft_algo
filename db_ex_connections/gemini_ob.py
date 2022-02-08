@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 
-#To do:
-#1. Add exception "ContentTypeError"
 
 import sys
 sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
+# sys.path.append("/home/obukowski/Desktop/repo/hft_algo/hft_algo")
 
 import aiohttp
 from aiohttp import ContentTypeError
@@ -57,7 +56,6 @@ async def main():
                     tasks.append(asyncio.create_task(single_url_getter(session, url_dict[k])))
 
                 responses = await asyncio.gather(*tasks)
-                print(responses)
                 for i in range(len(responses)):
                     before_db_save = time.time()
                     cursor.execute(f"""INSERT INTO gemini.{list(url_dict.keys())[i]}_ob (
@@ -108,14 +106,12 @@ async def main():
                                                         {float(responses[i]['bids'][9]['amount'])},
                                                         {int(responses[i]['bids'][9]['timestamp'])});""")
 
-                    logger.debug(f"Time of saving ob for {k}: {time.time() - before_db_save}")
+                    logger.debug(f"Time of saving ob for {list(url_dict.keys())[i]}: {time.time() - before_db_save}")
                 logger.info(f"Ob received and successfully saved into database for {[*url_dict]} ")
 
                 await asyncio.sleep(5 - (time.time() - st))
 
             except (KeyError, RuntimeError, ContentTypeError) as rest_error:
-                 logger.error(f" $$ {str(rest_error)} $$ ", exc_info=True)
-
-
+                logger.error(f" $$ {str(rest_error)} $$ ", exc_info=True)
 
 asyncio.run(main())

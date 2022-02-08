@@ -92,6 +92,7 @@ async def main():
                 st = time.time()
                 responses = await multiple_ulr_getter(session, urls)
                 if responses[0]['error'] == 0:
+                    print(responses)
                     before_db_save = time.time()
                     for i in range(len(responses) - 1):
                         cursor.execute(f"""INSERT INTO bitkub.{list(url_dict.keys())[int(i / 2)]}_ob (

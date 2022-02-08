@@ -594,3 +594,4 @@ KeyError: 'seqNo'
 11:56:59.073 INFO  Trade received for gala
 11:56:59.626 INFO  Trade received for gala
 11:56:59.930 INFO  Trade received for gala
+07:10:59.946 INFO  Ob received and successfully saved into database for ['btcthb', 'eththb', 'dogethb', 'manathb', 'usdtthb', 'adathb', 'sandthb', 'dotthb', 'sushithb', 'galathb', 'yfithb', 'linkthb', 'imxthb', 'nearthb', 'crvthb', 'unithb'] 
