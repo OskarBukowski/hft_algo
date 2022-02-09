@@ -2,6 +2,7 @@
 
 import sys
 sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
+# sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import asyncio
 import time
@@ -92,7 +93,6 @@ async def main():
                 st = time.time()
                 responses = await multiple_ulr_getter(session, urls)
                 if responses[0]['error'] == 0:
-                    print(responses)
                     before_db_save = time.time()
                     for i in range(len(responses) - 1):
                         cursor.execute(f"""INSERT INTO bitkub.{list(url_dict.keys())[int(i / 2)]}_ob (
@@ -147,13 +147,16 @@ async def main():
                     logger.info(f"Ob received and successfully saved into database for {[*url_dict]} ")
 
                 else:  # {"status": "Fail"} or other unexpected REST API responses
-                    logger.error(f" $$ Connection status: {str(responses[0]['error'])} if not 0 --> CHECK $$ ",
-                                 exc_info=True)
+                    logger.error(
+                        f" $$ Connection status: {str(responses[0]['error'])} if not 0 --> CHECK $$ ", exc_info=True)
+                    time.sleep(5.0)
 
                 await asyncio.sleep(5 - (time.time() - st))
 
-            except (KeyError, RuntimeError,ContentTypeError) as rest_error:
+            except (KeyError, RuntimeError, ContentTypeError) as rest_error:
                 logger.error(f" $$ {str(rest_error)} $$ ", exc_info=True)
+                continue
 
 
-asyncio.run(main())
+if __name__ == '__main__':
+    asyncio.run(main())

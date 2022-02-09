@@ -3,7 +3,7 @@
 
 import sys
 sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
-# sys.path.append("/home/obukowski/Desktop/repo/hft_algo/hft_algo")
+# sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import aiohttp
 from aiohttp import ContentTypeError
@@ -114,4 +114,5 @@ async def main():
             except (KeyError, RuntimeError, ContentTypeError) as rest_error:
                 logger.error(f" $$ {str(rest_error)} $$ ", exc_info=True)
 
-asyncio.run(main())
+if __name__ == '__main__':
+    asyncio.run(main())

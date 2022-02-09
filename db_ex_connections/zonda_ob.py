@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
-#To do:
-#1. Add exception "ContentTypeError"
+
 
 import sys
 sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
+# sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import aiohttp
 from aiohttp import ContentTypeError
@@ -57,7 +57,6 @@ async def main():
                 responses = await asyncio.gather(*tasks)
 
                 if responses[0]['status'] == "Ok":
-                    print(responses)
                     before_db_save = time.time()
 
                     for i in range(0, len(responses)):
@@ -114,11 +113,13 @@ async def main():
 
                 else:  # {"status": "Fail"} or other unexpected REST API responses
                     logger.error(f" $$ Connection status: {str(responses[0]['status'])} $$ ", exc_info=True)
+                    time.sleep(5.0)
 
                 await asyncio.sleep(5 - (time.time() - st))
 
             except (KeyError, RuntimeError, ContentTypeError) as rest_error:
                 logger.error(f" $$ {str(rest_error)} $$ ", exc_info=True)
+                continue
 
-
-asyncio.run(main())
+if __name__ == '__main__':
+    asyncio.run(main())

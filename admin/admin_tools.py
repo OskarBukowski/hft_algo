@@ -5,7 +5,7 @@
 #######
 
 import sys
-sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
+sys.path.append("C:/Users/oskar/Desktop/hft_algo")
 
 import psycopg2
 from pathlib import Path
@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 import os
 import logging
 
-env_path = Path('C:/Users/oskar/Desktop/hft_algo/hft_algo/admin') / '.env'
+env_path = Path('C:/Users/oskar/Desktop/hft_algo/admin') / '.env'
 load_dotenv(dotenv_path=env_path)
 
 
@@ -152,42 +152,41 @@ class SqlConst:
 if __name__ == '__main__':
     cs = SqlConst()
 
-    # cs.table_creator_2('huobi', 'btcusdt', 'trades')
-    # cs.table_creator_2('huobi', 'ethusdt', 'trades')
-    # cs.table_creator_2('huobi', 'shibusdt', 'trades')
-    # cs.table_creator_2('huobi', 'avaxusdt', 'trades')
-    # cs.table_creator_2('huobi', 'filusdt', 'trades')
-    # cs.table_creator_2('huobi', 'adausdt', 'trades')
-    # cs.table_creator_2('huobi', 'solusdt', 'trades')
-    # cs.table_creator_2('huobi', 'xrpusdt', 'trades')
-    # cs.table_creator_2('huobi', 'trxusdt', 'trades')
-    # cs.table_creator_2('huobi', 'galausdt', 'trades')
-    # cs.table_creator_2('huobi', 'manausdt', 'trades')
-    # cs.table_creator_2('huobi', 'dotusdt', 'trades')
-    # cs.table_creator_2('huobi', 'lunausdt', 'trades')
-    # cs.table_creator_2('huobi', 'sandusdt', 'trades')
-    # cs.table_creator_2('huobi', 'dogeusdt', 'trades')
-    # cs.table_creator_2('huobi', 'axsusdt', 'trades')
-    # cs.table_creator_2('huobi', 'maticusdt', 'trades')
-    #
-    #
-    # cs.table_creator('huobi', 'btcusdt', 'ob')
-    # cs.table_creator('huobi', 'ethusdt', 'ob')
-    # cs.table_creator('huobi', 'shibusdt', 'ob')
-    # cs.table_creator('huobi', 'avaxusdt', 'ob')
-    # cs.table_creator('huobi', 'filusdt', 'ob')
-    # cs.table_creator('huobi', 'adausdt', 'ob')
-    # cs.table_creator('huobi', 'solusdt', 'ob')
-    # cs.table_creator('huobi', 'xrpusdt', 'ob')
-    # cs.table_creator('huobi', 'trxusdt', 'ob')
-    # cs.table_creator('huobi', 'galausdt', 'ob')
-    # cs.table_creator('huobi', 'manausdt', 'ob')
-    # cs.table_creator('huobi', 'dotusdt', 'ob')
-    # cs.table_creator('huobi', 'lunausdt', 'ob')
-    # cs.table_creator('huobi', 'sandusdt', 'ob')
-    # cs.table_creator('huobi', 'dogeusdt', 'ob')
-    # cs.table_creator('huobi', 'axsusdt', 'ob')
-    # cs.table_creator('huobi', 'maticusdt', 'ob')
+    cs.table_creator_2('gemini', 'btcusd', 'trades')
+    cs.table_creator_2('gemini', 'ethusd', 'trades')
+    cs.table_creator_2('gemini', 'dogeusd', 'trades')
+    cs.table_creator_2('gemini', 'maticusd', 'trades')
+    cs.table_creator_2('gemini', 'sushiusd', 'trades')
+    cs.table_creator_2('gemini', 'ftmusd', 'trades')
+    cs.table_creator_2('gemini', 'linkusd', 'trades')
+    cs.table_creator_2('gemini', 'sandusd', 'trades')
+    cs.table_creator_2('gemini', 'filusd', 'trades')
+    cs.table_creator_2('gemini', 'galausd', 'trades')
+    cs.table_creator_2('gemini', 'manausd', 'trades')
+    cs.table_creator_2('gemini', 'lrcusd', 'trades')
+    cs.table_creator_2('gemini', 'lunausd', 'trades')
+    cs.table_creator_2('gemini', 'crvusd', 'trades')
+    cs.table_creator_2('gemini', 'aaveusd', 'trades')
+    cs.table_creator_2('gemini', 'uniusd', 'trades')
+    cs.table_creator_2('gemini', 'axsusd', 'trades')
+
+    cs.table_creator('gemini', 'btcusd', 'ob')
+    cs.table_creator('gemini', 'ethusd', 'ob')
+    cs.table_creator('gemini', 'dogeusd', 'ob')
+    cs.table_creator('gemini', 'maticusd', 'ob')
+    cs.table_creator('gemini', 'sushiusd', 'ob')
+    cs.table_creator('gemini', 'ftmusd', 'ob')
+    cs.table_creator('gemini', 'linkusd', 'ob')
+    cs.table_creator('gemini', 'sandusd', 'ob')
+    cs.table_creator('gemini', 'filusd', 'ob')
+    cs.table_creator('gemini', 'galausd', 'ob')
+    cs.table_creator('gemini', 'manausd', 'ob')
+    cs.table_creator('gemini', 'lrcusd', 'ob')
+    cs.table_creator('gemini', 'lunausd', 'ob')
+    cs.table_creator('gemini', 'crvusd', 'ob')
+    cs.table_creator('gemini', 'aaveusd', 'ob')
+    cs.table_creator('gemini', 'uniusd', 'ob')
+    cs.table_creator('gemini', 'axsusd', 'ob')
 
 
 

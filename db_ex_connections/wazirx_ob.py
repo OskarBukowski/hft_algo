@@ -8,6 +8,7 @@
 
 import sys
 sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
+# sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import asyncio
 from admin.admin_tools import connection, logger_conf
@@ -125,4 +126,5 @@ async def main():
                 logger.error(f" $$ {str(rest_error)} $$ ", exc_info=True)
 
 
-asyncio.run(main())
+if __name__ == '__main__':
+    asyncio.run(main())
