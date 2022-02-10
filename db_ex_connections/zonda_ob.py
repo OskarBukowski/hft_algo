@@ -7,7 +7,7 @@ sys.path.append("C:/Users/oskar/Desktop/hft_algo/")
 # sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import aiohttp
-from aiohttp import ContentTypeError
+from aiohttp import ContentTypeError, ClientConnectionError
 import asyncio
 import time
 import json
@@ -132,7 +132,7 @@ if __name__ == '__main__':
     while True:
         try:
             asyncio.run(main())
-        except (RuntimeError, KeyboardInterrupt) as kill:
+        except (RuntimeError, KeyboardInterrupt, ClientConnectionError) as kill:
             logging_handler().error(f" $$ System's try to kill process, error: {str(kill)} $$ ", exc_info=True)
             continue
 
