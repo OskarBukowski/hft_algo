@@ -3,7 +3,7 @@
 
 
 import sys
-sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
+sys.path.append("C:/Users/oskar/Desktop/hft_algo/")
 # sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import aiohttp
@@ -12,6 +12,8 @@ import asyncio
 import time
 import json
 from admin.admin_tools import connection, logger_conf
+import atexit
+import signal
 
 
 async def single_url_getter(session, url):
@@ -20,9 +22,14 @@ async def single_url_getter(session, url):
         return message
 
 
+def logging_handler():
+    return logger_conf("../db_ex_connections/zonda.log")
+
+
+
 async def main():
     cursor = connection()
-    logger = logger_conf("../db_ex_connections/zonda.log")
+    logger = logging_handler()
     async with aiohttp.ClientSession() as session:
 
         exchange_spec_dict = json.load(open('../admin/exchanges'))
@@ -122,4 +129,12 @@ async def main():
                 continue
 
 if __name__ == '__main__':
-    asyncio.run(main())
+    while True:
+        try:
+            asyncio.run(main())
+        except (RuntimeError, KeyboardInterrupt) as kill:
+            logging_handler().error(f" $$ System's try to kill process, error: {str(kill)} $$ ", exc_info=True)
+            continue
+
+
+
