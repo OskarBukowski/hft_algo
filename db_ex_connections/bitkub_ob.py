@@ -9,7 +9,7 @@ import time
 import json
 from admin.admin_tools import connection, logger_conf, dict_values_getter
 import aiohttp
-from aiohttp import ContentTypeError
+from aiohttp import ContentTypeError, ClientOSError, ClientConnectionError
 
 
 async def single_url_getter(session, url):
@@ -26,9 +26,13 @@ async def multiple_ulr_getter(session, urls):
     return results
 
 
+def logging_handler():
+    return logger_conf("../db_ex_connections/bitkub.log")
+
+
 async def main():
     cursor = connection()
-    logger = logger_conf("../db_ex_connections/bitkub.log")
+    logger = logging_handler()
 
     async with aiohttp.ClientSession() as session:
 
@@ -153,10 +157,15 @@ async def main():
 
                 await asyncio.sleep(5 - (time.time() - st))
 
-            except (KeyError, RuntimeError, ContentTypeError) as rest_error:
+            except (KeyError, RuntimeError, ContentTypeError, ClientOSError) as rest_error:
                 logger.error(f" $$ {str(rest_error)} $$ ", exc_info=True)
                 continue
 
 
 if __name__ == '__main__':
-    asyncio.run(main())
+    while True:
+        try:
+            asyncio.run(main())
+        except (RuntimeError, KeyboardInterrupt, ClientConnectionError, ClientOSError) as kill:
+            logging_handler().error(f" $$ System's try to kill process, error: {str(kill)} $$ ", exc_info=True)
+            continue

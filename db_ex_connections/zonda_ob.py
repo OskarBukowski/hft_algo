@@ -7,7 +7,7 @@ sys.path.append("C:/Users/oskar/Desktop/hft_algo/")
 # sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import aiohttp
-from aiohttp import ContentTypeError, ClientConnectionError
+from aiohttp import ContentTypeError, ClientConnectionError, ClientOSError
 import asyncio
 import time
 import json
@@ -24,7 +24,6 @@ async def single_url_getter(session, url):
 
 def logging_handler():
     return logger_conf("../db_ex_connections/zonda.log")
-
 
 
 async def main():
@@ -124,7 +123,7 @@ async def main():
 
                 await asyncio.sleep(5 - (time.time() - st))
 
-            except (KeyError, RuntimeError, ContentTypeError) as rest_error:
+            except (KeyError, ContentTypeError) as rest_error:
                 logger.error(f" $$ {str(rest_error)} $$ ", exc_info=True)
                 continue
 
@@ -132,7 +131,7 @@ if __name__ == '__main__':
     while True:
         try:
             asyncio.run(main())
-        except (RuntimeError, KeyboardInterrupt, ClientConnectionError) as kill:
+        except (RuntimeError, KeyboardInterrupt, ClientConnectionError, ClientOSError) as kill:
             logging_handler().error(f" $$ System's try to kill process, error: {str(kill)} $$ ", exc_info=True)
             continue
 

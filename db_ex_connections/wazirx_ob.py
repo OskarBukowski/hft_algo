@@ -15,7 +15,7 @@ from admin.admin_tools import connection, logger_conf
 import time
 import json
 import aiohttp
-from aiohttp import ContentTypeError
+from aiohttp import ContentTypeError, ClientOSError, ClientConnectionError
 
 
 async def single_url_getter(session, url):
@@ -24,9 +24,13 @@ async def single_url_getter(session, url):
         return message
 
 
+def logging_handler():
+    return logger_conf("../db_ex_connections/wazirx.log")
+
+
 async def main():
     cursor = connection()
-    logger = logger_conf("../db_ex_connections/wazirx.log")
+    logger = logging_handler()
     async with aiohttp.ClientSession() as session:
 
         exchange_spec_dict = json.load(open('../admin/exchanges'))
@@ -127,4 +131,9 @@ async def main():
 
 
 if __name__ == '__main__':
-    asyncio.run(main())
+    while True:
+        try:
+            asyncio.run(main())
+        except (RuntimeError, KeyboardInterrupt, ClientConnectionError, ClientOSError) as kill:
+            logging_handler().error(f" $$ System's try to kill process, error: {str(kill)} $$ ", exc_info=True)
+            continue

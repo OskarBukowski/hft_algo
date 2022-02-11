@@ -6,7 +6,7 @@ sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
 # sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import aiohttp
-from aiohttp import ContentTypeError
+from aiohttp import ContentTypeError, ClientOSError, ClientConnectionError
 import asyncio
 import time
 import json
@@ -19,9 +19,13 @@ async def single_url_getter(session, url):
         return message
 
 
+def logging_handler():
+    return logger_conf("../db_ex_connections/gemini.log")
+
+
 async def main():
     cursor = connection()
-    logger = logger_conf("../db_ex_connections/gemini.log")
+    logger = logging_handler()
     async with aiohttp.ClientSession() as session:
 
         exchange_spec_dict = json.load(open('../admin/exchanges'))
@@ -115,4 +119,9 @@ async def main():
                 logger.error(f" $$ {str(rest_error)} $$ ", exc_info=True)
 
 if __name__ == '__main__':
-    asyncio.run(main())
+    while True:
+        try:
+            asyncio.run(main())
+        except (RuntimeError, KeyboardInterrupt, ClientConnectionError, ClientOSError) as kill:
+            logging_handler().error(f" $$ System's try to kill process, error: {str(kill)} $$ ", exc_info=True)
+            continue
