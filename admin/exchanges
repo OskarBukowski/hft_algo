@@ -39,6 +39,26 @@
       "maker_fee": 0.0,
       "taker_fee":  0.0,
       "coingecko": "https://www.coingecko.com/en/exchanges/cex"
+    },
+
+      "gemini": {
+      "rest_url": "https://api.gemini.com/v1",
+      "websocket_url": "wss://api.gemini.com/v1",
+      "api_key": "",
+      "secret_key": "",
+      "maker_fee": 0.0,
+      "taker_fee":  0.0,
+      "coingecko": "https://www.coingecko.com/en/exchanges/gemini"
+    },
+
+      "huobi": {
+      "rest_url": "https://api.huobi.pro/",
+      "websocket_url": "wss://api.huobi.pro/ws",
+      "api_key": "",
+      "secret_key": "",
+      "maker_fee": 0.0,
+      "taker_fee":  0.0,
+      "coingecko": "https://www.coingecko.com/en/exchanges/huobi"
     }
   },
 
@@ -97,14 +117,48 @@
         "trxinr": "trxinr",
         "vetinr": "vetinr",
         "lunausdt": "lunausdt",
-        "ethusdt": "ethusdt"
-
-      },
+        "ethusdt": "ethusdt"},
 
       "cex": {
-        "btcusd": "BTC/USD"
+        "btcusd": "BTC/USD"},
 
-      }
+      "gemini": {
+        "btcusd": "btcusd",
+        "ethusd": "ethusd",
+        "dogeusd": "dogeusd",
+        "maticusd": "maticusd",
+        "sushiusd" : "sushiusd",
+        "ftmusd" : "ftmusd",
+        "linkusd" : "linkusd",
+        "sandusd" : "sandusd",
+        "filusd" : "filusd",
+        "galausd": "galausd",
+        "manausd": "manausd",
+        "lrcusd": "lrcusd",
+        "lunausd": "lunausd",
+        "crvusd": "crvusd",
+        "aaveusd": "aaveusd",
+        "uniusd": "uniusd",
+        "axsusd": "axsusd"},
+
+      "huobi": {
+        "btcusdt": "btcusdt",
+        "ethusdt": "ethusdt",
+        "shibusdt": "shibusdt",
+        "avaxusdt" : "avaxusdt",
+        "filusdt" : "filusdt",
+        "adausdt" : "adausdt",
+        "solusdt" : "solusdt",
+        "xrpusdt" : "xrpusdt",
+        "trxusdt" : "trxusdt",
+        "galausdt": "galausdt",
+        "manausdt": "manausdt",
+        "dotusdt": "dotusdt",
+        "lunausdt": "lunausdt",
+        "sandusdt": "sandusdt",
+        "dogeusdt": "dogeusdt",
+        "axsusdt": "axsusdt",
+        "maticusdt": "maticusdt"}
 
 
     }

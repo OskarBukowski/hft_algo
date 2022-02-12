@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 
-#To do:
-#1. Add exception "ContentTypeError"
+
 
 import sys
-sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
+sys.path.append("C:/Users/oskar/Desktop/hft_algo/")
+sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import aiohttp
-from aiohttp import ContentTypeError
+from aiohttp import ContentTypeError, ClientConnectionError, ClientOSError
 import asyncio
+from asyncio.exceptions import TimeoutError
 import time
 import json
 from admin.admin_tools import connection, logger_conf
@@ -20,9 +21,13 @@ async def single_url_getter(session, url):
         return message
 
 
+def logging_handler():
+    return logger_conf("../db_ex_connections/zonda.log")
+
+
 async def main():
     cursor = connection()
-    logger = logger_conf("../db_ex_connections/zonda.log")
+    logger = logging_handler()
     async with aiohttp.ClientSession() as session:
 
         exchange_spec_dict = json.load(open('../admin/exchanges'))
@@ -57,7 +62,6 @@ async def main():
                 responses = await asyncio.gather(*tasks)
 
                 if responses[0]['status'] == "Ok":
-                    print(responses)
                     before_db_save = time.time()
 
                     for i in range(0, len(responses)):
@@ -114,11 +118,21 @@ async def main():
 
                 else:  # {"status": "Fail"} or other unexpected REST API responses
                     logger.error(f" $$ Connection status: {str(responses[0]['status'])} $$ ", exc_info=True)
+                    time.sleep(5.0)
 
                 await asyncio.sleep(5 - (time.time() - st))
 
-            except (KeyError, RuntimeError, ContentTypeError) as rest_error:
+            except (KeyError, ContentTypeError) as rest_error:
                 logger.error(f" $$ {str(rest_error)} $$ ", exc_info=True)
+                continue
+
+if __name__ == '__main__':
+    while True:
+        try:
+            asyncio.run(main())
+        except (RuntimeError, KeyboardInterrupt, ClientConnectionError, ClientOSError, TimeoutError) as kill:
+            logging_handler().error(f" $$ Connection kill, error: {str(kill)} $$ ", exc_info=True)
+            continue
 
 
-asyncio.run(main())
+

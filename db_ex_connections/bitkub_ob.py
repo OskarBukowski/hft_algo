@@ -2,13 +2,15 @@
 
 import sys
 sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
+sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import asyncio
+from asyncio.exceptions import TimeoutError
 import time
 import json
 from admin.admin_tools import connection, logger_conf, dict_values_getter
 import aiohttp
-from aiohttp import ContentTypeError
+from aiohttp import ContentTypeError, ClientOSError, ClientConnectionError
 
 
 async def single_url_getter(session, url):
@@ -25,9 +27,13 @@ async def multiple_ulr_getter(session, urls):
     return results
 
 
+def logging_handler():
+    return logger_conf("../db_ex_connections/bitkub.log")
+
+
 async def main():
     cursor = connection()
-    logger = logger_conf("../db_ex_connections/bitkub.log")
+    logger = logging_handler()
 
     async with aiohttp.ClientSession() as session:
 
@@ -146,13 +152,21 @@ async def main():
                     logger.info(f"Ob received and successfully saved into database for {[*url_dict]} ")
 
                 else:  # {"status": "Fail"} or other unexpected REST API responses
-                    logger.error(f" $$ Connection status: {str(responses[0]['error'])} if not 0 --> CHECK $$ ",
-                                 exc_info=True)
+                    logger.error(
+                        f" $$ Connection status: {str(responses[0]['error'])} if not 0 --> CHECK $$ ", exc_info=True)
+                    time.sleep(5.0)
 
                 await asyncio.sleep(5 - (time.time() - st))
 
-            except (KeyError, RuntimeError,ContentTypeError) as rest_error:
+            except (KeyError, RuntimeError, ContentTypeError, ClientOSError) as rest_error:
                 logger.error(f" $$ {str(rest_error)} $$ ", exc_info=True)
+                continue
 
 
-asyncio.run(main())
+if __name__ == '__main__':
+    while True:
+        try:
+            asyncio.run(main())
+        except (RuntimeError, KeyboardInterrupt, ClientConnectionError, ClientOSError, TimeoutError) as kill:
+            logging_handler().error(f" $$ Connection kill, error: {str(kill)} $$ ", exc_info=True)
+            continue
