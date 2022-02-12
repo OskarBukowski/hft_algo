@@ -8,9 +8,10 @@
 
 import sys
 sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
-# sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
+sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import asyncio
+from asyncio.exceptions import TimeoutError
 from admin.admin_tools import connection, logger_conf
 import time
 import json
@@ -134,6 +135,6 @@ if __name__ == '__main__':
     while True:
         try:
             asyncio.run(main())
-        except (RuntimeError, KeyboardInterrupt, ClientConnectionError, ClientOSError) as kill:
-            logging_handler().error(f" $$ System's try to kill process, error: {str(kill)} $$ ", exc_info=True)
+        except (RuntimeError, KeyboardInterrupt, ClientConnectionError, ClientOSError, TimeoutError) as kill:
+            logging_handler().error(f" $$ Connection kill, error: {str(kill)} $$ ", exc_info=True)
             continue

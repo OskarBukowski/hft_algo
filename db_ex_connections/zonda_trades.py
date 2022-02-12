@@ -3,7 +3,7 @@
 
 import sys
 sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
-# sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
+sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import websockets
 from websockets import ConnectionClosedError, ConnectionClosedOK
@@ -108,7 +108,9 @@ class Websocket:
         self.LOGGER.warning("Connection is closed, waiting 5sec to reconnect")
         time.sleep(5.0)
 
-    def keyboard_interrupt(self):
+    def keyboard_interrupt(self, error_variable):
+        self.LOGGER.debug(f" $$ {str(repr(error_variable))} $$ ", exc_info=True)
+        self.LOGGER.warning("Received closing order")
         self.LOGGER.info("Closing application")
 
 
@@ -127,7 +129,7 @@ async def main():
             continue
 
         except KeyboardInterrupt as stop_on_demand_error:
-            socket_class.closed_connection(stop_on_demand_error)
+            socket_class.keyboard_interrupt(stop_on_demand_error)
             break
 
 

@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 
 
-
 import sys
 sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
-# sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
+sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import asyncio
+from asyncio.exceptions import TimeoutError
 from admin.admin_tools import connection, logger_conf
 import time
 import json
 import aiohttp
-from aiohttp import ContentTypeError
+from aiohttp import ContentTypeError, ClientOSError, ClientConnectionError
 
 
 async def single_url_getter(session, url):
@@ -20,9 +20,13 @@ async def single_url_getter(session, url):
         return message
 
 
+def logging_handler():
+    return logger_conf("../db_ex_connections/huobi.log")
+
+
 async def main():
     cursor = connection()
-    logger = logger_conf("../db_ex_connections/huobi.log")
+    logger = logging_handler()
     async with aiohttp.ClientSession() as session:
 
         exchange_spec_dict = json.load(open('../admin/exchanges'))
@@ -58,8 +62,6 @@ async def main():
                 responses = await asyncio.gather(*tasks)
 
                 if responses[0]['status'] == 'ok':
-                    print(responses)
-
                     for i in range(0, len(responses)):
                         before_db_save = time.time()
                         cursor.execute(f"""INSERT INTO huobi.{responses[i]['ch'].split(".")[1]}_ob (
@@ -127,4 +129,9 @@ async def main():
 
 
 if __name__ == '__main__':
-    asyncio.run(main())
+    while True:
+        try:
+            asyncio.run(main())
+        except (RuntimeError, KeyboardInterrupt, ClientConnectionError, ClientOSError, TimeoutError) as kill:
+            logging_handler().error(f" $$ Connection kill, error: {str(kill)} $$ ", exc_info=True)
+            continue

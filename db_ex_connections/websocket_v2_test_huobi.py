@@ -1,53 +1,44 @@
 #!/usr/bin/env python3
 
-
 import sys
+
 sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
-# sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
+sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import websockets
 from websockets import ConnectionClosedError, ConnectionClosedOK
 import asyncio
 import json
-import psycopg2
 import time
-from json.decoder import JSONDecodeError
 from admin.admin_tools import connection, logger_conf
+import gzip
+import psycopg2
 
 
 class Websocket:
     CURSOR = connection()
     LOGGER = logger_conf("../db_ex_connections/huobi.log")
     SUBSCRIPTIONS = {
-        'btcpln': '{"action": "subscribe-public","module": "trading","path": "transactions/btc-pln"}',
-        'ethpln': '{"action": "subscribe-public","module": "trading","path": "transactions/eth-pln"}',
-        'lunapln': '{"action": "subscribe-public","module": "trading","path": "transactions/luna-pln"}',
-        'ftmpln': '{"action": "subscribe-public","module": "trading","path": "transactions/ftm-pln"}',
-        'btceur': '{"action": "subscribe-public","module": "trading","path": "transactions/btc-eur"}',
-        'xrppln': '{"action": "subscribe-public","module": "trading","path": "transactions/xrp-pln"}',
-        'etheur': '{"action": "subscribe-public","module": "trading","path": "transactions/eth-eur"}',
-        'adapln': '{"action": "subscribe-public","module": "trading","path": "transactions/ada-pln"}',
-        'maticpln': '{"action": "subscribe-public","module": "trading","path": "transactions/matic-pln"}',
-        'usdtpln': '{"action": "subscribe-public","module": "trading","path": "transactions/usdt-pln"}',
-        'dotpln': '{"action": "subscribe-public","module": "trading","path": "transactions/dot-pln"}',
-        'avaxpln': '{"action": "subscribe-public","module": "trading","path": "transactions/avax-pln"}',
-        'dogepln': '{"action": "subscribe-public","module": "trading","path": "transactions/doge-pln"}',
-        'trxpln': '{"action": "subscribe-public","module": "trading","path": "transactions/trx-pln"}',
-        'manapln': '{"action": "subscribe-public","module": "trading","path": "transactions/mana-pln"}',
-        'linkpln': '{"action": "subscribe-public","module": "trading","path": "transactions/link-pln"}'
+        'btcusdt': '{"sub": "market.btcusdt.trade.detail","id": "id1"}',
+        'ethusdt': '{"sub": "market.ethusdt.trade.detail","id": "id1"}',
+        'shibusdt': '{"sub": "market.shibusdt.trade.detail","id": "id1"}',
+        'avaxusdt': '{"sub": "market.avaxusdt.trade.detail","id": "id1"}',
+        'filusdt': '{"sub": "market.filusdt.trade.detail","id": "id1"}',
+        'adausdt': '{"sub": "market.adausdt.trade.detail","id": "id1"}',
+        'solusdt': '{"sub": "market.solusdt.trade.detail","id": "id1"}',
+        'xrpusdt': '{"sub": "market.xrpusdt.trade.detail","id": "id1"}',
+        'trxusdt': '{"sub": "market.trxusdt.trade.detail","id": "id1"}',
+        'galausdt': '{"sub": "market.galausdt.trade.detail","id": "id1"}',
+        'manausdt': '{"sub": "market.manausdt.trade.detail","id": "id1"}',
+        'dotusdt': '{"sub": "market.dotusdt.trade.detail","id": "id1"}',
+        'lunausdt': '{"sub": "market.lunausdt.trade.detail","id": "id1"}',
+        'sandusdt': '{"sub": "market.sandusdt.trade.detail","id": "id1"}',
+        'dogeusdt': '{"sub": "market.dogeusdt.trade.detail","id": "id1"}',
+        'axsusdt': '{"sub": "market.axsusdt.trade.detail","id": "id1"}',
+        'maticusdt': '{"sub": "market.maticusdt.trade.detail","id": "id1"}'
     }
 
-    URL = "wss://api.zonda.exchange/websocket/"
-
-
-    def timer(self):
-        """Simple decorator that counts the time of execution"""
-        def time_counter(*args):
-            start = time.time()
-            val = self(*args)
-            print(f"Time of execution: {self.__name__}: {time.time() - start}")
-            return val
-        return time_counter()
+    URL = "wss://api.huobi.pro/ws"
 
     def open_connection(self):
         return websockets.connect(self.URL, ping_timeout=30, close_timeout=20)
@@ -56,50 +47,53 @@ class Websocket:
         for k, v in self.SUBSCRIPTIONS.items():
             await websocket.send(v)
 
-    async def heartbeat_check(self, session):
-        await session.send('{"action": "ping"}')
-        response = await session.recv()
-        if response == '{"action":"pong"}':
-            await self.send_subscribe_message(session)
-        else:
-            self.LOGGER.info(f"No heartbeat, check the zondaglobal.com API details")
-            self.LOGGER.info(f"Check maintenance")
-            time.sleep(10.0)
+    async def heartbeat_response_creator(self, response, session):
+        """example heartbeat check: {"ping":1644437537572}"""
+        await session.send('{{"pong": {}}}'.format(response['ping']))
+        self.LOGGER.info("Heartbeat message sent with timestamp {}".format(response['ping']))
 
-    def perform_actions(self, response):
-        """expected response: {'action': 'push', 'topic': 'trading/transactions/usdt-pln',
-                                'message': {'transactions': [{'id': 'b3379207-87d5-11ec-ab8e-0242ac11000f',
-                                't': '1644211244619', 'a': '14.25', 'r': '4', 'ty': 'Buy'}]},
-                                'timestamp': '1644211244619', 'seqNo': 467515}"""
+    def response_mapping(self, response_keys_tuple, response):
+        """dict_keys(['id', 'status', 'subbed', 'ts'])
+           dict_keys(['ch', 'ts', 'tick'])"""
+
+        mapping_dict = {tuple(['id', 'status', 'subbed', 'ts']): self.subscription_confirmation,
+                        tuple(['ch', 'ts', 'tick']): self.database_save}
+
+        return mapping_dict[response_keys_tuple](response)
+
+    def subscription_confirmation(self, response):
+        self.LOGGER.info(f"Trades stream subscription confirmed for {response['subbed'].split('.')[1]}")
+
+    def database_save(self, response):
+        """{'ch': 'market.btcusdt.trade.detail',
+            'ts': 1644438174613,
+            'tick': {'id': 149028017931,
+            'ts': 1644438174611,
+            'data': [
+                   {'id': 149028017931472898124980116,
+                    'ts': 1644438174611,
+                    'tradeId': 102627793342,
+                    'amount': 0.000330785964198955,
+                    'price': 44466.86,
+                    'direction': 'buy'}]}}"""
         try:
-            if response['action'] == "push":
-                symbol = str(response['topic'].split('/')[2].replace("-", ""))
-                try:
-                    st = time.time()
-                    self.CURSOR.execute(f"""INSERT INTO zonda.{symbol}_trades (id, price, volume, "timestamp")
-                                        VALUES (
-                                                '{str(response['message']['transactions'][0]['id'])}',
-                                                {float(response['message']['transactions'][0]['r'])},
-                                                {float(response['message']['transactions'][0]['a'])},
-                                                {int(response['timestamp'])}
-                                                );""")
+            for resp in response['tick']['data']:
+                st = time.time()
+                self.CURSOR.execute(f"""INSERT INTO huobi.{response['ch'].split(".")[1]}_trades (id, price, volume, "timestamp")
+                                    VALUES (
+                                            '{str(resp['tradeId'])}',
+                                            {float(resp['price'])},
+                                            {float(resp['amount'])},
+                                            {int(resp['ts'])}
+                                            );""")
 
-                    self.LOGGER.info(f"Trade received for {symbol}")
-                    self.LOGGER.debug(
-                        f"""Trade received on timestamp: {response['timestamp']} for {symbol},
-                        saving in database time: {time.time() - st}""")
+                self.LOGGER.info(f"Trade received for {response['ch'].split('.')[1]}")
+                self.LOGGER.debug(
+                    f"""Trade received on timestamp: {response['tick']['data'][0]['ts']} for {response['ch'].split(".")[1]},
+                    saving in database time: {time.time() - st}""")
 
-                except psycopg2.Error as database_saving_error:
-                    self.LOGGER.error(f" $$ {str(repr(database_saving_error))} $$ ", exc_info=True)
-                    time.sleep(10.0)
-            else:
-                try:
-                    self.LOGGER.info(f"@Subscribed for: {response['path']}")
-                except KeyError as message_error:
-                    self.LOGGER.error(f" $$ {str(repr(message_error))} $$ ", exc_info=True)
-
-        except (TypeError, JSONDecodeError) as received_message_error:
-            self.LOGGER.error(f" $$ {str(repr(received_message_error))} $$ ", exc_info=True)
+        except psycopg2.Error as database_saving_error:
+            self.LOGGER.error(f" $$ {str(repr(database_saving_error))} $$ ", exc_info=True)
             time.sleep(10.0)
 
     def closed_connection(self, error_variable):
@@ -108,7 +102,9 @@ class Websocket:
         self.LOGGER.warning("Connection is closed, waiting 5sec to reconnect")
         time.sleep(5.0)
 
-    def keyboard_interrupt(self):
+    def keyboard_interrupt(self, error_variable):
+        self.LOGGER.debug(f" $$ {str(repr(error_variable))} $$ ", exc_info=True)
+        self.LOGGER.warning("Received closing order")
         self.LOGGER.info("Closing application")
 
 
@@ -119,15 +115,22 @@ async def main():
             await socket_class.send_subscribe_message(wss)
             while True:
                 resp = await wss.recv()
-                response = json.loads(resp)
-                socket_class.perform_actions(response)
+                response = json.loads(gzip.decompress(resp).decode('utf-8'))
+                try:
+                    if list(response.keys()) == ['ping']:
+                        await socket_class.heartbeat_response_creator(response, wss)
+                    else:
+                        socket_class.response_mapping(tuple(list(response.keys())), response)
+
+                except KeyError as unknown_message:
+                    socket_class.LOGGER.error(f" $$ ----- {str(repr(unknown_message))} $$ ", exc_info=True)
 
         except (ConnectionClosedError, ConnectionClosedOK) as websocket_connection_error:
             socket_class.closed_connection(websocket_connection_error)
             continue
 
         except KeyboardInterrupt as stop_on_demand_error:
-            socket_class.closed_connection(stop_on_demand_error)
+            socket_class.keyboard_interrupt(stop_on_demand_error)
             break
 
 
