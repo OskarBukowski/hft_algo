@@ -453,3 +453,89 @@ KeyError: 'message'
 11:34:11.473 INFO  Ob received for BTC-PLN timestamp: 1644748451426
 11:34:11.538 INFO  Ob received for BTC-PLN timestamp: 1644748451470
 11:34:11.667 INFO  Ob received for BTC-PLN timestamp: 1644748451606
+05:20:09.999 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\algo\zonda_async_socket_ob_update.py", line 22, in main
+    f"Ob received for {message_recv['message']['changes'][0]['marketCode']} timestamp: {message_recv['message']['timestamp']}")
+KeyError: 'message'
+05:20:10.546 INFO  Ob received for BTC-PLN timestamp: 1644898813004
+05:20:11.046 INFO  Ob received for BTC-PLN timestamp: 1644898813547
+05:20:11.668 INFO  Ob received for BTC-PLN timestamp: 1644898814077
+05:20:12.183 INFO  Ob received for BTC-PLN timestamp: 1644898814607
+05:20:12.590 INFO  Ob received for BTC-PLN timestamp: 1644898815132
+05:20:13.626 INFO  Ob received for BTC-PLN timestamp: 1644898816170
+05:20:14.147 INFO  Ob received for BTC-PLN timestamp: 1644898816694
+05:20:14.741 INFO  Ob received for BTC-PLN timestamp: 1644898817211
+05:20:15.760 INFO  Ob received for BTC-PLN timestamp: 1644898818251
+05:20:16.275 INFO  Ob received for BTC-PLN timestamp: 1644898818770
+05:20:16.783 INFO  Ob received for BTC-PLN timestamp: 1644898819291
+05:20:18.419 INFO  Ob received for BTC-PLN timestamp: 1644898820866
+05:20:18.935 INFO  Ob received for BTC-PLN timestamp: 1644898821389
+05:20:19.445 INFO  Ob received for BTC-PLN timestamp: 1644898821921
+05:20:19.966 INFO  Ob received for BTC-PLN timestamp: 1644898822455
+05:20:20.438 INFO  Ob received for BTC-PLN timestamp: 1644898822985
+05:20:21.089 INFO  Ob received for BTC-PLN timestamp: 1644898823532
+05:20:21.596 INFO  Ob received for BTC-PLN timestamp: 1644898824053
+05:20:22.054 INFO  Ob received for BTC-PLN timestamp: 1644898824575
+05:20:23.030 INFO  Ob received for BTC-PLN timestamp: 1644898825094
+05:20:23.030 INFO  Ob received for BTC-PLN timestamp: 1644898825613
+05:20:23.645 INFO  Ob received for BTC-PLN timestamp: 1644898826135
+05:20:24.082 INFO  Ob received for BTC-PLN timestamp: 1644898826654
+05:20:24.567 INFO  Ob received for BTC-PLN timestamp: 1644898827171
+05:20:25.277 INFO  Ob received for BTC-PLN timestamp: 1644898827692
+05:20:25.792 INFO  Ob received for BTC-PLN timestamp: 1644898828211
+05:20:26.121 INFO  Ob received for BTC-PLN timestamp: 1644898828731
+05:20:26.822 INFO  Ob received for BTC-PLN timestamp: 1644898829251
+05:20:27.337 INFO  Ob received for BTC-PLN timestamp: 1644898829773
+05:20:27.687 INFO  Ob received for BTC-PLN timestamp: 1644898830298
+05:20:28.373 INFO  Ob received for BTC-PLN timestamp: 1644898830824
+05:20:28.873 INFO  Ob received for BTC-PLN timestamp: 1644898831350
+05:20:29.378 INFO  Ob received for BTC-PLN timestamp: 1644898831889
+05:20:29.956 INFO  Ob received for BTC-PLN timestamp: 1644898832449
+05:20:30.602 INFO  Ob received for BTC-PLN timestamp: 1644898832982
+05:20:31.024 INFO  Ob received for BTC-PLN timestamp: 1644898833512
+05:23:26.708 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\algo\zonda_async_socket_ob_update.py", line 25, in main
+    f"Ob received for {message_recv['message']['changes'][0]['marketCode']} timestamp: {message_recv['message']['timestamp']}")
+KeyError: 'message'
+05:23:57.333 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\algo\zonda_async_socket_ob_update.py", line 26, in main
+    f"Ob received for {message_recv['message']['changes'][0]['marketCode']} timestamp: {message_recv['message']['timestamp']}")
+KeyError: 'message'
+05:23:57.349 ERROR   $$ 'message' $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\algo\zonda_async_socket_ob_update.py", line 26, in main
+    f"Ob received for {message_recv['message']['changes'][0]['marketCode']} timestamp: {message_recv['message']['timestamp']}")
+KeyError: 'message'
+05:23:58.271 INFO  Ob received for BTC-PLN timestamp: 1644899040733
+05:23:58.646 INFO  Ob received for BTC-PLN timestamp: 1644899041256
+05:23:59.193 INFO  Ob received for BTC-PLN timestamp: 1644899041776
+05:23:59.745 INFO  Ob received for BTC-PLN timestamp: 1644899042303
+05:24:00.327 INFO  Ob received for BTC-PLN timestamp: 1644899042826
+05:24:00.843 INFO  Ob received for BTC-PLN timestamp: 1644899043347
+05:24:01.452 INFO  Ob received for BTC-PLN timestamp: 1644899043872
+05:24:01.968 INFO  Ob received for BTC-PLN timestamp: 1644899044392
+05:24:02.473 INFO  Ob received for BTC-PLN timestamp: 1644899044913
+05:24:02.989 INFO  Ob received for BTC-PLN timestamp: 1644899045435
+05:24:03.505 INFO  Ob received for BTC-PLN timestamp: 1644899045958
+05:24:04.005 INFO  Ob received for BTC-PLN timestamp: 1644899046488
+05:24:04.630 INFO  Ob received for BTC-PLN timestamp: 1644899047037
+05:24:05.145 INFO  Ob received for BTC-PLN timestamp: 1644899047565
+05:24:05.645 INFO  Ob received for BTC-PLN timestamp: 1644899048085
+05:24:06.166 INFO  Ob received for BTC-PLN timestamp: 1644899048609
+05:24:06.682 INFO  Ob received for BTC-PLN timestamp: 1644899049134
+05:24:07.188 INFO  Ob received for BTC-PLN timestamp: 1644899049654
+05:24:07.568 INFO  Ob received for BTC-PLN timestamp: 1644899050173
+05:24:08.318 INFO  Ob received for BTC-PLN timestamp: 1644899050723
+05:24:08.818 INFO  Ob received for BTC-PLN timestamp: 1644899051266
+05:24:09.339 INFO  Ob received for BTC-PLN timestamp: 1644899051799
+05:24:09.841 INFO  Ob received for BTC-PLN timestamp: 1644899052330
+05:24:10.252 INFO  Ob received for BTC-PLN timestamp: 1644899052862
+05:24:10.971 INFO  Ob received for BTC-PLN timestamp: 1644899053392
+05:24:11.487 INFO  Ob received for BTC-PLN timestamp: 1644899053925
+05:24:11.992 INFO  Ob received for BTC-PLN timestamp: 1644899054460
+05:24:12.514 INFO  Ob received for BTC-PLN timestamp: 1644899054989
+05:24:13.019 INFO  Ob received for BTC-PLN timestamp: 1644899055518
+05:24:13.644 INFO  Ob received for BTC-PLN timestamp: 1644899056049

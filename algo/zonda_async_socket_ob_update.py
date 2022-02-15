@@ -11,8 +11,12 @@ async def main():
                                   ping_timeout=30,
                                   close_timeout=20) as websocket:
 
-        message_send = '{"action": "subscribe-public","module": "trading","path": "orderbook/btc-pln"}'
-        await websocket.send(message_send)
+        update = '{"action": "subscribe-public","module": "trading","path": "orderbook-limited/btc-pln/10"}'
+
+        snapshot = '{"requestId": "78539fe0-e9b0-4e4e-8c86-70b36aa93d4f","action": "proxy","module": "trading","path":"orderbook-limited/btc-pln/10"}'
+
+        await websocket.send(snapshot)
+        await websocket.send(update)
         while True:
             try:
                 response = await websocket.recv()
