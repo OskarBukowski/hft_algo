@@ -56,7 +56,7 @@ snap = {'type': 'update',
         'eventId': 89156281495,
         'socket_sequence': 0,
         'events': [
-            # irrational orders on the beggining, like BTC for 0.01 USD
+            # irrational orders on the beginning, like BTC for 0.01 USD
             {'type': 'change', 'reason': 'initial', 'price': '0.01', 'delta': '125651', 'remaining': '125651', 'side': 'bid'},
                    {'type': 'change', 'reason': 'initial', 'price': '0.02', 'delta': '4284', 'remaining': '4284', 'side': 'bid'},
                    {'type': 'change', 'reason': 'initial', 'price': '0.03', 'delta': '1003275.99999999', 'remaining': '1003275.99999999', 'side': 'bid'},
@@ -73,7 +73,7 @@ snap = {'type': 'update',
                    {'type': 'change', 'reason': 'initial', 'price': '33172.00', 'delta': '0.00075364', 'remaining': '0.00075364', 'side': 'bid'},
                    {'type': 'change', 'reason': 'initial', 'price': '33177.78', 'delta': '0.00447136', 'remaining': '0.00447136', 'side': 'bid'},
                    {'type': 'change', 'reason': 'initial', 'price': '33180.00', 'delta': '0.00030138', 'remaining': '0.00030138', 'side': 'bid'},
-            # the higjhest [eg. 25 offers ] on the top of bids and the same for asks
+            # the highest [eg. 25 offers ] on the top of bids and the same for asks
                    {'type': 'change', 'reason': 'initial', 'price': '43501.85', 'delta': '0.14', 'remaining': '0.14', 'side': 'bid'},
                    {'type': 'change', 'reason': 'initial', 'price': '43506.54', 'delta': '0.14', 'remaining': '0.14', 'side': 'bid'},
                    {'type': 'change', 'reason': 'initial', 'price': '43508.49', 'delta': '1', 'remaining': '1', 'side': 'bid'},
