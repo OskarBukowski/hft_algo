@@ -17,7 +17,7 @@ import psycopg2
 class Websocket:
     CURSOR = connection()
     LOGGER = logger_conf("../db_ex_connections/gemini.log")
-    SUBSCRIPTIONS = ["btcusd", "ethusd", "dogeusd", "maticusd", "sushiusd", "ftmusd" ,"linkusd", "sandusd",
+    SUBSCRIPTIONS = ["btcusd", "ethusd", "dogeusd", "maticusd", "sushiusd", "ftmusd","linkusd", "sandusd",
                      "filusd", "galausd", "manausd", "lrcusd", "lunausd", "crvusd", "aaveusd", "uniusd", "axsusd"]
 
     URL = "wss://api.gemini.com/v1/marketdata/{}?trades=true"
