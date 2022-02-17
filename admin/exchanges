@@ -59,6 +59,26 @@
       "maker_fee": 0.0,
       "taker_fee":  0.0,
       "coingecko": "https://www.coingecko.com/en/exchanges/huobi"
+    },
+
+      "bitso": {
+      "rest_url": "https://api.bitso.com/v3",
+      "websocket_url": "wss://ws.bitso.com",
+      "api_key": "",
+      "secret_key": "",
+      "maker_fee": 0.0,
+      "taker_fee":  0.0,
+      "coingecko": "https://www.coingecko.com/en/exchanges/bitso"
+    },
+
+      "bitfinex": {
+      "rest_url": "https://api-pub.bitfinex.com",
+      "websocket_url": "wss://api-pub.bitfinex.com/",
+      "api_key": "",
+      "secret_key": "",
+      "maker_fee": 0.0,
+      "taker_fee":  0.0,
+      "coingecko": "https://www.coingecko.com/en/exchanges/bitfinex"
     }
   },
 
@@ -158,8 +178,42 @@
         "sandusdt": "sandusdt",
         "dogeusdt": "dogeusdt",
         "axsusdt": "axsusdt",
-        "maticusdt": "maticusdt"}
+        "maticusdt": "maticusdt"},
 
+      "bitso": {
+        "xrpmxn": "xrp_mxn",
+        "btcmxn": "btc_mxn",
+        "ethmxn": "eth_mxn",
+        "manamxn" : "mana_mxn",
+        "ltcusd" : "ltc_usd",
+        "btcbrl" : "btc_brl",
+        "linkusd" : "link_usd",
+        "batmxn" : "bat_mxn",
+        "btcusd" : "btc_usd",
+        "xrpusd": "xrp_usd",
+        "aaveusd": "aave_usd",
+        "ethbrl": "eth_brl",
+        "shibusd": "shib_usd",
+        "sandusd": "sand_usd",
+        "ftmusd": "ftm_usd"},
+
+      "bitfinex": {
+        "btcusd": "tBTCUSD",
+        "ethusd": "tETHUSD",
+        "shibusd": "tSHIB:USD",
+        "avaxusd" : "tAVAX:USD",
+        "filusd" : "tFILUSD",
+        "adausd" : "tADAUSD",
+        "solusd" : "tSOLUSD",
+        "xrpusd" : "tXRPUSD",
+        "linkusd" : "tLINK:USD",
+        "ltcusd": "tLTCUSD",
+        "dotusd": "tDOTUSD",
+        "lunausdt": "tLUNA:USD",
+        "uniusd": "tUNIUSD",
+        "dogeusd": "tDOGE:USD",
+        "dogeusdt": "tDOGE:USDT",
+        "maticusd": "tMATIC:USD"}
 
     }
 

@@ -10,7 +10,6 @@ sys.path.append("C:/Users/oskar/Desktop/hft_algo")
 import psycopg2
 from pathlib import Path
 from dotenv import load_dotenv
-import os
 import logging
 
 env_path = Path('C:/Users/oskar/Desktop/hft_algo/admin') / '.env'
@@ -46,10 +45,10 @@ def connection():
 
 # def remote_connection():
 #     conn = psycopg2.connect(
-#         host='192.168.0.52',
-#         database='postgres',
-#         user='postgres',
-#         password='remiksow',
+#         host='*********',
+#         database='*********',
+#         user='************',
+#         password='*************',
 #     )
 #     conn.autocommit = True
 #     cursor = conn.cursor()
@@ -152,41 +151,37 @@ class SqlConst:
 if __name__ == '__main__':
     cs = SqlConst()
 
-    cs.table_creator_2('gemini', 'btcusd', 'trades')
-    cs.table_creator_2('gemini', 'ethusd', 'trades')
-    cs.table_creator_2('gemini', 'dogeusd', 'trades')
-    cs.table_creator_2('gemini', 'maticusd', 'trades')
-    cs.table_creator_2('gemini', 'sushiusd', 'trades')
-    cs.table_creator_2('gemini', 'ftmusd', 'trades')
-    cs.table_creator_2('gemini', 'linkusd', 'trades')
-    cs.table_creator_2('gemini', 'sandusd', 'trades')
-    cs.table_creator_2('gemini', 'filusd', 'trades')
-    cs.table_creator_2('gemini', 'galausd', 'trades')
-    cs.table_creator_2('gemini', 'manausd', 'trades')
-    cs.table_creator_2('gemini', 'lrcusd', 'trades')
-    cs.table_creator_2('gemini', 'lunausd', 'trades')
-    cs.table_creator_2('gemini', 'crvusd', 'trades')
-    cs.table_creator_2('gemini', 'aaveusd', 'trades')
-    cs.table_creator_2('gemini', 'uniusd', 'trades')
-    cs.table_creator_2('gemini', 'axsusd', 'trades')
+    cs.table_creator_2('bitso', 'xrpmxn', 'trades')
+    cs.table_creator_2('bitso', 'btcmxn', 'trades')
+    cs.table_creator_2('bitso', 'ethmxn', 'trades')
+    cs.table_creator_2('bitso', 'manamxn', 'trades')
+    cs.table_creator_2('bitso', 'ltcusd', 'trades')
+    cs.table_creator_2('bitso', 'btcbrl', 'trades')
+    cs.table_creator_2('bitso', 'linkusd', 'trades')
+    cs.table_creator_2('bitso', 'batmxn', 'trades')
+    cs.table_creator_2('bitso', 'btcusd', 'trades')
+    cs.table_creator_2('bitso', 'xrpusd', 'trades')
+    cs.table_creator_2('bitso', 'aaveusd', 'trades')
+    cs.table_creator_2('bitso', 'ethbrl', 'trades')
+    cs.table_creator_2('bitso', 'shibusd', 'trades')
+    cs.table_creator_2('bitso', 'sandusd', 'trades')
+    cs.table_creator_2('bitso', 'ftmusd', 'trades')
 
-    cs.table_creator('gemini', 'btcusd', 'ob')
-    cs.table_creator('gemini', 'ethusd', 'ob')
-    cs.table_creator('gemini', 'dogeusd', 'ob')
-    cs.table_creator('gemini', 'maticusd', 'ob')
-    cs.table_creator('gemini', 'sushiusd', 'ob')
-    cs.table_creator('gemini', 'ftmusd', 'ob')
-    cs.table_creator('gemini', 'linkusd', 'ob')
-    cs.table_creator('gemini', 'sandusd', 'ob')
-    cs.table_creator('gemini', 'filusd', 'ob')
-    cs.table_creator('gemini', 'galausd', 'ob')
-    cs.table_creator('gemini', 'manausd', 'ob')
-    cs.table_creator('gemini', 'lrcusd', 'ob')
-    cs.table_creator('gemini', 'lunausd', 'ob')
-    cs.table_creator('gemini', 'crvusd', 'ob')
-    cs.table_creator('gemini', 'aaveusd', 'ob')
-    cs.table_creator('gemini', 'uniusd', 'ob')
-    cs.table_creator('gemini', 'axsusd', 'ob')
+    cs.table_creator('bitso', 'xrpmxn', 'ob')
+    cs.table_creator('bitso', 'btcmxn', 'ob')
+    cs.table_creator('bitso', 'ethmxn', 'ob')
+    cs.table_creator('bitso', 'manamxn', 'ob')
+    cs.table_creator('bitso', 'ltcusd', 'ob')
+    cs.table_creator('bitso', 'btcbrl', 'ob')
+    cs.table_creator('bitso', 'linkusd', 'ob')
+    cs.table_creator('bitso', 'batmxn', 'ob')
+    cs.table_creator('bitso', 'btcusd', 'ob')
+    cs.table_creator('bitso', 'xrpusd', 'ob')
+    cs.table_creator('bitso', 'aaveusd', 'ob')
+    cs.table_creator('bitso', 'ethbrl', 'ob')
+    cs.table_creator('bitso', 'shibusd', 'ob')
+    cs.table_creator('bitso', 'sandusd', 'ob')
+    cs.table_creator('bitso', 'ftmusd', 'ob')
 
 
 

@@ -1,0 +1,38 @@
+22:04:17.611 ERROR   $$ Connection kill, error:  $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex_ob.py", line 137, in <module>
+    asyncio.run(main())
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 1854, in _run_once
+    event_list = self._selector.select(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 434, in select
+    self._poll(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 783, in _poll
+    status = _overlapped.GetQueuedCompletionStatus(self._iocp, ms)
+KeyboardInterrupt
+22:40:59.951 ERROR   $$ Connection kill, error:  $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex_ob.py", line 138, in <module>
+    asyncio.run(main())
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 1854, in _run_once
+    event_list = self._selector.select(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 434, in select
+    self._poll(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 783, in _poll
+    status = _overlapped.GetQueuedCompletionStatus(self._iocp, ms)
+KeyboardInterrupt
