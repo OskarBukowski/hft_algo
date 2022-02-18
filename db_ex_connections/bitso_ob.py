@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+# !!! BE AWARE OF STRICT RATE LIMITS, THE CONSEQUENCE IS BAN FOR 24H
 
 import sys
 
@@ -121,7 +122,7 @@ async def main():
                 if not [i['success'] for i in responses if i['success'] is False]:
                     logger.info(f"Ob received and successfully saved into database for {[*url_dict]}")
 
-                await asyncio.sleep(5 - (time.time() - st))
+                await asyncio.sleep(10 - (time.time() - st))
 
             except (KeyError, ContentTypeError) as rest_error:
                 logger.error(f" $$ {str(rest_error)} $$ ", exc_info=True)
