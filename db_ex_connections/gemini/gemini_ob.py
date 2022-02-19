@@ -29,7 +29,7 @@ async def main():
     logger = logging_handler()
     async with aiohttp.ClientSession() as session:
 
-        exchange_spec_dict = json.load(open('../admin/exchanges'))
+        exchange_spec_dict = json.load(open('../../admin/exchanges'))
         mapped_currency = exchange_spec_dict['currency_mapping']['gemini']
         rest_url = exchange_spec_dict['source']['gemini']['rest_url']
 

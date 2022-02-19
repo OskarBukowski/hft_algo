@@ -3,7 +3,7 @@
 
 import sys
 
-sys.path.append("C:/Users/oskar/Desktop/hft_algo/")
+sys.path.append("//")
 sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import aiohttp
@@ -32,7 +32,7 @@ async def main():
     logger = logging_handler()
     async with aiohttp.ClientSession() as session:
 
-        exchange_spec_dict = json.load(open('../admin/exchanges'))
+        exchange_spec_dict = json.load(open('../../admin/exchanges'))
         mapped_currency = exchange_spec_dict['currency_mapping']['bitfinex']
         rest_url = exchange_spec_dict['source']['bitfinex']['rest_url']
 

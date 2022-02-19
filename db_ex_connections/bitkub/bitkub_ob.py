@@ -37,7 +37,7 @@ async def main():
 
     async with aiohttp.ClientSession() as session:
 
-        exchange_spec_dict = json.load(open('../admin/exchanges'))
+        exchange_spec_dict = json.load(open('../../admin/exchanges'))
         mapped_currency = exchange_spec_dict['currency_mapping']['bitkub']
         rest_url = exchange_spec_dict['source']['bitkub']['rest_url']
 

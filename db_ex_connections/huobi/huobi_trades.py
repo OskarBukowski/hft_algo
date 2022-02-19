@@ -16,8 +16,9 @@ import psycopg2
 
 
 class Websocket:
+    TRADES_COUNTER = 0
     CURSOR = connection()
-    LOGGER = logger_conf("../db_ex_connections/huobi.log")
+    LOGGER = logger_conf("../huobi/huobi.log")
     SUBSCRIPTIONS = {
         'btcusdt': '{"sub": "market.btcusdt.trade.detail","id": "id1"}',
         'ethusdt': '{"sub": "market.ethusdt.trade.detail","id": "id1"}',
@@ -39,6 +40,15 @@ class Websocket:
     }
 
     URL = "wss://api.huobi.pro/ws"
+
+    def db_confirm(func):
+        """Decorator that send confirmation if 20 trades's been saved correctly to postgres"""
+        def confirm(self, *args):
+            func(self, *args)
+            if self.TRADES_COUNTER >= 20:
+                self.LOGGER.info(f'Last {self.TRADES_COUNTER} trades saved correctly')
+                self.TRADES_COUNTER = 0
+        return confirm
 
     def open_connection(self):
         return websockets.connect(self.URL, ping_timeout=30, close_timeout=20)
@@ -64,6 +74,24 @@ class Websocket:
     def subscription_confirmation(self, response):
         self.LOGGER.info(f"Trades stream subscription confirmed for {response['subbed'].split('.')[1]}")
 
+
+    def internal_database_save(self, response):
+        for resp in response['tick']['data']:
+            self.TRADES_COUNTER += 1
+            st = time.time()
+            self.CURSOR.execute(f"""INSERT INTO huobi.{response['ch'].split(".")[1]}_trades (id, price, volume, "timestamp")
+                                VALUES (
+                                        '{str(resp['tradeId'])}',
+                                        {float(resp['price'])},
+                                        {float(resp['amount'])},
+                                        {int(resp['ts'])}
+                                        );""")
+
+            self.LOGGER.debug(
+                f"""Trade received on timestamp: {response['tick']['data'][0]['ts']} for {response['ch'].split(".")[1]},
+                saving in database time: {time.time() - st}""")
+
+    @db_confirm
     def database_save(self, response):
         """{'ch': 'market.btcusdt.trade.detail',
             'ts': 1644438174613,
@@ -77,20 +105,7 @@ class Websocket:
                     'price': 44466.86,
                     'direction': 'buy'}]}}"""
         try:
-            for resp in response['tick']['data']:
-                st = time.time()
-                self.CURSOR.execute(f"""INSERT INTO huobi.{response['ch'].split(".")[1]}_trades (id, price, volume, "timestamp")
-                                    VALUES (
-                                            '{str(resp['tradeId'])}',
-                                            {float(resp['price'])},
-                                            {float(resp['amount'])},
-                                            {int(resp['ts'])}
-                                            );""")
-
-                self.LOGGER.info(f"Trade received for {response['ch'].split('.')[1]}")
-                self.LOGGER.debug(
-                    f"""Trade received on timestamp: {response['tick']['data'][0]['ts']} for {response['ch'].split(".")[1]},
-                    saving in database time: {time.time() - st}""")
+            self.internal_database_save(response)
 
         except psycopg2.Error as database_saving_error:
             self.LOGGER.error(f" $$ {str(repr(database_saving_error))} $$ ", exc_info=True)

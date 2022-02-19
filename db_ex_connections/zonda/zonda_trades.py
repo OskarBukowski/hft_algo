@@ -44,10 +44,9 @@ class Websocket:
         """Simple decorator that counts the time of execution"""
         def time_counter(*args):
             start = time.time()
-            val = self(*args)
+            self(*args)
             print(f"Time of execution: {self.__name__}: {time.time() - start}")
-            return val
-        return time_counter()
+        return time_counter
 
     def open_connection(self):
         return websockets.connect(self.URL, ping_timeout=30, close_timeout=20)
@@ -65,6 +64,7 @@ class Websocket:
             self.LOGGER.info(f"No heartbeat, check the zondaglobal.com API details")
             self.LOGGER.info(f"Check maintenance")
             time.sleep(10.0)
+
 
     def perform_actions(self, response):
         """expected response: {'action': 'push', 'topic': 'trading/transactions/usdt-pln',

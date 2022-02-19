@@ -385,6 +385,28 @@ s = {"action":"proxy-response",
          "timestamp":"1645164517816",
          "seqNo":"95908010"}}
 
-c = {'action': 'push', 'topic': 'trading/orderbook-limited/btc-pln/10', 'message': {'changes': [{'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '162036.79', 'action': 'update', 'state': {'ra': '162036.79', 'ca': '0.06892472', 'sa': '0.06892472', 'pa': '0.06892472', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '162035.77', 'action': 'remove'}], 'timestamp': '1645165599988'}, 'timestamp': '1645165599988', 'seqNo': 95910018}
+c = {'action': 'push',
+     'topic': 'trading/orderbook-limited/btc-pln/10',
+     'message':
+         {'changes': [{'marketCode': 'BTC-PLN',
+                       'entryType': 'Buy',
+                       'rate': '162036.79',
+                       'action': 'update',
+                        'state': {'ra': '162036.79', 'ca': '0.06892472', 'sa': '0.06892472', 'pa': '0.06892472', 'co': 1}},
+                                    {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '162035.77', 'action': 'remove'}], 'timestamp': '1645165599988'}, 'timestamp': '1645165599988', 'seqNo': 95910018}
 
+import numpy
 
+d = {'Zonda': np.array(
+        [[1.6199998e+05, 6.0000000e-05],
+        [1.6145000e+05, 2.1677000e-04]]),
+    'Huobi': np.array(
+        [[0., 0.],
+        [0., 0.]])}
+
+# print(d['ddd'])
+
+exchange_spec_dict = json.load(open('../admin/exchanges'))
+ex = exchange_spec_dict['currency_mapping'].keys()
+
+print(ex)

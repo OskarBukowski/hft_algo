@@ -6,6 +6,7 @@
 
 import sys
 sys.path.append("C:/Users/oskar/Desktop/hft_algo")
+sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import psycopg2
 from pathlib import Path
