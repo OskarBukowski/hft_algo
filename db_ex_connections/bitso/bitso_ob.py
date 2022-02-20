@@ -24,7 +24,7 @@ async def single_url_getter(session, url):
 
 
 def logging_handler():
-    return logger_conf("../db_ex_connections/bitso.log")
+    return logger_conf("../bitso/bitso.log")
 
 
 async def main():
@@ -60,6 +60,7 @@ async def main():
                     tasks.append(asyncio.create_task(single_url_getter(session, url_dict[k])))
 
                 responses = await asyncio.gather(*tasks)
+                print(responses)
                 for i in range(len(responses)):
                     if responses[i]['success'] is True:
                         before_db_save = time.time()
@@ -122,7 +123,7 @@ async def main():
                 if not [i['success'] for i in responses if i['success'] is False]:
                     logger.info(f"Ob received and successfully saved into database for {[*url_dict]}")
 
-                await asyncio.sleep(10 - (time.time() - st))
+                await asyncio.sleep(12 - (time.time() - st))
 
             except (KeyError, ContentTypeError) as rest_error:
                 logger.error(f" $$ {str(rest_error)} $$ ", exc_info=True)
