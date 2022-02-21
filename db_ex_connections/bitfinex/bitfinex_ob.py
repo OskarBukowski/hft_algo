@@ -15,7 +15,6 @@ from asyncio.exceptions import TimeoutError
 import time
 import json
 from admin.admin_tools import connection, logger_conf
-import datetime
 import time
 
 
@@ -64,9 +63,9 @@ async def main():
                     tasks.append(asyncio.create_task(single_url_getter(session, url_dict[k])))
 
                 responses = await asyncio.gather(*tasks)
-                print(responses)
                 for i in range(len(responses)):
                     before_db_save = time.time()
+                    print(responses[i][0])
                     asks = [r for r in responses[i] if float(r[2]) < 0]
                     bids = [r for r in responses[i] if float(r[2]) > 0]
 
@@ -123,7 +122,7 @@ async def main():
 
                 await asyncio.sleep(5 - (time.time() - st))
 
-            except (KeyError, TypeError, ContentTypeError) as rest_error:
+            except (KeyError, TypeError, ContentTypeError, ValueError) as rest_error:
                 logger.error(f" $$ {str(rest_error)} $$ ", exc_info=True)
                 continue
 

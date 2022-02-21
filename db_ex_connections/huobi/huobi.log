@@ -215,3 +215,22 @@
 14:50:51.159 INFO  Last 20 trades saved correctly
 14:50:51.667 INFO  Last 22 trades saved correctly
 14:50:52.411 INFO  Last 21 trades saved correctly
+21:01:41.066 INFO  Trades stream subscription confirmed for btcusdt
+21:01:41.101 INFO  Trades stream subscription confirmed for ethusdt
+21:01:41.111 INFO  Trades stream subscription confirmed for shibusdt
+21:01:41.114 INFO  Trades stream subscription confirmed for avaxusdt
+21:01:41.115 INFO  Trades stream subscription confirmed for filusdt
+21:01:41.117 INFO  Trades stream subscription confirmed for adausdt
+21:01:41.118 INFO  Trades stream subscription confirmed for solusdt
+21:01:41.119 INFO  Trades stream subscription confirmed for xrpusdt
+21:01:41.121 INFO  Trades stream subscription confirmed for trxusdt
+21:01:41.122 INFO  Last 20 trades saved correctly
+21:01:41.122 INFO  Trades stream subscription confirmed for galausdt
+21:01:41.124 INFO  Trades stream subscription confirmed for manausdt
+21:01:41.125 INFO  Trades stream subscription confirmed for dotusdt
+21:01:41.130 INFO  Trades stream subscription confirmed for lunausdt
+21:01:41.132 INFO  Trades stream subscription confirmed for sandusdt
+21:01:41.134 INFO  Trades stream subscription confirmed for dogeusdt
+21:01:41.137 INFO  Trades stream subscription confirmed for axsusdt
+21:01:41.139 INFO  Trades stream subscription confirmed for maticusdt
+21:01:41.473 INFO  Last 21 trades saved correctly
