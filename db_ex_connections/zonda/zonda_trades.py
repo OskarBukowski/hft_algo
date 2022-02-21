@@ -17,7 +17,7 @@ from admin.admin_tools import connection, logger_conf
 
 class Websocket:
     CURSOR = connection()
-    LOGGER = logger_conf("../db_ex_connections/zonda_2.log")
+    LOGGER = logger_conf("../zonda/zonda.log")
     SUBSCRIPTIONS = {
         'btcpln': '{"action": "subscribe-public","module": "trading","path": "transactions/btc-pln"}',
         'ethpln': '{"action": "subscribe-public","module": "trading","path": "transactions/eth-pln"}',

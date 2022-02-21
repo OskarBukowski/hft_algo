@@ -22,7 +22,7 @@ async def single_url_getter(session, url):
 
 
 def logging_handler():
-    return logger_conf("../db_ex_connections/zonda.log")
+    return logger_conf("../zonda/zonda.log")
 
 
 async def main():
@@ -113,7 +113,7 @@ async def main():
                                                             {float(responses[i]['buy'][9]['ca'])},
                                                             {int(responses[i]['timestamp'])});""")
 
-                    logger.debug(f"Time of saving ob for {k}: {time.time() - before_db_save}")
+                    logger.debug(f"Time of saving ob for {[*url_dict]}: {time.time() - before_db_save}")
                     logger.info(f"Ob received and successfully saved into database for {[*url_dict]} ")
 
                 else:  # {"status": "Fail"} or other unexpected REST API responses

@@ -16,7 +16,7 @@ import psycopg2
 
 class Websocket:
     CURSOR = connection()
-    LOGGER = logger_conf("../db_ex_connections/gemini.log")
+    LOGGER = logger_conf("../gemini/gemini.log")
     SUBSCRIPTIONS = ["btcusd", "ethusd", "dogeusd", "maticusd", "sushiusd", "ftmusd","linkusd", "sandusd",
                      "filusd", "galausd", "manausd", "lrcusd", "lunausd", "crvusd", "aaveusd", "uniusd", "axsusd"]
 

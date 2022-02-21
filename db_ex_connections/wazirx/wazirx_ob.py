@@ -26,7 +26,7 @@ async def single_url_getter(session, url):
 
 
 def logging_handler():
-    return logger_conf("../db_ex_connections/wazirx.log")
+    return logger_conf("../wazirx/wazirx.log")
 
 
 async def main():

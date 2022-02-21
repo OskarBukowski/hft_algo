@@ -17,7 +17,7 @@ from admin.admin_tools import connection, logger_conf
 
 class Websocket:
     CURSOR = connection()
-    LOGGER = logger_conf("../db_ex_connections/bitkub_2.log")
+    LOGGER = logger_conf("../bitkub/bitkub.log")
     MARKETS = ['market.trade.thb_btc',
                'market.trade.thb_eth',
                'market.trade.thb_doge',

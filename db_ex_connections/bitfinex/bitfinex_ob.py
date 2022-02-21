@@ -3,6 +3,8 @@
 
 import sys
 
+import numpy as np
+
 sys.path.append("//")
 sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
@@ -24,7 +26,7 @@ async def single_url_getter(session, url):
 
 
 def logging_handler():
-    return logger_conf("../db_ex_connections/bitfinex.log")
+    return logger_conf("../bitfinex/bitfinex.log")
 
 
 async def main():
@@ -55,7 +57,7 @@ async def main():
                     }
 
         while True:
-            # try:
+            try:
                 st = time.time()
                 tasks = []
                 for k in url_dict.keys():
@@ -64,8 +66,9 @@ async def main():
                 responses = await asyncio.gather(*tasks)
                 print(responses)
                 for i in range(len(responses)):
-                    asks = [i for i in responses[0] if i[2] < 0]
-                    bids = [i for i in responses[0] if i[2] > 0]
+                    before_db_save = time.time()
+                    asks = [r for r in responses[i] if float(r[2]) < 0]
+                    bids = [r for r in responses[i] if float(r[2]) > 0]
 
                     cursor.execute(f"""INSERT INTO bitfinex.{list(url_dict.keys())[i]}_ob ( ask_0, ask_vol_0, ask_1,
                     ask_vol_1, ask_2, ask_vol_2, ask_3, ask_vol_3, ask_4, ask_vol_4, ask_5, ask_vol_5, ask_6,
@@ -73,61 +76,56 @@ async def main():
                     bid_vol_1, bid_2, bid_vol_2, bid_3, bid_vol_3, bid_4, bid_vol_4, bid_5, bid_vol_5, bid_6,
                     bid_vol_6, bid_7, bid_vol_7, bid_8, bid_vol_8, bid_9, bid_vol_9, "timestamp") VALUES (
                                                         {float(asks[0][0])},
-                                                        {float(asks[0][2])},
+                                                        {np.absolute(float(asks[0][2]))},
                                                         {float(asks[1][0])},
-                                                        {float(asks[1][2])},
-                                                        {float(responses[i]['payload']['asks'][2]['price'])},
-                                                        {float(responses[i]['payload']['asks'][2]['amount'])},
-                                                        {float(responses[i]['payload']['asks'][3]['price'])},
-                                                        {float(responses[i]['payload']['asks'][3]['amount'])},
-                                                        {float(responses[i]['payload']['asks'][4]['price'])},
-                                                        {float(responses[i]['payload']['asks'][4]['amount'])},
-                                                        {float(responses[i]['payload']['asks'][5]['price'])},
-                                                        {float(responses[i]['payload']['asks'][5]['amount'])},
-                                                        {float(responses[i]['payload']['asks'][6]['price'])},
-                                                        {float(responses[i]['payload']['asks'][6]['amount'])},
-                                                        {float(responses[i]['payload']['asks'][7]['price'])},
-                                                        {float(responses[i]['payload']['asks'][7]['amount'])},
-                                                        {float(responses[i]['payload']['asks'][8]['price'])},
-                                                        {float(responses[i]['payload']['asks'][8]['amount'])},
-                                                        {float(responses[i]['payload']['asks'][9]['price'])},
-                                                        {float(responses[i]['payload']['asks'][9]['amount'])},
-                                                        {float(responses[i]['payload']['bids'][0]['price'])},
-                                                        {float(responses[i]['payload']['bids'][0]['amount'])},
-                                                        {float(responses[i]['payload']['bids'][1]['price'])},
-                                                        {float(responses[i]['payload']['bids'][1]['amount'])},
-                                                        {float(responses[i]['payload']['bids'][2]['price'])},
-                                                        {float(responses[i]['payload']['bids'][2]['amount'])},
-                                                        {float(responses[i]['payload']['bids'][3]['price'])},
-                                                        {float(responses[i]['payload']['bids'][3]['amount'])},
-                                                        {float(responses[i]['payload']['bids'][4]['price'])},
-                                                        {float(responses[i]['payload']['bids'][4]['amount'])},
-                                                        {float(responses[i]['payload']['bids'][5]['price'])},
-                                                        {float(responses[i]['payload']['bids'][5]['amount'])},
-                                                        {float(responses[i]['payload']['bids'][6]['price'])},
-                                                        {float(responses[i]['payload']['bids'][6]['amount'])},
-                                                        {float(responses[i]['payload']['bids'][7]['price'])},
-                                                        {float(responses[i]['payload']['bids'][7]['amount'])},
-                                                        {float(responses[i]['payload']['bids'][8]['price'])},
-                                                        {float(responses[i]['payload']['bids'][8]['amount'])},
-                                                        {float(responses[i]['payload']['bids'][9]['price'])},
-                                                        {float(responses[i]['payload']['bids'][9]['amount'])},
-                    {int(datetime.datetime.strptime(responses[i]['payload']['updated_at'].replace("T", " ").split("+")[0],
-                                                    '%Y-%m-%d %H:%M:%S').timestamp())});""")
+                                                        {np.absolute(float(asks[1][2]))},
+                                                        {float(asks[2][0])},
+                                                        {np.absolute(float(asks[2][2]))},
+                                                        {float(asks[3][0])},
+                                                        {np.absolute(float(asks[3][2]))},
+                                                        {float(asks[4][0])},
+                                                        {np.absolute(float(asks[4][2]))},
+                                                        {float(asks[5][0])},
+                                                        {np.absolute(float(asks[5][2]))},
+                                                        {float(asks[6][0])},
+                                                        {np.absolute(float(asks[6][2]))},
+                                                        {float(asks[7][0])},
+                                                        {np.absolute(float(asks[7][2]))},
+                                                        {float(asks[8][0])},
+                                                        {np.absolute(float(asks[8][2]))},
+                                                        {float(asks[9][0])},
+                                                        {np.absolute(float(asks[9][2]))},
+                                                        {float(bids[0][0])},
+                                                        {float(bids[0][2])},
+                                                        {float(bids[1][0])},
+                                                        {float(bids[1][2])},
+                                                        {float(bids[2][0])},
+                                                        {float(bids[2][2])},
+                                                        {float(bids[3][0])},
+                                                        {float(bids[3][2])},
+                                                        {float(bids[4][0])},
+                                                        {float(bids[4][2])},
+                                                        {float(bids[5][0])},
+                                                        {float(bids[5][2])},
+                                                        {float(bids[6][0])},
+                                                        {float(bids[6][2])},
+                                                        {float(bids[7][0])},
+                                                        {float(bids[7][2])},
+                                                        {float(bids[8][0])},
+                                                        {float(bids[8][2])},
+                                                        {float(bids[9][0])},
+                                                        {float(bids[9][2])},
+                                                        {int(round(time.time() * 1000))});""")
 
-            #         logger.debug(f"Time of saving ob for {k}: {time.time() - before_db_save}")
-            #
-            #
-            #         else:  # {'success': False, 'error': {'code': 200, 'message': 'Too many requests.'}}
-            #             logger.error(f" $$ Connection status: {str(responses[i]['error']['message'])} $$ ",
-            #                          exc_info=True)
-            #             time.sleep(5.0)
-            #
-            #     await asyncio.sleep(5 - (time.time() - st))
-            #
-            # except (KeyError, ContentTypeError) as rest_error:
-            #     logger.error(f" $$ {str(rest_error)} $$ ", exc_info=True)
-            #     continue
+                logger.debug(f"Time of saving ob for {[*url_dict]}: {time.time() - before_db_save}")
+                logger.info(f"Ob received and successfully saved into database for {[*url_dict]} ")
+
+
+                await asyncio.sleep(5 - (time.time() - st))
+
+            except (KeyError, TypeError, ContentTypeError) as rest_error:
+                logger.error(f" $$ {str(rest_error)} $$ ", exc_info=True)
+                continue
 
 
 if __name__ == '__main__':

@@ -28,7 +28,7 @@ async def multiple_ulr_getter(session, urls):
 
 
 def logging_handler():
-    return logger_conf("../db_ex_connections/bitkub.log")
+    return logger_conf("../bitkub/bitkub.log")
 
 
 async def main():

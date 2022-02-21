@@ -21,7 +21,7 @@ async def single_url_getter(session, url):
 
 
 def logging_handler():
-    return logger_conf("../db_ex_connections/gemini.log")
+    return logger_conf("../gemini/gemini.log")
 
 
 async def main():

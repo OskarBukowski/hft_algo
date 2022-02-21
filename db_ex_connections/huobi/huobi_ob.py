@@ -21,7 +21,7 @@ async def single_url_getter(session, url):
 
 
 def logging_handler():
-    return logger_conf("../db_ex_connections/huobi.log")
+    return logger_conf("../huobi/huobi.log")
 
 
 async def main():
