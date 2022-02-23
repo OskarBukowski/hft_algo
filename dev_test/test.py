@@ -1,4 +1,5 @@
 import numpy as np
+from operator import itemgetter
 
 s = {'action': 'proxy-response',
      'requestId': '78539fe0-e9b0-4e4e-8c86-70b36aa93d4f',
@@ -42,26 +43,31 @@ for i in range(5):
     ob['bid'][i][1] = float(s['body']['buy'][i]['ca'])
 
 
-ob_2 = {'ask': {0: np.array([1.5182e+05, 6.7000e-04]),
-                1: np.array([1.5202931e+05, 6.0000000e-05]),
-                2: np.array([1.521000e+05, 7.862616e-02]),
-                3: np.array([1.5244052e+05, 5.0000000e-01]),
-                4: np.array([1.5244053e+05, 3.1724181e-01])},
+ob_2 = {'ask': {0: [1.5182e+05, 6.7000e-04],
+                1: [1.5202931e+05, 6.0000000e-05],
+                2: [1.521000e+05, 7.862616e-02],
+                3: [1.5244052e+05, 5.0000000e-01],
+                4: [1.5244053e+05, 3.1724181e-01]},
 
-        'bid': {0: np.array([1.5070328e+05, 7.0686600e-03]),
-                1: np.array([1.51000e+05, 1.19866e-03]),
-                2: np.array([1.5100001e+05, 1.0240000e+00]),
-                3: np.array([1.5101123e+05, 4.0000000e-03]),
-                4: np.array([1.5101226e+05, 9.8561790e-02])}}
+        'bid': {0: [1.5070328e+05, 7.0686600e-03],
+                1: [1.51000e+05, 1.19866e-03],
+                2: [1.5100001e+05, 1.0240000e+00],
+                3: [1.5101123e+05, 4.0000000e-03],
+                4: [1.5101226e+05, 9.8561790e-02]}}
 
-bids = [i for i in ob['bid'].values()]
-asks = [i for i in ob['ask'].values()]
+bids = [i for i in ob_2['bid'].values()]
+asks = [i for i in ob_2['ask'].values()]
 
 bids_prices = [i[0] for i in bids]
 asks_prices = [i[0] for i in asks]
 
-# print(f"Bids: {bids_prices}  ;  max --> {max(bids_prices)}  min --> {min(bids_prices)}")
-# print(f"Asks: {asks_prices}  ;  max --> {max(asks_prices)}  min --> {min(asks_prices)}")
+print(f"Bids: {bids}")
+print(f"Asks: {asks}")
+
+print(f"Bids prices: {bids}")
+print(f"Asks prices: {asks}")
+
+print(ob_2['ask'].values())
 
 # Push examples
 
@@ -78,37 +84,95 @@ p1 = {'action': 'push',
           {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '151012.28', 'action': 'update', 'state': {'ra': '151012.28', 'ca': '0.09245289', 'sa': '0.09245289', 'pa': '0.09245289', 'co': 1}},
           {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '151012.27', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '151012.26', 'action': 'remove'},
           {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '152440.51', 'action': 'update', 'state': {'ra': '152440.51', 'ca': '0.34848427', 'sa': '0.34848427', 'pa': '0.34848427', 'co': 2}},
-          {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '152440.53', 'action': 'remove'}], 'timestamp': '1645547230006'},
+          {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '152440.52', 'action': 'remove'}], 'timestamp': '1645547230006'},
       'timestamp': '1645547230006', 'seqNo': 96535058}
 
 response = p1['message']['changes']
 
 
 for r in response:
-    if r['entryType'] == 'Buy':
-        if int(r['rate']) in range(min(bids_prices), max(bids_prices) + 0.01):
+    if r['entryType'] == 'Sell':
+        if float(r['rate']) >= min(asks_prices) or float(r['rate']) <=  max(asks_prices) + 0.01:
             if r['action'] == 'update':
                 try:
-                    index = bids_prices.index(r['rate'])
-                    ob['bid'][index][1] = float(r['state']['ca'])
+                    index = asks_prices.index(float(r['rate']))
+                    ob_2['ask'][index][1] = float(r['state']['ca'])
                 except ValueError: # if the element does not exist in list
-                    bids_prices.append(int(r['rate']))
-                    bids_prices.remove(min(bids_prices))
-                    bids_prices.sort()
+                    asks.append([float(r['state']['ra']), float(r['state']['ca'])])
+                    asks = sorted(asks, key=itemgetter(0))
+                    print(asks)
+                    asks.remove(asks[-1])
+                    ob_2['ask'] = {k:asks[k] for k, v in ob_2['ask'].items()}
+                    print("---", ob_2['ask'])
+
+            elif r['action'] == 'remove':
+                try:
+                    """ We collect only first 5 lines, so if one of the is removed I do not search for values below, 
+                    but i set 10 billion as a price and wait for update that will be in top five range to get rid 
+                    of this temporary placeholder"""
+
+                    index = asks_prices.index(float(r['rate']))
+                    ob_2['ask'][index] = [100000000.0, 1000000000.0]
+                    print(ob_2['ask'][index])
+                    asks = sorted([i for i in ob_2['ask'].values()], key=itemgetter(0))
+                    ob_2['ask'] = {k: asks[k] for k, v in ob_2['ask'].items()}
+                    print("---", ob_2['ask'])
+                except ValueError as e:
+                    continue
 
 
-        elif int(r['rate']) > max(bids_prices):
-            pass
+        elif float(r['rate']) < min(asks_prices):
+            asks.append([float(r['state']['ra']), float(r['state']['ca'])])
+            asks = sorted(asks, key=itemgetter(0))
+            print(asks)
+            asks.remove(asks[-1])
+            ob_2['ask'] = {k: asks[k] for k, v in ob_2['ask'].items()}
+            print("---", ob_2['ask'])
 
-    else: # == 'Sell'
-        pass
+    else: # == 'Buy'
+        if float(r['rate']) >= min(bids_prices) or float(r['rate']) <= max(bids_prices) + 0.01:
+            if r['action'] == 'update':
+                try:
+                    index = bids_prices.index(float(r['rate']))
+                    ob_2['ask'][index][1] = float(r['state']['ca'])
+                except ValueError:  # if the element does not exist in list
+                    bids.append([float(r['state']['ra']), float(r['state']['ca'])])
+                    bids = sorted(bids, key=itemgetter(0), reverse=True)
+                    print(bids)
+                    bids.remove(asks[-1])
+                    ob_2['bid'] = {k: bids[k] for k, v in ob_2['bid'].items()}
+                    print("---", ob_2['bid'])
 
-d = {0: [0.0, 0.0],
-     1: [0.0, 0.0],
-     2: [0.0, 0.0]}
+            elif r['action'] == 'remove':
+                try:
+                    """ We collect only first 5 lines, so if one of the is removed I do not search for values below, 
+                    but i set 0.0 as a price and wait for update that will be in top five range to get rid 
+                    of this temporary placeholder"""
 
-z = [1.5, 3.4, 6.7]
+                    index = bids_prices.index(float(r['rate']))
+                    ob_2['bid'][index] = [0.0, 0.0]
+                    print(ob_2['bid'][index])
+                    bids = sorted([i for i in ob_2['bid'].values()], key=itemgetter(0))
+                    ob_2['bid'] = {k: bids[k] for k, v in ob_2['bid'].items()}
+                    print("---", ob_2['bid'])
+                except ValueError as e:
+                    continue
 
-d = {z[k] for k, v in d.items()}
 
-print(d)
+        elif float(r['rate']) < min(bids_prices):
+            bids.append([float(r['state']['ra']), float(r['state']['ca'])])
+            bids = sorted(bids, key=itemgetter(0))
+            print(bids)
+            bids.remove(asks[-1])
+            ob_2['bid'] = {k: asks[k] for k, v in ob_2['bid'].items()}
+            print("---", ob_2['bid'])
+
+# d = {0: [0.0, 0.0],
+#      1: [0.0, 0.0],
+#      2: [0.0, 0.0]}
+#
+# z = [1.5, 3.4, 6.7]
+#
+# d = {z[k] for k, v in d.items()}
+#
+# print(d)
