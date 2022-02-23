@@ -17,7 +17,7 @@ from admin.admin_tools import connection, logger_conf
 
 class Websocket:
     CURSOR = connection()
-    LOGGER = logger_conf("../db_ex_connections/wazirx.log")
+    LOGGER = logger_conf("../wazirx/wazirx.log")
     SUBSCRIPTIONS = [
         '''{"event":"subscribe",
                         "streams":

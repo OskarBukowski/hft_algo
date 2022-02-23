@@ -1,0 +1,236 @@
+14:48:47.855 INFO  Trades stream subscription confirmed for btcusdt
+14:48:47.882 INFO  Trades stream subscription confirmed for ethusdt
+14:48:47.886 INFO  Trades stream subscription confirmed for shibusdt
+14:48:47.887 INFO  Trades stream subscription confirmed for avaxusdt
+14:48:47.888 INFO  Trades stream subscription confirmed for filusdt
+14:48:47.889 INFO  Trades stream subscription confirmed for adausdt
+14:48:47.890 INFO  Trades stream subscription confirmed for solusdt
+14:48:47.891 INFO  Trades stream subscription confirmed for xrpusdt
+14:48:47.893 INFO  Trades stream subscription confirmed for trxusdt
+14:48:47.894 INFO  Trades stream subscription confirmed for galausdt
+14:48:47.895 INFO  Trades stream subscription confirmed for manausdt
+14:48:47.896 INFO  Trades stream subscription confirmed for dotusdt
+14:48:47.897 INFO  Trades stream subscription confirmed for lunausdt
+14:48:47.897 INFO  Trades stream subscription confirmed for sandusdt
+14:48:47.898 INFO  Trades stream subscription confirmed for dogeusdt
+14:48:47.899 INFO  Trades stream subscription confirmed for axsusdt
+14:48:47.900 INFO  Trades stream subscription confirmed for maticusdt
+14:48:48.122 INFO  Last 20 trades saved correctly
+14:48:48.998 INFO  Last 22 trades saved correctly
+14:48:49.065 INFO  Last 20 trades saved correctly
+14:48:49.423 INFO  Last 22 trades saved correctly
+14:48:50.056 INFO  Last 21 trades saved correctly
+14:48:50.643 INFO  Last 20 trades saved correctly
+14:48:51.259 INFO  Heartbeat message sent with timestamp 1645278531297
+14:48:51.888 INFO  Last 21 trades saved correctly
+14:48:52.578 INFO  Last 20 trades saved correctly
+14:48:53.274 INFO  Last 20 trades saved correctly
+14:48:54.211 INFO  Last 21 trades saved correctly
+14:48:54.810 INFO  Last 22 trades saved correctly
+14:48:55.949 INFO  Last 20 trades saved correctly
+14:48:56.327 INFO  Heartbeat message sent with timestamp 1645278536353
+14:48:56.468 INFO  Last 20 trades saved correctly
+14:48:57.226 INFO  Last 20 trades saved correctly
+14:48:57.681 INFO  Last 21 trades saved correctly
+14:48:58.725 INFO  Last 21 trades saved correctly
+14:48:59.332 INFO  Last 20 trades saved correctly
+14:48:59.818 INFO  Last 20 trades saved correctly
+14:49:00.697 INFO  Last 20 trades saved correctly
+14:49:01.487 INFO  Heartbeat message sent with timestamp 1645278541420
+14:49:01.609 INFO  Last 22 trades saved correctly
+14:49:02.088 INFO  Last 20 trades saved correctly
+14:49:02.136 INFO  Last 20 trades saved correctly
+14:49:02.181 INFO  Last 20 trades saved correctly
+14:49:02.763 INFO  Last 21 trades saved correctly
+14:49:03.309 INFO  Last 21 trades saved correctly
+14:49:04.246 INFO  Last 20 trades saved correctly
+14:49:04.873 INFO  Last 20 trades saved correctly
+14:49:05.303 INFO  Last 22 trades saved correctly
+14:49:05.945 INFO  Last 20 trades saved correctly
+14:49:06.491 INFO  Heartbeat message sent with timestamp 1645278546525
+14:49:06.617 INFO  Last 20 trades saved correctly
+14:49:07.066 INFO  Last 21 trades saved correctly
+14:49:07.896 INFO  Last 21 trades saved correctly
+14:49:08.512 INFO  Last 22 trades saved correctly
+14:49:09.070 INFO  Last 20 trades saved correctly
+14:49:09.789 INFO  Last 20 trades saved correctly
+14:49:10.182 INFO  Last 23 trades saved correctly
+14:49:10.999 INFO  Last 20 trades saved correctly
+14:49:11.573 INFO  Heartbeat message sent with timestamp 1645278551612
+14:49:11.684 INFO  Last 21 trades saved correctly
+14:49:12.327 INFO  Last 20 trades saved correctly
+14:49:12.973 INFO  Last 21 trades saved correctly
+14:49:13.971 INFO  Last 20 trades saved correctly
+14:49:14.854 INFO  Last 20 trades saved correctly
+14:49:15.611 INFO  Last 20 trades saved correctly
+14:49:16.519 INFO  Last 20 trades saved correctly
+14:49:16.748 INFO  Heartbeat message sent with timestamp 1645278556789
+14:49:17.535 INFO  Last 21 trades saved correctly
+14:49:18.144 INFO  Last 20 trades saved correctly
+14:49:18.865 INFO  Last 20 trades saved correctly
+14:49:19.734 INFO  Last 20 trades saved correctly
+14:49:20.393 INFO  Last 20 trades saved correctly
+14:49:20.960 INFO  Last 20 trades saved correctly
+14:49:21.420 INFO  Last 21 trades saved correctly
+14:49:21.787 INFO  Heartbeat message sent with timestamp 1645278561826
+14:49:22.064 INFO  Last 20 trades saved correctly
+14:49:22.482 INFO  Last 20 trades saved correctly
+14:49:22.722 INFO  Last 20 trades saved correctly
+14:49:22.924 INFO  Last 21 trades saved correctly
+14:49:22.978 INFO  Last 30 trades saved correctly
+14:49:23.504 INFO  Last 20 trades saved correctly
+14:49:24.113 INFO  Last 21 trades saved correctly
+14:49:24.690 INFO  Last 20 trades saved correctly
+14:49:25.980 INFO  Last 20 trades saved correctly
+14:49:26.851 INFO  Heartbeat message sent with timestamp 1645278566894
+14:49:26.957 INFO  Last 20 trades saved correctly
+14:49:27.461 INFO  Last 20 trades saved correctly
+14:49:28.130 INFO  Last 22 trades saved correctly
+14:49:28.252 INFO  Last 21 trades saved correctly
+14:49:29.182 INFO  Last 20 trades saved correctly
+14:49:29.407 INFO  Last 32 trades saved correctly
+14:49:29.910 INFO  Last 20 trades saved correctly
+14:49:30.377 INFO  Last 20 trades saved correctly
+14:49:30.792 INFO  Last 20 trades saved correctly
+14:49:31.585 INFO  Last 20 trades saved correctly
+14:49:31.940 INFO  Heartbeat message sent with timestamp 1645278571979
+14:49:32.112 INFO  Last 20 trades saved correctly
+14:49:32.557 INFO  Last 20 trades saved correctly
+14:49:32.919 INFO  Last 20 trades saved correctly
+14:49:33.463 INFO  Last 20 trades saved correctly
+14:49:34.610 INFO  Last 21 trades saved correctly
+14:49:35.376 INFO  Last 20 trades saved correctly
+14:49:35.839 INFO  Last 21 trades saved correctly
+14:49:36.989 INFO  Last 20 trades saved correctly
+14:49:36.991 INFO  Heartbeat message sent with timestamp 1645278577033
+14:49:37.857 INFO  Last 20 trades saved correctly
+14:49:38.506 INFO  Last 21 trades saved correctly
+14:49:39.748 INFO  Last 20 trades saved correctly
+14:49:40.100 INFO  Last 20 trades saved correctly
+14:49:40.625 INFO  Last 33 trades saved correctly
+14:49:41.221 INFO  Last 21 trades saved correctly
+14:49:41.989 INFO  Last 20 trades saved correctly
+14:49:42.048 INFO  Heartbeat message sent with timestamp 1645278582089
+14:49:42.471 INFO  Last 20 trades saved correctly
+14:49:43.440 INFO  Last 20 trades saved correctly
+14:49:43.843 INFO  Last 24 trades saved correctly
+14:49:44.040 INFO  Last 20 trades saved correctly
+14:49:44.319 INFO  Last 20 trades saved correctly
+14:49:44.807 INFO  Last 20 trades saved correctly
+14:49:45.040 INFO  Last 20 trades saved correctly
+14:49:45.517 INFO  Last 20 trades saved correctly
+14:49:46.734 INFO  Last 21 trades saved correctly
+14:49:47.141 INFO  Heartbeat message sent with timestamp 1645278587180
+14:49:47.724 INFO  Last 20 trades saved correctly
+14:49:48.530 INFO  Last 21 trades saved correctly
+14:49:49.829 INFO  Last 20 trades saved correctly
+14:49:50.150 INFO  Last 20 trades saved correctly
+14:49:51.825 INFO  Last 20 trades saved correctly
+14:49:52.242 INFO  Heartbeat message sent with timestamp 1645278592284
+14:49:52.640 INFO  Last 21 trades saved correctly
+14:49:52.939 INFO  Last 20 trades saved correctly
+14:49:54.347 INFO  Last 20 trades saved correctly
+14:49:55.353 INFO  Last 20 trades saved correctly
+14:49:55.994 INFO  Last 21 trades saved correctly
+14:49:56.828 INFO  Last 20 trades saved correctly
+14:49:57.266 INFO  Last 22 trades saved correctly
+14:49:57.320 INFO  Heartbeat message sent with timestamp 1645278597362
+14:49:58.264 INFO  Last 20 trades saved correctly
+14:49:59.117 INFO  Last 20 trades saved correctly
+14:50:00.148 INFO  Last 20 trades saved correctly
+14:50:01.493 INFO  Last 20 trades saved correctly
+14:50:02.106 INFO  Last 20 trades saved correctly
+14:50:02.386 INFO  Heartbeat message sent with timestamp 1645278602420
+14:50:02.794 INFO  Last 20 trades saved correctly
+14:50:03.766 INFO  Last 20 trades saved correctly
+14:50:04.801 INFO  Last 20 trades saved correctly
+14:50:05.613 INFO  Last 20 trades saved correctly
+14:50:06.787 INFO  Last 20 trades saved correctly
+14:50:07.187 INFO  Last 23 trades saved correctly
+14:50:07.191 INFO  Last 20 trades saved correctly
+14:50:07.195 INFO  Last 20 trades saved correctly
+14:50:07.200 INFO  Last 21 trades saved correctly
+14:50:07.280 INFO  Last 20 trades saved correctly
+14:50:07.462 INFO  Heartbeat message sent with timestamp 1645278607502
+14:50:07.655 INFO  Last 21 trades saved correctly
+14:50:08.914 INFO  Last 20 trades saved correctly
+14:50:10.177 INFO  Last 20 trades saved correctly
+14:50:10.998 INFO  Last 20 trades saved correctly
+14:50:11.708 INFO  Last 20 trades saved correctly
+14:50:12.555 INFO  Heartbeat message sent with timestamp 1645278612578
+14:50:12.596 INFO  Last 29 trades saved correctly
+14:50:13.327 INFO  Last 20 trades saved correctly
+14:50:14.520 INFO  Last 20 trades saved correctly
+14:50:15.540 INFO  Last 20 trades saved correctly
+14:50:16.291 INFO  Last 20 trades saved correctly
+14:50:17.243 INFO  Last 20 trades saved correctly
+14:50:17.636 INFO  Heartbeat message sent with timestamp 1645278617679
+14:50:18.074 INFO  Last 20 trades saved correctly
+14:50:19.260 INFO  Last 20 trades saved correctly
+14:50:20.293 INFO  Last 20 trades saved correctly
+14:50:20.624 INFO  Last 24 trades saved correctly
+14:50:20.708 INFO  Last 20 trades saved correctly
+14:50:21.281 INFO  Last 20 trades saved correctly
+14:50:21.843 INFO  Last 22 trades saved correctly
+14:50:22.527 INFO  Last 20 trades saved correctly
+14:50:22.781 INFO  Heartbeat message sent with timestamp 1645278622822
+14:50:23.481 INFO  Last 35 trades saved correctly
+14:50:24.349 INFO  Last 20 trades saved correctly
+14:50:25.134 INFO  Last 20 trades saved correctly
+14:50:26.026 INFO  Last 20 trades saved correctly
+14:50:27.267 INFO  Last 20 trades saved correctly
+14:50:27.832 INFO  Heartbeat message sent with timestamp 1645278627871
+14:50:27.894 INFO  Last 21 trades saved correctly
+14:50:28.505 INFO  Last 20 trades saved correctly
+14:50:29.455 INFO  Last 20 trades saved correctly
+14:50:30.017 INFO  Last 20 trades saved correctly
+14:50:31.451 INFO  Last 20 trades saved correctly
+14:50:32.655 INFO  Last 20 trades saved correctly
+14:50:32.935 INFO  Heartbeat message sent with timestamp 1645278632977
+14:50:33.193 INFO  Last 28 trades saved correctly
+14:50:34.074 INFO  Last 20 trades saved correctly
+14:50:34.762 INFO  Last 22 trades saved correctly
+14:50:35.207 INFO  Last 20 trades saved correctly
+14:50:36.520 INFO  Last 20 trades saved correctly
+14:50:37.968 INFO  Last 20 trades saved correctly
+14:50:38.003 INFO  Heartbeat message sent with timestamp 1645278638043
+14:50:38.664 INFO  Last 20 trades saved correctly
+14:50:40.076 INFO  Last 20 trades saved correctly
+14:50:41.105 INFO  Last 20 trades saved correctly
+14:50:41.887 INFO  Last 20 trades saved correctly
+14:50:42.620 INFO  Last 20 trades saved correctly
+14:50:43.093 INFO  Heartbeat message sent with timestamp 1645278643132
+14:50:43.556 INFO  Last 49 trades saved correctly
+14:50:44.193 INFO  Last 20 trades saved correctly
+14:50:44.431 INFO  Last 20 trades saved correctly
+14:50:45.149 INFO  Last 20 trades saved correctly
+14:50:45.821 INFO  Last 20 trades saved correctly
+14:50:46.674 INFO  Last 20 trades saved correctly
+14:50:46.951 INFO  Last 20 trades saved correctly
+14:50:48.144 INFO  Heartbeat message sent with timestamp 1645278648182
+14:50:48.144 INFO  Last 20 trades saved correctly
+14:50:48.864 INFO  Last 22 trades saved correctly
+14:50:49.928 INFO  Last 20 trades saved correctly
+14:50:50.399 INFO  Last 20 trades saved correctly
+14:50:51.159 INFO  Last 20 trades saved correctly
+14:50:51.667 INFO  Last 22 trades saved correctly
+14:50:52.411 INFO  Last 21 trades saved correctly
+21:01:41.066 INFO  Trades stream subscription confirmed for btcusdt
+21:01:41.101 INFO  Trades stream subscription confirmed for ethusdt
+21:01:41.111 INFO  Trades stream subscription confirmed for shibusdt
+21:01:41.114 INFO  Trades stream subscription confirmed for avaxusdt
+21:01:41.115 INFO  Trades stream subscription confirmed for filusdt
+21:01:41.117 INFO  Trades stream subscription confirmed for adausdt
+21:01:41.118 INFO  Trades stream subscription confirmed for solusdt
+21:01:41.119 INFO  Trades stream subscription confirmed for xrpusdt
+21:01:41.121 INFO  Trades stream subscription confirmed for trxusdt
+21:01:41.122 INFO  Last 20 trades saved correctly
+21:01:41.122 INFO  Trades stream subscription confirmed for galausdt
+21:01:41.124 INFO  Trades stream subscription confirmed for manausdt
+21:01:41.125 INFO  Trades stream subscription confirmed for dotusdt
+21:01:41.130 INFO  Trades stream subscription confirmed for lunausdt
+21:01:41.132 INFO  Trades stream subscription confirmed for sandusdt
+21:01:41.134 INFO  Trades stream subscription confirmed for dogeusdt
+21:01:41.137 INFO  Trades stream subscription confirmed for axsusdt
+21:01:41.139 INFO  Trades stream subscription confirmed for maticusdt
+21:01:41.473 INFO  Last 21 trades saved correctly

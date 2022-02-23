@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 
+# !!! BE AWARE OF STRICT RATE LIMITS, THE CONSEQUENCE IS BAN FOR 24H
 
 import sys
 
-sys.path.append("C:/Users/oskar/Desktop/hft_algo/")
+sys.path.append("//")
 sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import aiohttp
@@ -23,7 +24,7 @@ async def single_url_getter(session, url):
 
 
 def logging_handler():
-    return logger_conf("../db_ex_connections/bitso.log")
+    return logger_conf("../bitso/bitso.log")
 
 
 async def main():
@@ -31,7 +32,7 @@ async def main():
     logger = logging_handler()
     async with aiohttp.ClientSession() as session:
 
-        exchange_spec_dict = json.load(open('../admin/exchanges'))
+        exchange_spec_dict = json.load(open('../../admin/exchanges'))
         mapped_currency = exchange_spec_dict['currency_mapping']['bitso']
         rest_url = exchange_spec_dict['source']['bitso']['rest_url']
 
@@ -59,6 +60,7 @@ async def main():
                     tasks.append(asyncio.create_task(single_url_getter(session, url_dict[k])))
 
                 responses = await asyncio.gather(*tasks)
+                print(responses)
                 for i in range(len(responses)):
                     if responses[i]['success'] is True:
                         before_db_save = time.time()
@@ -121,7 +123,7 @@ async def main():
                 if not [i['success'] for i in responses if i['success'] is False]:
                     logger.info(f"Ob received and successfully saved into database for {[*url_dict]}")
 
-                await asyncio.sleep(5 - (time.time() - st))
+                await asyncio.sleep(12 - (time.time() - st))
 
             except (KeyError, ContentTypeError) as rest_error:
                 logger.error(f" $$ {str(rest_error)} $$ ", exc_info=True)

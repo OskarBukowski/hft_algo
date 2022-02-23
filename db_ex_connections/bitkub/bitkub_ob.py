@@ -28,7 +28,7 @@ async def multiple_ulr_getter(session, urls):
 
 
 def logging_handler():
-    return logger_conf("../db_ex_connections/bitkub.log")
+    return logger_conf("../bitkub/bitkub.log")
 
 
 async def main():
@@ -37,7 +37,7 @@ async def main():
 
     async with aiohttp.ClientSession() as session:
 
-        exchange_spec_dict = json.load(open('../admin/exchanges'))
+        exchange_spec_dict = json.load(open('../../admin/exchanges'))
         mapped_currency = exchange_spec_dict['currency_mapping']['bitkub']
         rest_url = exchange_spec_dict['source']['bitkub']['rest_url']
 

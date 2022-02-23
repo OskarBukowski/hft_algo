@@ -6,6 +6,7 @@
 
 import sys
 sys.path.append("C:/Users/oskar/Desktop/hft_algo")
+sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import psycopg2
 from pathlib import Path
@@ -20,10 +21,10 @@ load_dotenv(dotenv_path=env_path)
 
 def connection():
     conn = psycopg2.connect(
-        host='127.0.0.1',
-        database='postgres',
-        user='postgres',
-        password='remiksow',
+        host='*****',
+        database='*********',
+        user='********',
+        password='********',
     )
     conn.autocommit = True
     cursor = conn.cursor()
@@ -151,37 +152,39 @@ class SqlConst:
 if __name__ == '__main__':
     cs = SqlConst()
 
-    cs.table_creator_2('bitso', 'xrpmxn', 'trades')
-    cs.table_creator_2('bitso', 'btcmxn', 'trades')
-    cs.table_creator_2('bitso', 'ethmxn', 'trades')
-    cs.table_creator_2('bitso', 'manamxn', 'trades')
-    cs.table_creator_2('bitso', 'ltcusd', 'trades')
-    cs.table_creator_2('bitso', 'btcbrl', 'trades')
-    cs.table_creator_2('bitso', 'linkusd', 'trades')
-    cs.table_creator_2('bitso', 'batmxn', 'trades')
-    cs.table_creator_2('bitso', 'btcusd', 'trades')
-    cs.table_creator_2('bitso', 'xrpusd', 'trades')
-    cs.table_creator_2('bitso', 'aaveusd', 'trades')
-    cs.table_creator_2('bitso', 'ethbrl', 'trades')
-    cs.table_creator_2('bitso', 'shibusd', 'trades')
-    cs.table_creator_2('bitso', 'sandusd', 'trades')
-    cs.table_creator_2('bitso', 'ftmusd', 'trades')
+    cs.table_creator_2('bitfinex', 'btcusd', 'trades')
+    cs.table_creator_2('bitfinex', 'ethusd', 'trades')
+    cs.table_creator_2('bitfinex', 'shibusd', 'trades')
+    cs.table_creator_2('bitfinex', 'avaxusd', 'trades')
+    cs.table_creator_2('bitfinex', 'filusd', 'trades')
+    cs.table_creator_2('bitfinex', 'adausd', 'trades')
+    cs.table_creator_2('bitfinex', 'solusd', 'trades')
+    cs.table_creator_2('bitfinex', 'xrpusd', 'trades')
+    cs.table_creator_2('bitfinex', 'linkusd', 'trades')
+    cs.table_creator_2('bitfinex', 'ltcusd', 'trades')
+    cs.table_creator_2('bitfinex', 'dotusd', 'trades')
+    cs.table_creator_2('bitfinex', 'lunausdt', 'trades')
+    cs.table_creator_2('bitfinex', 'uniusd', 'trades')
+    cs.table_creator_2('bitfinex', 'dogeusd', 'trades')
+    cs.table_creator_2('bitfinex', 'dogeusdt', 'trades')
+    cs.table_creator_2('bitfinex', 'maticusd', 'trades')
 
-    cs.table_creator('bitso', 'xrpmxn', 'ob')
-    cs.table_creator('bitso', 'btcmxn', 'ob')
-    cs.table_creator('bitso', 'ethmxn', 'ob')
-    cs.table_creator('bitso', 'manamxn', 'ob')
-    cs.table_creator('bitso', 'ltcusd', 'ob')
-    cs.table_creator('bitso', 'btcbrl', 'ob')
-    cs.table_creator('bitso', 'linkusd', 'ob')
-    cs.table_creator('bitso', 'batmxn', 'ob')
-    cs.table_creator('bitso', 'btcusd', 'ob')
-    cs.table_creator('bitso', 'xrpusd', 'ob')
-    cs.table_creator('bitso', 'aaveusd', 'ob')
-    cs.table_creator('bitso', 'ethbrl', 'ob')
-    cs.table_creator('bitso', 'shibusd', 'ob')
-    cs.table_creator('bitso', 'sandusd', 'ob')
-    cs.table_creator('bitso', 'ftmusd', 'ob')
+    cs.table_creator('bitfinex', 'btcusd', 'ob')
+    cs.table_creator('bitfinex', 'ethusd', 'ob')
+    cs.table_creator('bitfinex', 'shibusd', 'ob')
+    cs.table_creator('bitfinex', 'avaxusd', 'ob')
+    cs.table_creator('bitfinex', 'filusd', 'ob')
+    cs.table_creator('bitfinex', 'adausd', 'ob')
+    cs.table_creator('bitfinex', 'solusd', 'ob')
+    cs.table_creator('bitfinex', 'xrpusd', 'ob')
+    cs.table_creator('bitfinex', 'linkusd', 'ob')
+    cs.table_creator('bitfinex', 'ltcusd', 'ob')
+    cs.table_creator('bitfinex', 'dotusd', 'ob')
+    cs.table_creator('bitfinex', 'lunausdt', 'ob')
+    cs.table_creator('bitfinex', 'uniusd', 'ob')
+    cs.table_creator('bitfinex', 'dogeusd', 'ob')
+    cs.table_creator('bitfinex', 'dogeusdt', 'ob')
+    cs.table_creator('bitfinex', 'maticusd', 'ob')
 
 
 

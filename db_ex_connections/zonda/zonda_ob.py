@@ -3,7 +3,7 @@
 
 
 import sys
-sys.path.append("C:/Users/oskar/Desktop/hft_algo/")
+sys.path.append("//")
 sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import aiohttp
@@ -22,7 +22,7 @@ async def single_url_getter(session, url):
 
 
 def logging_handler():
-    return logger_conf("../db_ex_connections/zonda.log")
+    return logger_conf("../zonda/zonda.log")
 
 
 async def main():
@@ -30,7 +30,7 @@ async def main():
     logger = logging_handler()
     async with aiohttp.ClientSession() as session:
 
-        exchange_spec_dict = json.load(open('../admin/exchanges'))
+        exchange_spec_dict = json.load(open('../../admin/exchanges'))
         mapped_currency = exchange_spec_dict['currency_mapping']['zonda']
         rest_url = exchange_spec_dict['source']['zonda']['rest_url']
 
@@ -113,7 +113,7 @@ async def main():
                                                             {float(responses[i]['buy'][9]['ca'])},
                                                             {int(responses[i]['timestamp'])});""")
 
-                    logger.debug(f"Time of saving ob for {k}: {time.time() - before_db_save}")
+                    logger.debug(f"Time of saving ob for {[*url_dict]}: {time.time() - before_db_save}")
                     logger.info(f"Ob received and successfully saved into database for {[*url_dict]} ")
 
                 else:  # {"status": "Fail"} or other unexpected REST API responses

@@ -1,0 +1,745 @@
+07:01:38.688 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+07:01:43.186 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+07:01:48.267 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+07:01:53.278 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+07:01:56.592 ERROR   $$ Connection kill, error:  $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 134, in <module>
+    asyncio.run(main())
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 1854, in _run_once
+    event_list = self._selector.select(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 434, in select
+    self._poll(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 783, in _poll
+    status = _overlapped.GetQueuedCompletionStatus(self._iocp, ms)
+KeyboardInterrupt
+17:51:28.364 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:51:33.302 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:51:38.315 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:51:43.209 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:51:48.025 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:51:53.201 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:51:58.033 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:52:03.058 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:52:08.109 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:52:13.082 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:52:18.145 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:52:23.154 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:52:28.184 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:52:33.107 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:52:38.255 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:52:43.167 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:52:48.200 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:52:53.123 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:52:58.221 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:53:03.224 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:53:08.185 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:53:13.247 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:53:18.250 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:53:23.200 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:53:28.297 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+17:53:29.349 ERROR   $$ Connection kill, error:  $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 134, in <module>
+    asyncio.run(main())
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 1854, in _run_once
+    event_list = self._selector.select(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 434, in select
+    self._poll(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 783, in _poll
+    status = _overlapped.GetQueuedCompletionStatus(self._iocp, ms)
+KeyboardInterrupt
+18:05:10.796 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+18:05:12.832 ERROR   $$ Connection kill, error:  $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 135, in <module>
+    asyncio.run(main())
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 1854, in _run_once
+    event_list = self._selector.select(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 434, in select
+    self._poll(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 783, in _poll
+    status = _overlapped.GetQueuedCompletionStatus(self._iocp, ms)
+KeyboardInterrupt
+18:05:47.294 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+18:05:51.744 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+18:05:56.895 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+18:06:02.035 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+18:06:06.896 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+18:06:07.274 ERROR   $$ Connection kill, error:  $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 135, in <module>
+    asyncio.run(main())
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 1854, in _run_once
+    event_list = self._selector.select(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 434, in select
+    self._poll(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 783, in _poll
+    status = _overlapped.GetQueuedCompletionStatus(self._iocp, ms)
+KeyboardInterrupt
+18:06:07.816 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+18:06:10.407 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:10.548 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:10.688 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:10.798 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:10.892 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:11.001 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:11.100 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:11.194 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:11.288 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:11.413 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:11.616 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:11.835 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:11.960 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:12.054 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:12.194 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:12.288 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:12.387 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:12.480 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:12.574 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:12.684 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:12.793 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:12.886 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:13.019 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:13.160 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:13.269 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:13.379 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:13.488 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:13.644 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:13.785 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:13.894 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:14.035 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:14.113 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:14.207 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:14.301 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:14.441 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:14.535 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:14.644 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:14.738 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:14.879 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:15.004 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:15.196 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:15.337 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:15.462 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 70, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:15.571 ERROR   $$ Connection kill, error:  $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 135, in <module>
+    asyncio.run(main())
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 1854, in _run_once
+    event_list = self._selector.select(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 434, in select
+    self._poll(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 783, in _poll
+    status = _overlapped.GetQueuedCompletionStatus(self._iocp, ms)
+KeyboardInterrupt
+18:06:31.624 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:31.718 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:31.827 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:31.906 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:32.015 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:32.140 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:32.234 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:32.332 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:32.442 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:32.551 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:32.692 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:32.785 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:32.900 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:32.978 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:33.087 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:33.166 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:33.259 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:33.384 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:33.462 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:33.603 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:33.728 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:33.844 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:33.985 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:34.068 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:34.193 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:34.271 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:34.381 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:34.537 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:34.978 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:35.099 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:35.164 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:35.227 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:35.367 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:35.461 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:35.638 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:35.841 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:35.982 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:06:36.029 ERROR   $$ Connection kill, error:  $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 134, in <module>
+    asyncio.run(main())
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 1854, in _run_once
+    event_list = self._selector.select(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 434, in select
+    self._poll(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 783, in _poll
+    status = _overlapped.GetQueuedCompletionStatus(self._iocp, ms)
+KeyboardInterrupt
+18:07:20.796 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+18:07:21.598 ERROR   $$ Connection kill, error:  $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 134, in <module>
+    asyncio.run(main())
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 1854, in _run_once
+    event_list = self._selector.select(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 434, in select
+    self._poll(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 783, in _poll
+    status = _overlapped.GetQueuedCompletionStatus(self._iocp, ms)
+KeyboardInterrupt
+18:07:30.593 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+18:07:31.525 ERROR   $$ Connection kill, error:  $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 134, in <module>
+    asyncio.run(main())
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 1854, in _run_once
+    event_list = self._selector.select(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 434, in select
+    self._poll(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 783, in _poll
+    status = _overlapped.GetQueuedCompletionStatus(self._iocp, ms)
+KeyboardInterrupt
+18:07:40.348 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:07:40.488 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:07:40.597 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:07:40.754 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:07:40.879 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:07:41.025 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:07:41.119 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:07:41.275 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:07:41.400 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:07:41.494 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:07:41.681 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:07:41.937 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:07:42.015 ERROR   $$ object of type 'float' has no len() $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 69, in main
+    print(len(responses[i][0][2]))
+TypeError: object of type 'float' has no len()
+18:07:42.124 ERROR   $$ Connection kill, error:  $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 134, in <module>
+    asyncio.run(main())
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 1854, in _run_once
+    event_list = self._selector.select(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 434, in select
+    self._poll(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 783, in _poll
+    status = _overlapped.GetQueuedCompletionStatus(self._iocp, ms)
+KeyboardInterrupt
+18:07:51.071 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+18:07:51.973 ERROR   $$ Connection kill, error:  $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 134, in <module>
+    asyncio.run(main())
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 1854, in _run_once
+    event_list = self._selector.select(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 434, in select
+    self._poll(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 783, in _poll
+    status = _overlapped.GetQueuedCompletionStatus(self._iocp, ms)
+KeyboardInterrupt
+18:08:14.140 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+18:08:15.004 ERROR   $$ Connection kill, error:  $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 134, in <module>
+    asyncio.run(main())
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 1854, in _run_once
+    event_list = self._selector.select(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 434, in select
+    self._poll(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 783, in _poll
+    status = _overlapped.GetQueuedCompletionStatus(self._iocp, ms)
+KeyboardInterrupt
+18:08:26.803 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+18:08:27.574 ERROR   $$ Connection kill, error:  $$ 
+Traceback (most recent call last):
+  File "C:\Users\oskar\Desktop\hft_algo\db_ex_connections\bitfinex\bitfinex_ob.py", line 134, in <module>
+    asyncio.run(main())
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\base_events.py", line 1854, in _run_once
+    event_list = self._selector.select(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 434, in select
+    self._poll(timeout)
+  File "C:\Users\oskar\anaconda3\envs\hft_algo\lib\asyncio\windows_events.py", line 783, in _poll
+    status = _overlapped.GetQueuedCompletionStatus(self._iocp, ms)
+KeyboardInterrupt
+18:11:06.156 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+18:11:10.767 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+18:11:15.760 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+18:11:20.742 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+18:11:25.721 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+18:11:30.733 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+18:11:35.765 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+18:11:40.683 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+18:11:45.782 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+18:11:50.756 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 
+18:11:55.804 INFO  Ob received and successfully saved into database for ['btcusd', 'ethusd', 'shibusd', 'avaxusd', 'filusd', 'adausd', 'solusd', 'xrpusd', 'linkusd', 'ltcusd', 'dotusd', 'lunausdt', 'uniusd', 'dogeusd', 'dogeusdt', 'maticusd'] 

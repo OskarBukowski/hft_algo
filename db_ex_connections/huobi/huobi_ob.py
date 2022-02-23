@@ -21,7 +21,7 @@ async def single_url_getter(session, url):
 
 
 def logging_handler():
-    return logger_conf("../db_ex_connections/huobi.log")
+    return logger_conf("../huobi/huobi.log")
 
 
 async def main():
@@ -29,7 +29,7 @@ async def main():
     logger = logging_handler()
     async with aiohttp.ClientSession() as session:
 
-        exchange_spec_dict = json.load(open('../admin/exchanges'))
+        exchange_spec_dict = json.load(open('../../admin/exchanges'))
         mapped_currency = exchange_spec_dict['currency_mapping']['huobi']
         rest_url = exchange_spec_dict['source']['huobi']['rest_url']
 
