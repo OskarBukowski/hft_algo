@@ -21,10 +21,10 @@ load_dotenv(dotenv_path=env_path)
 
 def connection():
     conn = psycopg2.connect(
-        host='127.0.0.1',
-        database='postgres',
-        user='postgres',
-        password='remiksow',
+        host='*****',
+        database='*********',
+        user='********',
+        password='********',
     )
     conn.autocommit = True
     cursor = conn.cursor()
