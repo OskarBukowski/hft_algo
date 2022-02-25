@@ -216,3 +216,60 @@ for changes in [p['message']['changes'] for p in rl]:
 #
 # print(d)
 
+
+
+
+            elif r['entryType'] == 'Buy':
+                self.LOGGER.info(f'Bid: {r["rate"]}, bids: {[i[0] for i in self.bids]}')
+                if float(r['rate']) >= min([i[0] for i in self.bids]) or float(r['rate']) <= max(
+                        [i[0] for i in self.bids]) + 0.01:
+                    if r['action'] == 'update':
+                        try:
+                            index = [i[0] for i in self.bids].index(float(r['rate']))
+                            self.internal_ob['ask'][index][1] = float(r['state']['ca'])
+                        except ValueError:  # if the element does not exist in list
+                            self.bids.append([float(r['state']['ra']), float(r['state']['ca'])])
+                            self.bids = sorted(self.bids, key=itemgetter(0), reverse=True)
+                            self.bids.remove(self.bids[-1])
+                            self.internal_ob['bid'] = {k: self.bids[k] for k, v in self.internal_ob['bid'].items()}
+
+                    elif r['action'] == 'remove':
+                        try:
+                            """ We collect only first 5 lines, so if one of the is removed I do not search for values below,
+                            but i set 0.0 as a price and wait for update that will be in top five range to get rid
+                            of this temporary placeholder"""
+                            index = [i[0] for i in self.bids].index(float(r['rate']))
+                            self.internal_ob['bid'][index] = [0.0, 0.0]
+                            self.bids = sorted([i for i in self.internal_ob['bid'].values()], key=itemgetter(0),
+                                               reverse=True)
+                            self.internal_ob['bid'] = {k: self.bids[k] for k, v in self.internal_ob['bid'].items()}
+                        except ValueError as e:
+                            continue
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

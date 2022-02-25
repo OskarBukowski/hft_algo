@@ -138,6 +138,7 @@ class Zonda(Client):
             self.orderbook_handler[self.name][0] = [float(response['body']['sell'][0][i]) for i in ['ra', 'ca']]
             self.orderbook_handler[self.name][1] = [float(response['body']['buy'][-1][i]) for i in ['ra', 'ca']]
 
+    @heartbeat
     def ob_update_maintain(self, response):
         bids = [i for i in self.internal_ob['bid'].values()]
         asks = [i for i in self.internal_ob['ask'].values()]
