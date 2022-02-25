@@ -1,130 +1,82 @@
-21:43:43.951 INFO  Subscribed for huobi
-21:43:44.220 INFO  Subscription confirmed for btcusdt
-21:43:48.605 INFO  Huobi: heartbeat message sent with timestamp 1645649027776
-21:43:50.205 INFO  Subscribed for zonda
-21:43:50.288 INFO  Subscription confirmed for btc-pln
-21:43:53.187 INFO  Huobi: heartbeat message sent with timestamp 1645649032836
-21:43:58.636 INFO  Huobi: heartbeat message sent with timestamp 1645649037888
-21:44:09.753 INFO  Huobi: heartbeat message sent with timestamp 1645649042932
-21:44:10.735 INFO  Huobi: heartbeat message sent with timestamp 1645649043964
-21:44:11.387 INFO  Huobi: heartbeat message sent with timestamp 1645649044965
-21:44:12.805 INFO  Huobi: heartbeat message sent with timestamp 1645649045973
-21:44:14.444 INFO  Huobi: heartbeat message sent with timestamp 1645649046982
-21:44:14.986 INFO  Huobi: heartbeat message sent with timestamp 1645649047992
-21:44:15.202 INFO  Huobi: heartbeat message sent with timestamp 1645649048993
-21:44:15.421 INFO  Huobi: heartbeat message sent with timestamp 1645649050002
-21:44:17.705 INFO  Huobi: heartbeat message sent with timestamp 1645649053054
-21:45:27.828 INFO  Subscribed for zonda
-21:45:27.909 INFO  Subscription confirmed for btc-pln
-21:45:28.593 INFO  Subscribed for huobi
-21:45:28.868 INFO  Subscription confirmed for btcusdt
-21:45:29.338 INFO  Unknown response: 'Sell'
-21:45:29.339 INFO  Unknown response: 'Sell'
-21:45:29.397 INFO  Unknown response: 'Sell'
-21:45:29.910 INFO  Unknown response: 'Sell'
-21:45:30.469 INFO  Unknown response: 'Sell'
-21:45:30.988 INFO  Unknown response: 'Sell'
-21:45:31.510 INFO  Unknown response: 'Sell'
-21:45:32.055 INFO  Unknown response: 'Sell'
-21:45:32.569 INFO  Unknown response: 'Sell'
-21:45:33.100 INFO  Unknown response: 'Sell'
-21:45:33.634 INFO  Unknown response: 'Sell'
-21:45:34.167 INFO  Unknown response: 'Sell'
-21:45:34.686 INFO  Unknown response: 'Sell'
-21:45:35.218 INFO  Unknown response: 'Sell'
-21:45:35.765 INFO  Unknown response: 'Sell'
-21:45:36.297 INFO  Unknown response: 'Sell'
-21:45:36.849 INFO  Unknown response: 'Sell'
-21:45:37.367 INFO  Unknown response: 'Sell'
-21:45:37.904 INFO  Unknown response: 'Sell'
-21:45:38.423 INFO  Unknown response: 'Sell'
-21:45:38.955 INFO  Unknown response: 'Sell'
-21:45:39.487 INFO  Unknown response: 'Sell'
-21:45:40.017 INFO  Unknown response: 'Sell'
-21:45:41.058 INFO  Unknown response: 'Sell'
-21:45:41.542 INFO  Huobi: heartbeat message sent with timestamp 1645649133621
-21:45:41.574 INFO  Unknown response: 'Sell'
-21:45:42.100 INFO  Unknown response: 'Sell'
-21:45:42.623 INFO  Unknown response: 'Sell'
-21:45:43.071 INFO  Huobi: heartbeat message sent with timestamp 1645649134649
-21:45:43.157 INFO  Unknown response: 'Sell'
-21:45:43.509 INFO  Huobi: heartbeat message sent with timestamp 1645649135682
-21:45:43.683 INFO  Unknown response: 'Sell'
-21:45:43.729 INFO  Huobi: heartbeat message sent with timestamp 1645649136690
-21:45:44.210 INFO  Unknown response: 'Sell'
-21:45:44.602 INFO  Huobi: heartbeat message sent with timestamp 1645649137707
-21:45:44.723 INFO  Unknown response: 'Sell'
-21:45:44.820 INFO  Huobi: heartbeat message sent with timestamp 1645649138726
-21:45:45.264 INFO  Unknown response: 'Sell'
-21:45:45.586 INFO  Huobi: heartbeat message sent with timestamp 1645649139746
-21:45:45.761 INFO  Unknown response: 'Sell'
-21:45:46.281 INFO  Unknown response: 'Sell'
-21:45:46.818 INFO  Unknown response: 'Sell'
-21:45:47.354 INFO  Unknown response: 'Sell'
-21:45:47.905 INFO  Unknown response: 'Sell'
-21:45:48.452 INFO  Unknown response: 'Sell'
-21:45:49.028 INFO  Unknown response: 'Sell'
-21:45:49.523 INFO  Unknown response: 'Sell'
-21:45:50.043 INFO  Huobi: heartbeat message sent with timestamp 1645649140755
-21:45:50.060 INFO  Unknown response: 'Sell'
-21:45:50.592 INFO  Unknown response: 'Sell'
-21:45:50.917 INFO  Huobi: heartbeat message sent with timestamp 1645649141776
-21:45:51.122 INFO  Unknown response: 'Sell'
-21:45:51.683 INFO  Unknown response: 'Sell'
-21:45:51.809 INFO  Huobi: heartbeat message sent with timestamp 1645649143787
-21:45:51.811 INFO  Huobi: heartbeat message sent with timestamp 1645649148868
-21:46:10.994 INFO  Subscribed for zonda
-21:46:11.075 INFO  Subscription confirmed for btc-pln
-21:46:11.773 INFO  Subscribed for huobi
-21:46:12.035 INFO  Subscription confirmed for btcusdt
-21:46:14.912 INFO  Huobi: heartbeat message sent with timestamp 1645649174486
-21:46:24.593 INFO  Huobi: heartbeat message sent with timestamp 1645649179610
-21:46:25.029 INFO  Huobi: heartbeat message sent with timestamp 1645649180644
-21:46:25.574 INFO  Huobi: heartbeat message sent with timestamp 1645649181645
-21:46:26.230 INFO  Huobi: heartbeat message sent with timestamp 1645649182646
-21:46:27.212 INFO  Huobi: heartbeat message sent with timestamp 1645649183675
-21:46:27.646 INFO  Huobi: heartbeat message sent with timestamp 1645649184694
-21:46:38.235 INFO  Huobi: heartbeat message sent with timestamp 1645649189827
-21:46:42.957 INFO  Huobi: heartbeat message sent with timestamp 1645649192909
-21:46:42.958 INFO  Huobi: heartbeat message sent with timestamp 1645649193929
-21:46:42.959 INFO  Huobi: heartbeat message sent with timestamp 1645649194935
-21:46:42.959 INFO  Huobi: heartbeat message sent with timestamp 1645649195952
-21:46:42.960 INFO  Huobi: heartbeat message sent with timestamp 1645649196969
-21:46:42.960 INFO  Huobi: heartbeat message sent with timestamp 1645649197970
-21:46:42.961 INFO  Huobi: heartbeat message sent with timestamp 1645649199987
-21:47:31.234 INFO  Subscribed for zonda
-21:47:31.323 INFO  Subscription confirmed for btc-pln
-21:47:32.073 INFO  Subscribed for huobi
-21:47:32.366 INFO  Subscription confirmed for btcusdt
-21:47:35.233 INFO  Huobi: heartbeat message sent with timestamp 1645649254131
-21:47:47.652 INFO  Huobi: heartbeat message sent with timestamp 1645649259179
-21:47:50.424 INFO  Huobi: heartbeat message sent with timestamp 1645649261201
-21:47:50.425 INFO  Huobi: heartbeat message sent with timestamp 1645649262222
-21:47:50.426 INFO  Huobi: heartbeat message sent with timestamp 1645649263230
-21:47:50.426 INFO  Huobi: heartbeat message sent with timestamp 1645649264238
-21:47:50.427 INFO  Huobi: heartbeat message sent with timestamp 1645649265245
-21:47:50.427 INFO  Huobi: heartbeat message sent with timestamp 1645649266267
-21:47:50.428 INFO  Huobi: heartbeat message sent with timestamp 1645649267295
-21:47:50.429 INFO  Huobi: heartbeat message sent with timestamp 1645649269311
-21:48:53.264 INFO  Subscribed for zonda
-21:48:53.333 INFO  Subscription confirmed for btc-pln
-21:48:54.058 INFO  Subscribed for huobi
-21:48:54.332 INFO  Subscription confirmed for btcusdt
-21:48:59.545 INFO  Huobi: heartbeat message sent with timestamp 1645649336745
-21:49:03.244 INFO  Huobi: heartbeat message sent with timestamp 1645649339769
-21:49:04.019 INFO  Huobi: heartbeat message sent with timestamp 1645649341777
-21:49:16.270 INFO  Subscribed for zonda
-21:49:16.364 INFO  Subscription confirmed for btc-pln
-21:49:17.012 INFO  Subscribed for huobi
-21:49:17.294 INFO  Subscription confirmed for btcusdt
-21:49:22.212 INFO  Huobi: heartbeat message sent with timestamp 1645649361265
-21:49:24.164 INFO  Huobi: heartbeat message sent with timestamp 1645649362285
-21:49:33.539 INFO  Huobi: heartbeat message sent with timestamp 1645649366378
-21:49:38.332 INFO  Huobi: heartbeat message sent with timestamp 1645649369420
-21:49:38.767 INFO  Huobi: heartbeat message sent with timestamp 1645649370421
-21:49:39.423 INFO  Huobi: heartbeat message sent with timestamp 1645649371441
-21:49:44.111 INFO  Huobi: heartbeat message sent with timestamp 1645649372475
-21:49:45.527 INFO  Huobi: heartbeat message sent with timestamp 1645649373504
-21:49:47.907 INFO  Huobi: heartbeat message sent with timestamp 1645649376555
-21:49:47.908 INFO  Huobi: heartbeat message sent with timestamp 1645649381621
-21:49:47.910 INFO  Huobi: heartbeat message sent with timestamp 1645649386693
+07:12:17.058 INFO  Subscribed for zonda
+07:12:17.136 INFO  Unknown response: {'action': 'subscribe-public-confirm', 'module': 'trading', 'path': 'orderbook-limited/btc-pln/10'}
+07:12:17.136 INFO  Subscription confirmed for btc-pln
+07:12:17.136 INFO  Unknown response: {'action': 'proxy-response', 'requestId': '78539fe0-e9b0-4e4e-8c86-70b36aa93d4f', 'statusCode': 200, 'body': {'status': 'Ok', 'sell': [{'ra': '159851.90', 'ca': '0.24968094', 'sa': '0.24968094', 'pa': '0.24968094', 'co': 1}, {'ra': '159851.91', 'ca': '1.0000', 'sa': '1.0000', 'pa': '1.0000', 'co': 1}, {'ra': '159851.92', 'ca': '0.978', 'sa': '0.978', 'pa': '0.978', 'co': 1}, {'ra': '159851.95', 'ca': '0.24459631', 'sa': '0.24459631', 'pa': '0.24459631', 'co': 1}, {'ra': '159936.84', 'ca': '0.00006', 'sa': '0.00006', 'pa': '0.00006', 'co': 1}, {'ra': '160000', 'ca': '0.00873506', 'sa': '0.00873506', 'pa': '0.00873506', 'co': 2}, {'ra': '160006.23', 'ca': '2.0', 'sa': '2.0', 'pa': '2.0', 'co': 1}, {'ra': '160335.61', 'ca': '0.00266155', 'sa': '0.00266155', 'pa': '0.00266155', 'co': 1}, {'ra': '160335.62', 'ca': '0.01579132', 'sa': '0.01579132', 'pa': '0.01579132', 'co': 1}, {'ra': '160335.69', 'ca': '1.000', 'sa': '1.000', 'pa': '1.000', 'co': 1}], 'buy': [{'ra': '158317.44', 'ca': '0.97596047', 'sa': '0.97596047', 'pa': '0.97596047', 'co': 1}, {'ra': '158500', 'ca': '0.03154574', 'sa': '0.03154574', 'pa': '0.03154574', 'co': 1}, {'ra': '158850', 'ca': '1.00947623', 'sa': '1.00947623', 'pa': '1.00947623', 'co': 2}, {'ra': '158850.01', 'ca': '0.08832584', 'sa': '0.08832584', 'pa': '0.08832584', 'co': 1}, {'ra': '158853', 'ca': '0.00012590', 'sa': '0.00012590', 'pa': '0.00012590', 'co': 1}, {'ra': '158853.02', 'ca': '0.01559339', 'sa': '0.01559339', 'pa': '0.01559339', 'co': 1}, {'ra': '158853.03', 'ca': '0.03762279', 'sa': '0.03762279', 'pa': '0.03762279', 'co': 1}, {'ra': '159298.36', 'ca': '0.00006', 'sa': '0.00006', 'pa': '0.00006', 'co': 1}, {'ra': '159347.21', 'ca': '0.13333333', 'sa': '0.13333333', 'pa': '0.13333333', 'co': 1}, {'ra': '159500', 'ca': '0.16344774', 'sa': '0.19', 'pa': '0.16344774', 'co': 1}], 'timestamp': '1645769538917', 'seqNo': '96932566'}}
+07:12:17.761 INFO  Subscribed for huobi
+07:12:18.027 INFO  Subscription confirmed for btcusdt
+07:12:18.589 INFO  Unknown response: {'action': 'push', 'topic': 'trading/orderbook-limited/btc-pln/10', 'message': {'changes': [{'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.88', 'action': 'update', 'state': {'ra': '159851.88', 'ca': '1.24968094', 'sa': '1.24968094', 'pa': '1.24968094', 'co': 2}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.89', 'action': 'update', 'state': {'ra': '159851.89', 'ca': '0.978', 'sa': '0.978', 'pa': '0.978', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '160700.04', 'action': 'update', 'state': {'ra': '160700.04', 'ca': '0.00052881', 'sa': '0.00052881', 'pa': '0.00052881', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.90', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.91', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.92', 'action': 'remove'}], 'timestamp': '1645769540525'}, 'timestamp': '1645769540525', 'seqNo': 96932567}
+07:12:18.589 INFO  Ask: 159851.88, asks: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:18.589 INFO  Ask: 159851.89, asks: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:18.589 INFO  Ask: 160700.04, asks: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:18.589 INFO  Ask: 159851.90, asks: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:18.589 INFO  Ask: 159851.91, asks: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:18.589 INFO  Ask: 159851.92, asks: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:19.100 INFO  Unknown response: {'action': 'push', 'topic': 'trading/orderbook-limited/btc-pln/10', 'message': {'changes': [{'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158317.43', 'action': 'update', 'state': {'ra': '158317.43', 'ca': '10.020', 'sa': '10.020', 'pa': '10.020', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '159500', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.87', 'action': 'update', 'state': {'ra': '159851.87', 'ca': '0.24968094', 'sa': '0.24968094', 'pa': '0.24968094', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.88', 'action': 'update', 'state': {'ra': '159851.88', 'ca': '1.00000000', 'sa': '1.00000000', 'pa': '1.00000000', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '160700.04', 'action': 'remove'}], 'timestamp': '1645769541051'}, 'timestamp': '1645769541051', 'seqNo': 96932568}
+07:12:19.100 INFO  Bid: 158317.43, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:19.100 INFO  Bid: 159500, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:19.100 ERROR  error from callback <bound method Zonda.on_message of <Zonda(Thread-2, started 17068)>>: 'state'
+07:12:19.600 INFO  Unknown response: {'action': 'push', 'topic': 'trading/orderbook-limited/btc-pln/10', 'message': {'changes': [{'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.05', 'action': 'update', 'state': {'ra': '158853.05', 'ca': '0.00006', 'sa': '0.00006', 'pa': '0.00006', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.04', 'action': 'update', 'state': {'ra': '158853.04', 'ca': '0.01802671', 'sa': '0.01802671', 'pa': '0.01802671', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158850.02', 'action': 'update', 'state': {'ra': '158850.02', 'ca': '0.13333333', 'sa': '0.13333333', 'pa': '0.13333333', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '159347.21', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '159298.36', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.02', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.86', 'action': 'update', 'state': {'ra': '159851.86', 'ca': '0.00006', 'sa': '0.00006', 'pa': '0.00006', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159999.99', 'action': 'update', 'state': {'ra': '159999.99', 'ca': '0.00266155', 'sa': '0.00266155', 'pa': '0.00266155', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159936.84', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '160335.69', 'action': 'remove'}], 'timestamp': '1645769541577'}, 'timestamp': '1645769541577', 'seqNo': 96932569}
+07:12:19.600 INFO  Bid: 158853.05, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:19.600 INFO  Bid: 158853.04, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:19.600 INFO  Bid: 158850.02, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:19.600 INFO  Bid: 159347.21, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:19.600 ERROR  error from callback <bound method Zonda.on_message of <Zonda(Thread-2, started 17068)>>: 'state'
+07:12:20.105 INFO  Unknown response: {'action': 'push', 'topic': 'trading/orderbook-limited/btc-pln/10', 'message': {'changes': [{'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.06', 'action': 'update', 'state': {'ra': '158853.06', 'ca': '0.978', 'sa': '0.978', 'pa': '0.978', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158850', 'action': 'update', 'state': {'ra': '158850', 'ca': '0.03147623', 'sa': '0.03147623', 'pa': '0.03147623', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158317.43', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.85', 'action': 'update', 'state': {'ra': '159851.85', 'ca': '0.978', 'sa': '0.978', 'pa': '0.978', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '160335.69', 'action': 'update', 'state': {'ra': '160335.69', 'ca': '1.000', 'sa': '1.000', 'pa': '1.000', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.89', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '160335.61', 'action': 'remove'}], 'timestamp': '1645769542101'}, 'timestamp': '1645769542101', 'seqNo': 96932570}
+07:12:20.105 INFO  Bid: 158853.06, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:20.105 INFO  Bid: 158850, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:20.105 INFO  Bid: 158317.43, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:20.105 ERROR  error from callback <bound method Zonda.on_message of <Zonda(Thread-2, started 17068)>>: 'state'
+07:12:20.633 INFO  Unknown response: {'action': 'push', 'topic': 'trading/orderbook-limited/btc-pln/10', 'message': {'changes': [{'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.08', 'action': 'update', 'state': {'ra': '158853.08', 'ca': '0.00006', 'sa': '0.00006', 'pa': '0.00006', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.07', 'action': 'update', 'state': {'ra': '158853.07', 'ca': '0.26099415', 'sa': '0.26099415', 'pa': '0.26099415', 'co': 3}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158317.43', 'action': 'update', 'state': {'ra': '158317.43', 'ca': '10.020', 'sa': '10.020', 'pa': '10.020', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158000', 'action': 'update', 'state': {'ra': '158000', 'ca': '0.04117525', 'sa': '0.04117525', 'pa': '0.04117525', 'co': 2}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '157718.76', 'action': 'update', 'state': {'ra': '157718.76', 'ca': '0.7000', 'sa': '0.7000', 'pa': '0.7000', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.05', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.04', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.03', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158850.02', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158850.01', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.83', 'action': 'update', 'state': {'ra': '159851.83', 'ca': '0.24974094', 'sa': '0.24974094', 'pa': '0.24974094', 'co': 2}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.84', 'action': 'update', 'state': {'ra': '159851.84', 'ca': '1.00266155', 'sa': '1.00266155', 'pa': '1.00266155', 'co': 2}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '160700.04', 'action': 'update', 'state': {'ra': '160700.04', 'ca': '0.00052881', 'sa': '0.00052881', 'pa': '0.00052881', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.86', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.87', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.88', 'action': 'remove'}], 'timestamp': '1645769542620'}, 'timestamp': '1645769542620', 'seqNo': 96932571}
+07:12:20.633 INFO  Bid: 158853.08, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:20.633 INFO  Bid: 158853.07, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:20.633 INFO  Bid: 158317.43, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:20.633 INFO  Bid: 158000, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:20.633 INFO  Bid: 157718.76, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:20.633 INFO  Bid: 158853.05, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:20.633 ERROR  error from callback <bound method Zonda.on_message of <Zonda(Thread-2, started 17068)>>: 'state'
+07:12:21.243 INFO  Unknown response: {'action': 'push', 'topic': 'trading/orderbook-limited/btc-pln/10', 'message': {'changes': [{'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.09', 'action': 'update', 'state': {'ra': '158853.09', 'ca': '0.00006', 'sa': '0.00006', 'pa': '0.00006', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.08', 'action': 'update', 'state': {'ra': '158853.08', 'ca': '0.01792962', 'sa': '0.01792962', 'pa': '0.01792962', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.07', 'action': 'update', 'state': {'ra': '158853.07', 'ca': '0.12766082', 'sa': '0.12766082', 'pa': '0.12766082', 'co': 2}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '157718.76', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.82', 'action': 'update', 'state': {'ra': '159851.82', 'ca': '0.00006', 'sa': '0.00006', 'pa': '0.00006', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.83', 'action': 'update', 'state': {'ra': '159851.83', 'ca': '0.24968094', 'sa': '0.24968094', 'pa': '0.24968094', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159999.99', 'action': 'remove'}], 'timestamp': '1645769543141'}, 'timestamp': '1645769543141', 'seqNo': 96932572}
+07:12:21.243 INFO  Bid: 158853.09, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:21.243 INFO  Bid: 158853.08, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:21.243 INFO  Bid: 158853.07, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:21.243 INFO  Bid: 157718.76, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:21.243 ERROR  error from callback <bound method Zonda.on_message of <Zonda(Thread-2, started 17068)>>: 'state'
+07:12:21.626 INFO  Huobi: heartbeat message sent with timestamp 1645769542698
+07:12:21.641 INFO  Unknown response: {'action': 'push', 'topic': 'trading/orderbook-limited/btc-pln/10', 'message': {'changes': [{'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.10', 'action': 'update', 'state': {'ra': '158853.10', 'ca': '0.01675506', 'sa': '0.01675506', 'pa': '0.01675506', 'co': 2}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.09', 'action': 'update', 'state': {'ra': '158853.09', 'ca': '0.03762278', 'sa': '0.03762278', 'pa': '0.03762278', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.08', 'action': 'update', 'state': {'ra': '158853.08', 'ca': '0.13333333', 'sa': '0.13333333', 'pa': '0.13333333', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.07', 'action': 'update', 'state': {'ra': '158853.07', 'ca': '0.09003804', 'sa': '0.09003804', 'pa': '0.09003804', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158000', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.81', 'action': 'update', 'state': {'ra': '159851.81', 'ca': '0.00266155', 'sa': '0.00266155', 'pa': '0.00266155', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.84', 'action': 'update', 'state': {'ra': '159851.84', 'ca': '1.00000000', 'sa': '1.00000000', 'pa': '1.00000000', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.82', 'action': 'remove'}], 'timestamp': '1645769543661'}, 'timestamp': '1645769543661', 'seqNo': 96932573}
+07:12:21.641 INFO  Bid: 158853.10, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:21.641 INFO  Bid: 158853.09, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:21.641 INFO  Bid: 158853.08, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:21.641 INFO  Bid: 158853.07, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:21.641 INFO  Bid: 158000, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:21.641 ERROR  error from callback <bound method Zonda.on_message of <Zonda(Thread-2, started 17068)>>: 'state'
+07:12:22.272 INFO  Unknown response: {'action': 'push', 'topic': 'trading/orderbook-limited/btc-pln/10', 'message': {'changes': [{'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.11', 'action': 'update', 'state': {'ra': '158853.11', 'ca': '0.00006', 'sa': '0.00006', 'pa': '0.00006', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.10', 'action': 'update', 'state': {'ra': '158853.10', 'ca': '0.01669506', 'sa': '0.01669506', 'pa': '0.01669506', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158317.43', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.80', 'action': 'update', 'state': {'ra': '159851.80', 'ca': '0.00006', 'sa': '0.00006', 'pa': '0.00006', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '160700.04', 'action': 'remove'}], 'timestamp': '1645769544182'}, 'timestamp': '1645769544182', 'seqNo': 96932574}
+07:12:22.272 INFO  Bid: 158853.11, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:22.272 INFO  Bid: 158853.10, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:22.272 INFO  Bid: 158317.43, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:22.272 ERROR  error from callback <bound method Zonda.on_message of <Zonda(Thread-2, started 17068)>>: 'state'
+07:12:22.777 INFO  Unknown response: {'action': 'push', 'topic': 'trading/orderbook-limited/btc-pln/10', 'message': {'changes': [{'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.13', 'action': 'update', 'state': {'ra': '158853.13', 'ca': '0.01950336', 'sa': '0.01950336', 'pa': '0.01950336', 'co': 2}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.12', 'action': 'update', 'state': {'ra': '158853.12', 'ca': '1.01562277', 'sa': '1.01562277', 'pa': '1.01562277', 'co': 2}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158317.45', 'action': 'update', 'state': {'ra': '158317.45', 'ca': '0.09998568', 'sa': '0.09998568', 'pa': '0.09998568', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158317.43', 'action': 'update', 'state': {'ra': '158317.43', 'ca': '10.020', 'sa': '10.020', 'pa': '10.020', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158000', 'action': 'update', 'state': {'ra': '158000', 'ca': '0.04117525', 'sa': '0.04117525', 'pa': '0.04117525', 'co': 2}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '157718.76', 'action': 'update', 'state': {'ra': '157718.76', 'ca': '0.7000', 'sa': '0.7000', 'pa': '0.7000', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.11', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.10', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.09', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.08', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.07', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.06', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.79', 'action': 'update', 'state': {'ra': '159851.79', 'ca': '0.98066155', 'sa': '0.98066155', 'pa': '0.98066155', 'co': 2}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '160700.04', 'action': 'update', 'state': {'ra': '160700.04', 'ca': '0.00052881', 'sa': '0.00052881', 'pa': '0.00052881', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '160799.99', 'action': 'update', 'state': {'ra': '160799.99', 'ca': '0.36117', 'sa': '0.36117', 'pa': '0.36117', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '160800', 'action': 'update', 'state': {'ra': '160800', 'ca': '0.13599807', 'sa': '0.13599807', 'pa': '0.13599807', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.80', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.81', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.84', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.85', 'action': 'remove'}], 'timestamp': '1645769544701'}, 'timestamp': '1645769544701', 'seqNo': 96932575}
+07:12:22.777 INFO  Bid: 158853.13, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:22.777 INFO  Bid: 158853.12, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:22.777 INFO  Bid: 158317.45, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:22.777 INFO  Bid: 158317.43, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:22.777 INFO  Bid: 158000, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:22.777 INFO  Bid: 157718.76, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:22.777 INFO  Bid: 158853.11, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:22.777 ERROR  error from callback <bound method Zonda.on_message of <Zonda(Thread-2, started 17068)>>: 'state'
+07:12:23.199 INFO  Unknown response: {'action': 'push', 'topic': 'trading/orderbook-limited/btc-pln/10', 'message': {'changes': [{'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.14', 'action': 'update', 'state': {'ra': '158853.14', 'ca': '0.01721323', 'sa': '0.01721323', 'pa': '0.01721323', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.13', 'action': 'update', 'state': {'ra': '158853.13', 'ca': '0.09403126', 'sa': '0.09403126', 'pa': '0.09403126', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158317.45', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.77', 'action': 'update', 'state': {'ra': '159851.77', 'ca': '0.24968094', 'sa': '0.24968094', 'pa': '0.24968094', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.78', 'action': 'update', 'state': {'ra': '159851.78', 'ca': '1.00000', 'sa': '1.00000', 'pa': '1.00000', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.83', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '160800', 'action': 'remove'}], 'timestamp': '1645769545227'}, 'timestamp': '1645769545227', 'seqNo': 96932576}
+07:12:23.199 INFO  Bid: 158853.14, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:23.199 INFO  Bid: 158853.13, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:23.199 INFO  Bid: 158317.45, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:23.199 ERROR  error from callback <bound method Zonda.on_message of <Zonda(Thread-2, started 17068)>>: 'state'
+07:12:23.808 INFO  Unknown response: {'action': 'push', 'topic': 'trading/orderbook-limited/btc-pln/10', 'message': {'changes': [{'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.16', 'action': 'update', 'state': {'ra': '158853.16', 'ca': '0.00006', 'sa': '0.00006', 'pa': '0.00006', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.15', 'action': 'update', 'state': {'ra': '158853.15', 'ca': '0.01878114', 'sa': '0.01878114', 'pa': '0.01878114', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.14', 'action': 'update', 'state': {'ra': '158853.14', 'ca': '0.13333333', 'sa': '0.13333333', 'pa': '0.13333333', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158000', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '157718.76', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.76', 'action': 'update', 'state': {'ra': '159851.76', 'ca': '0.00006', 'sa': '0.00006', 'pa': '0.00006', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '160700', 'action': 'update', 'state': {'ra': '160700', 'ca': '0.11832920', 'sa': '0.11832920', 'pa': '0.11832920', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '160700.04', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '160799.99', 'action': 'remove'}], 'timestamp': '1645769545754'}, 'timestamp': '1645769545754', 'seqNo': 96932577}
+07:12:23.808 INFO  Bid: 158853.16, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:23.808 INFO  Bid: 158853.15, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:23.808 INFO  Bid: 158853.14, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:23.808 INFO  Bid: 158000, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:23.808 ERROR  error from callback <bound method Zonda.on_message of <Zonda(Thread-2, started 17068)>>: 'state'
+07:12:24.316 INFO  Unknown response: {'action': 'push', 'topic': 'trading/orderbook-limited/btc-pln/10', 'message': {'changes': [{'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.17', 'action': 'update', 'state': {'ra': '158853.17', 'ca': '0.00006', 'sa': '0.00006', 'pa': '0.00006', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.16', 'action': 'update', 'state': {'ra': '158853.16', 'ca': '0.01710302', 'sa': '0.01710302', 'pa': '0.01710302', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.15', 'action': 'update', 'state': {'ra': '158853.15', 'ca': '0.03762276', 'sa': '0.03762276', 'pa': '0.03762276', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158853.12', 'action': 'update', 'state': {'ra': '158853.12', 'ca': '0.97800000', 'sa': '0.97800000', 'pa': '0.97800000', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158317.43', 'action': 'remove'}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.75', 'action': 'update', 'state': {'ra': '159851.75', 'ca': '0.00006', 'sa': '0.00006', 'pa': '0.00006', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.76', 'action': 'update', 'state': {'ra': '159851.76', 'ca': '0.00266155', 'sa': '0.00266155', 'pa': '0.00266155', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '159851.79', 'action': 'update', 'state': {'ra': '159851.79', 'ca': '0.97800000', 'sa': '0.97800000', 'pa': '0.97800000', 'co': 1}}, {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '160700', 'action': 'remove'}], 'timestamp': '1645769546291'}, 'timestamp': '1645769546291', 'seqNo': 96932578}
+07:12:24.316 INFO  Bid: 158853.17, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:24.316 INFO  Bid: 158853.16, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:24.316 INFO  Bid: 158853.15, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:24.316 INFO  Bid: 158853.12, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:24.316 INFO  Bid: 158317.43, bids: [0.0, 0.0, 0.0, 0.0, 0.0]
+07:12:24.316 ERROR  error from callback <bound method Zonda.on_message of <Zonda(Thread-2, started 17068)>>: 'state'
