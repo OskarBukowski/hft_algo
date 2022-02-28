@@ -1,130 +1,145 @@
-21:43:43.951 INFO  Subscribed for huobi
-21:43:44.220 INFO  Subscription confirmed for btcusdt
-21:43:48.605 INFO  Huobi: heartbeat message sent with timestamp 1645649027776
-21:43:50.205 INFO  Subscribed for zonda
-21:43:50.288 INFO  Subscription confirmed for btc-pln
-21:43:53.187 INFO  Huobi: heartbeat message sent with timestamp 1645649032836
-21:43:58.636 INFO  Huobi: heartbeat message sent with timestamp 1645649037888
-21:44:09.753 INFO  Huobi: heartbeat message sent with timestamp 1645649042932
-21:44:10.735 INFO  Huobi: heartbeat message sent with timestamp 1645649043964
-21:44:11.387 INFO  Huobi: heartbeat message sent with timestamp 1645649044965
-21:44:12.805 INFO  Huobi: heartbeat message sent with timestamp 1645649045973
-21:44:14.444 INFO  Huobi: heartbeat message sent with timestamp 1645649046982
-21:44:14.986 INFO  Huobi: heartbeat message sent with timestamp 1645649047992
-21:44:15.202 INFO  Huobi: heartbeat message sent with timestamp 1645649048993
-21:44:15.421 INFO  Huobi: heartbeat message sent with timestamp 1645649050002
-21:44:17.705 INFO  Huobi: heartbeat message sent with timestamp 1645649053054
-21:45:27.828 INFO  Subscribed for zonda
-21:45:27.909 INFO  Subscription confirmed for btc-pln
-21:45:28.593 INFO  Subscribed for huobi
-21:45:28.868 INFO  Subscription confirmed for btcusdt
-21:45:29.338 INFO  Unknown response: 'Sell'
-21:45:29.339 INFO  Unknown response: 'Sell'
-21:45:29.397 INFO  Unknown response: 'Sell'
-21:45:29.910 INFO  Unknown response: 'Sell'
-21:45:30.469 INFO  Unknown response: 'Sell'
-21:45:30.988 INFO  Unknown response: 'Sell'
-21:45:31.510 INFO  Unknown response: 'Sell'
-21:45:32.055 INFO  Unknown response: 'Sell'
-21:45:32.569 INFO  Unknown response: 'Sell'
-21:45:33.100 INFO  Unknown response: 'Sell'
-21:45:33.634 INFO  Unknown response: 'Sell'
-21:45:34.167 INFO  Unknown response: 'Sell'
-21:45:34.686 INFO  Unknown response: 'Sell'
-21:45:35.218 INFO  Unknown response: 'Sell'
-21:45:35.765 INFO  Unknown response: 'Sell'
-21:45:36.297 INFO  Unknown response: 'Sell'
-21:45:36.849 INFO  Unknown response: 'Sell'
-21:45:37.367 INFO  Unknown response: 'Sell'
-21:45:37.904 INFO  Unknown response: 'Sell'
-21:45:38.423 INFO  Unknown response: 'Sell'
-21:45:38.955 INFO  Unknown response: 'Sell'
-21:45:39.487 INFO  Unknown response: 'Sell'
-21:45:40.017 INFO  Unknown response: 'Sell'
-21:45:41.058 INFO  Unknown response: 'Sell'
-21:45:41.542 INFO  Huobi: heartbeat message sent with timestamp 1645649133621
-21:45:41.574 INFO  Unknown response: 'Sell'
-21:45:42.100 INFO  Unknown response: 'Sell'
-21:45:42.623 INFO  Unknown response: 'Sell'
-21:45:43.071 INFO  Huobi: heartbeat message sent with timestamp 1645649134649
-21:45:43.157 INFO  Unknown response: 'Sell'
-21:45:43.509 INFO  Huobi: heartbeat message sent with timestamp 1645649135682
-21:45:43.683 INFO  Unknown response: 'Sell'
-21:45:43.729 INFO  Huobi: heartbeat message sent with timestamp 1645649136690
-21:45:44.210 INFO  Unknown response: 'Sell'
-21:45:44.602 INFO  Huobi: heartbeat message sent with timestamp 1645649137707
-21:45:44.723 INFO  Unknown response: 'Sell'
-21:45:44.820 INFO  Huobi: heartbeat message sent with timestamp 1645649138726
-21:45:45.264 INFO  Unknown response: 'Sell'
-21:45:45.586 INFO  Huobi: heartbeat message sent with timestamp 1645649139746
-21:45:45.761 INFO  Unknown response: 'Sell'
-21:45:46.281 INFO  Unknown response: 'Sell'
-21:45:46.818 INFO  Unknown response: 'Sell'
-21:45:47.354 INFO  Unknown response: 'Sell'
-21:45:47.905 INFO  Unknown response: 'Sell'
-21:45:48.452 INFO  Unknown response: 'Sell'
-21:45:49.028 INFO  Unknown response: 'Sell'
-21:45:49.523 INFO  Unknown response: 'Sell'
-21:45:50.043 INFO  Huobi: heartbeat message sent with timestamp 1645649140755
-21:45:50.060 INFO  Unknown response: 'Sell'
-21:45:50.592 INFO  Unknown response: 'Sell'
-21:45:50.917 INFO  Huobi: heartbeat message sent with timestamp 1645649141776
-21:45:51.122 INFO  Unknown response: 'Sell'
-21:45:51.683 INFO  Unknown response: 'Sell'
-21:45:51.809 INFO  Huobi: heartbeat message sent with timestamp 1645649143787
-21:45:51.811 INFO  Huobi: heartbeat message sent with timestamp 1645649148868
-21:46:10.994 INFO  Subscribed for zonda
-21:46:11.075 INFO  Subscription confirmed for btc-pln
-21:46:11.773 INFO  Subscribed for huobi
-21:46:12.035 INFO  Subscription confirmed for btcusdt
-21:46:14.912 INFO  Huobi: heartbeat message sent with timestamp 1645649174486
-21:46:24.593 INFO  Huobi: heartbeat message sent with timestamp 1645649179610
-21:46:25.029 INFO  Huobi: heartbeat message sent with timestamp 1645649180644
-21:46:25.574 INFO  Huobi: heartbeat message sent with timestamp 1645649181645
-21:46:26.230 INFO  Huobi: heartbeat message sent with timestamp 1645649182646
-21:46:27.212 INFO  Huobi: heartbeat message sent with timestamp 1645649183675
-21:46:27.646 INFO  Huobi: heartbeat message sent with timestamp 1645649184694
-21:46:38.235 INFO  Huobi: heartbeat message sent with timestamp 1645649189827
-21:46:42.957 INFO  Huobi: heartbeat message sent with timestamp 1645649192909
-21:46:42.958 INFO  Huobi: heartbeat message sent with timestamp 1645649193929
-21:46:42.959 INFO  Huobi: heartbeat message sent with timestamp 1645649194935
-21:46:42.959 INFO  Huobi: heartbeat message sent with timestamp 1645649195952
-21:46:42.960 INFO  Huobi: heartbeat message sent with timestamp 1645649196969
-21:46:42.960 INFO  Huobi: heartbeat message sent with timestamp 1645649197970
-21:46:42.961 INFO  Huobi: heartbeat message sent with timestamp 1645649199987
-21:47:31.234 INFO  Subscribed for zonda
-21:47:31.323 INFO  Subscription confirmed for btc-pln
-21:47:32.073 INFO  Subscribed for huobi
-21:47:32.366 INFO  Subscription confirmed for btcusdt
-21:47:35.233 INFO  Huobi: heartbeat message sent with timestamp 1645649254131
-21:47:47.652 INFO  Huobi: heartbeat message sent with timestamp 1645649259179
-21:47:50.424 INFO  Huobi: heartbeat message sent with timestamp 1645649261201
-21:47:50.425 INFO  Huobi: heartbeat message sent with timestamp 1645649262222
-21:47:50.426 INFO  Huobi: heartbeat message sent with timestamp 1645649263230
-21:47:50.426 INFO  Huobi: heartbeat message sent with timestamp 1645649264238
-21:47:50.427 INFO  Huobi: heartbeat message sent with timestamp 1645649265245
-21:47:50.427 INFO  Huobi: heartbeat message sent with timestamp 1645649266267
-21:47:50.428 INFO  Huobi: heartbeat message sent with timestamp 1645649267295
-21:47:50.429 INFO  Huobi: heartbeat message sent with timestamp 1645649269311
-21:48:53.264 INFO  Subscribed for zonda
-21:48:53.333 INFO  Subscription confirmed for btc-pln
-21:48:54.058 INFO  Subscribed for huobi
-21:48:54.332 INFO  Subscription confirmed for btcusdt
-21:48:59.545 INFO  Huobi: heartbeat message sent with timestamp 1645649336745
-21:49:03.244 INFO  Huobi: heartbeat message sent with timestamp 1645649339769
-21:49:04.019 INFO  Huobi: heartbeat message sent with timestamp 1645649341777
-21:49:16.270 INFO  Subscribed for zonda
-21:49:16.364 INFO  Subscription confirmed for btc-pln
-21:49:17.012 INFO  Subscribed for huobi
-21:49:17.294 INFO  Subscription confirmed for btcusdt
-21:49:22.212 INFO  Huobi: heartbeat message sent with timestamp 1645649361265
-21:49:24.164 INFO  Huobi: heartbeat message sent with timestamp 1645649362285
-21:49:33.539 INFO  Huobi: heartbeat message sent with timestamp 1645649366378
-21:49:38.332 INFO  Huobi: heartbeat message sent with timestamp 1645649369420
-21:49:38.767 INFO  Huobi: heartbeat message sent with timestamp 1645649370421
-21:49:39.423 INFO  Huobi: heartbeat message sent with timestamp 1645649371441
-21:49:44.111 INFO  Huobi: heartbeat message sent with timestamp 1645649372475
-21:49:45.527 INFO  Huobi: heartbeat message sent with timestamp 1645649373504
-21:49:47.907 INFO  Huobi: heartbeat message sent with timestamp 1645649376555
-21:49:47.908 INFO  Huobi: heartbeat message sent with timestamp 1645649381621
-21:49:47.910 INFO  Huobi: heartbeat message sent with timestamp 1645649386693
+06:51:18.293 INFO  Subscribed for zonda
+06:51:18.371 INFO  Subscription confirmed for btc-pln
+06:51:18.371 INFO  Smapshot handler activated
+06:51:18.786 INFO  Snapshot handler output: [[1.6040265e+05 1.3333333e-01]
+ [1.5919386e+05 8.2894650e-02]]
+06:51:18.801 INFO  Push handler activated
+06:51:18.801 INFO  --------Asks: [[160402.65, 0.13333333], [160402.66, 0.10755174], [160402.67, 2.0], [160402.68, 2.20673416], [160500.0, 0.42440083]], Bids: [[159193.86, 0.08289465], [159192.85, 0.01952832], [159191.82, 0.02108622], [159190.8, 1.001], [159000.01, 0.42156273]]
+06:51:18.801 INFO  Response type Buy
+06:51:18.801 INFO  Executing before exception 4 
+06:51:18.801 INFO  [[159000.01, 0.42156273], [159190.8, 1.001], [159191.82, 0.02108622], [159192.85, 0.01952832], [159193.86, 0.08289465]]
+06:51:18.801 INFO  Response type Buy
+06:51:18.801 INFO  Executing before exception 1 
+06:51:18.801 INFO  Executing after exception 1 
+06:51:18.837 INFO  Response type Buy
+06:51:18.837 INFO  Response type Buy
+06:51:18.837 INFO  Executing before exception 2 
+06:51:18.837 INFO  {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '159193.86', 'action': 'remove'}
+06:51:18.837 INFO  Response type Buy
+06:51:18.837 INFO  Executing before exception 2 
+06:51:18.837 INFO  {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '159192.85', 'action': 'remove'}
+06:51:18.837 INFO  Response type Buy
+06:51:18.837 INFO  Executing before exception 2 
+06:51:18.837 INFO  {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '159190.8', 'action': 'remove'}
+06:51:18.837 INFO  Response type Sell
+06:51:18.837 INFO  Response type Sell
+06:51:18.852 INFO  Bid: 161315.57, bids: {0: [159193.87, 0.28178675], 1: [159191.82, 0.02108622], 2: [0.0, 0.0], 3: [0.0, 0.0], 4: [0.0, 0.0]}
+06:51:18.852 INFO  Ask: 161315.57, asks: {0: [160402.64, 0.01840521], 1: [160402.65, 0.13333333], 2: [160402.66, 0.10755174], 3: [160402.67, 2.0], 4: [160402.68, 2.20673416]}
+06:51:18.962 INFO  Subscribed for huobi
+06:51:19.311 INFO  Push handler activated
+06:51:19.311 INFO  --------Asks: [[160402.64, 0.01840521], [160402.65, 0.13333333], [160402.66, 0.10755174], [160402.67, 2.0], [160402.68, 2.20673416]], Bids: [[159193.87, 0.28178675], [159191.82, 0.02108622], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0]]
+06:51:19.311 INFO  Subscription confirmed for btcusdt
+06:51:19.311 INFO  Response type Buy
+06:51:19.326 INFO  Executing before exception 4 
+06:51:19.326 INFO  [[0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [159191.82, 0.02108622], [159193.87, 0.28178675]]
+06:51:19.326 INFO  Response type Buy
+06:51:19.326 INFO  Executing before exception 4 
+06:51:19.326 INFO  [[0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [159191.82, 0.02108622], [159193.87, 0.28178675]]
+06:51:19.326 INFO  Response type Buy
+06:51:19.326 INFO  Executing before exception 2 
+06:51:19.326 INFO  {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '159193.87', 'action': 'remove'}
+06:51:19.326 INFO  Response type Buy
+06:51:19.326 INFO  Executing before exception 2 
+06:51:19.326 INFO  {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158050.53', 'action': 'remove'}
+06:51:19.326 INFO  Executing after exception 2 
+06:51:19.326 INFO  Bid: 158050.53, bids: {0: [159191.82, 0.02108622], 1: [0.0, 0.0], 2: [0.0, 0.0], 3: [0.0, 0.0], 4: [0.0, 0.0]}
+06:51:19.326 INFO  Ask: 158050.53, asks: {0: [160402.64, 0.01840521], 1: [160402.65, 0.13333333], 2: [160402.66, 0.10755174], 3: [160402.67, 2.0], 4: [160402.68, 2.20673416]}
+06:51:19.936 INFO  Push handler activated
+06:51:19.936 INFO  --------Asks: [[160402.64, 0.01840521], [160402.65, 0.13333333], [160402.66, 0.10755174], [160402.67, 2.0], [160402.68, 2.20673416]], Bids: [[159191.82, 0.02108622], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0]]
+06:51:19.936 INFO  Response type Buy
+06:51:19.936 INFO  Executing before exception 4 
+06:51:19.936 INFO  [[0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [159191.82, 0.02108622]]
+06:51:19.936 INFO  Response type Buy
+06:51:19.936 INFO  Executing before exception 1 
+06:51:19.936 INFO  Executing after exception 1 
+06:51:19.936 INFO  Response type Buy
+06:51:19.936 INFO  Executing before exception 5 
+06:51:19.936 INFO  Response type Buy
+06:51:19.936 INFO  Executing before exception 5 
+06:51:19.936 INFO  Response type Sell
+06:51:19.936 INFO  Response type Sell
+06:51:19.936 INFO  Bid: 160932.26, bids: {0: [159191.82, 0.02108622], 1: [158050.53, 5.038], 2: [0.0, 0.0], 3: [0.0, 0.0], 4: [0.0, 0.0]}
+06:51:19.936 INFO  Ask: 160932.26, asks: {0: [160402.64, 0.01840521], 1: [160402.65, 0.13333333], 2: [160402.66, 0.10755174], 3: [160402.67, 2.0], 4: [160402.68, 2.20673416]}
+06:51:20.962 INFO  Push handler activated
+06:51:20.962 INFO  --------Asks: [[160402.64, 0.01840521], [160402.65, 0.13333333], [160402.66, 0.10755174], [160402.67, 2.0], [160402.68, 2.20673416]], Bids: [[159191.82, 0.02108622], [158050.53, 5.038], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0]]
+06:51:20.962 INFO  Response type Buy
+06:51:20.962 INFO  Executing before exception 4 
+06:51:20.962 INFO  [[0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [158050.53, 5.038], [159191.82, 0.02108622]]
+06:51:20.962 INFO  Response type Buy
+06:51:20.962 INFO  Executing before exception 4 
+06:51:20.962 INFO  [[0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [158050.53, 5.038], [159191.82, 0.02108622]]
+06:51:20.962 INFO  Response type Buy
+06:51:20.962 INFO  Executing before exception 4 
+06:51:20.962 INFO  [[0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [158050.53, 5.038], [159191.82, 0.02108622]]
+06:51:20.962 INFO  Response type Buy
+06:51:20.962 INFO  Executing before exception 5 
+06:51:20.962 INFO  Response type Buy
+06:51:20.962 INFO  Executing before exception 2 
+06:51:20.962 INFO  {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '159191.82', 'action': 'remove'}
+06:51:20.962 INFO  Response type Buy
+06:51:20.962 INFO  Executing before exception 2 
+06:51:20.962 INFO  {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '158050.53', 'action': 'remove'}
+06:51:20.962 INFO  Response type Sell
+06:51:20.962 INFO  Response type Sell
+06:51:20.962 INFO  Bid: 161315.57, bids: {0: [0.0, 0.0], 1: [0.0, 0.0], 2: [0.0, 0.0], 3: [0.0, 0.0], 4: [0.0, 0.0]}
+06:51:20.962 INFO  Ask: 161315.57, asks: {0: [160402.64, 0.01840521], 1: [160402.65, 0.13333333], 2: [160402.66, 0.10755174], 3: [160402.67, 2.0], 4: [160402.68, 2.20673416]}
+06:51:20.962 INFO  Push handler activated
+06:51:20.962 INFO  --------Asks: [[160402.64, 0.01840521], [160402.65, 0.13333333], [160402.66, 0.10755174], [160402.67, 2.0], [160402.68, 2.20673416]], Bids: [[0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0]]
+06:51:20.962 INFO  Response type Buy
+06:51:20.962 INFO  Executing before exception 4 
+06:51:20.962 INFO  [[0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0]]
+06:51:20.962 INFO  Response type Buy
+06:51:20.962 INFO  Executing before exception 4 
+06:51:20.962 INFO  [[0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0]]
+06:51:20.962 INFO  Response type Buy
+06:51:20.962 INFO  Executing before exception 5 
+06:51:20.962 INFO  Response type Buy
+06:51:20.962 INFO  Executing before exception 5 
+06:51:20.962 INFO  Response type Sell
+06:51:20.962 INFO  Response type Sell
+06:51:20.978 INFO  Response type Sell
+06:51:20.978 INFO  Response type Sell
+06:51:20.978 INFO  Response type Sell
+06:51:20.978 INFO  Bid: 161100, bids: {0: [0.0, 0.0], 1: [0.0, 0.0], 2: [0.0, 0.0], 3: [0.0, 0.0], 4: [0.0, 0.0]}
+06:51:20.978 INFO  Ask: 161100, asks: {0: [160402.62, 0.01898928], 1: [160402.63, 0.01833518], 2: [160402.65, 0.13333333], 3: [160402.66, 0.08921656], 4: [100000000.0, 1000000000.0]}
+06:51:21.702 INFO  Push handler activated
+06:51:21.702 INFO  --------Asks: [[160402.62, 0.01898928], [160402.63, 0.01833518], [160402.65, 0.13333333], [160402.66, 0.08921656], [100000000.0, 1000000000.0]], Bids: [[0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0]]
+06:51:21.702 INFO  Response type Buy
+06:51:21.702 INFO  Executing before exception 4 
+06:51:21.702 INFO  [[0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0]]
+06:51:21.702 INFO  Response type Buy
+06:51:21.702 INFO  Executing before exception 4 
+06:51:21.702 INFO  [[0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0]]
+06:51:21.702 INFO  Response type Buy
+06:51:21.702 INFO  Executing before exception 4 
+06:51:21.702 INFO  [[0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0]]
+06:51:21.702 INFO  Response type Buy
+06:51:21.702 INFO  Executing before exception 4 
+06:51:21.702 INFO  [[0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0]]
+06:51:21.702 INFO  Response type Buy
+06:51:21.702 INFO  Executing before exception 5 
+06:51:21.702 INFO  Response type Buy
+06:51:21.702 INFO  Executing before exception 5 
+06:51:21.702 INFO  Response type Buy
+06:51:21.702 INFO  Executing before exception 5 
+06:51:21.702 INFO  Bid: 159193.87, bids: {0: [0.0, 0.0], 1: [0.0, 0.0], 2: [0.0, 0.0], 3: [0.0, 0.0], 4: [0.0, 0.0]}
+06:51:21.702 INFO  Ask: 159193.87, asks: {0: [160402.62, 0.01898928], 1: [160402.63, 0.01833518], 2: [160402.65, 0.13333333], 3: [160402.66, 0.08921656], 4: [100000000.0, 1000000000.0]}
+06:51:22.249 INFO  Push handler activated
+06:51:22.249 INFO  --------Asks: [[160402.62, 0.01898928], [160402.63, 0.01833518], [160402.65, 0.13333333], [160402.66, 0.08921656], [100000000.0, 1000000000.0]], Bids: [[0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0]]
+06:51:22.249 INFO  Huobi: heartbeat message sent with timestamp 1646027484547
+06:51:22.249 INFO  Response type Buy
+06:51:22.249 INFO  Executing before exception 4 
+06:51:22.249 INFO  [[0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0]]
+06:51:22.249 INFO  Response type Buy
+06:51:22.249 INFO  Executing before exception 4 
+06:51:22.249 INFO  [[0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0]]
+06:51:22.249 INFO  Response type Buy
+06:51:22.249 INFO  Executing before exception 5 
+06:51:22.249 INFO  Response type Buy
+06:51:22.249 INFO  Executing before exception 5 
+06:51:22.249 INFO  Response type Sell
+06:51:22.249 INFO  Response type Sell
+06:51:22.264 INFO  Response type Sell
+06:51:22.264 INFO  Response type Sell
+06:51:22.264 INFO  Bid: 160402.63, bids: {0: [0.0, 0.0], 1: [0.0, 0.0], 2: [0.0, 0.0], 3: [0.0, 0.0], 4: [0.0, 0.0]}
+06:51:22.264 INFO  Ask: 160402.63, asks: {0: [160402.6, 0.01933397], 1: [160402.61, 0.01833518], 2: [160402.65, 0.13333333], 3: [100000000.0, 1000000000.0], 4: [100000000.0, 1000000000.0]}
