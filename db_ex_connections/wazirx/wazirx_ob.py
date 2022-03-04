@@ -7,8 +7,7 @@
 
 
 import sys
-sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
-sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
+sys.path.append("/home/obukowski/Desktop/hft_algo")
 
 import asyncio
 from asyncio.exceptions import TimeoutError

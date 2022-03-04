@@ -4,7 +4,7 @@
 
 import sys
 sys.path.append("//")
-sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
+sys.path.append("/home/obukowski/Desktop/hft_algo")
 
 import aiohttp
 from aiohttp import ContentTypeError, ClientConnectionError, ClientOSError
