@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+import sys
+sys.path.append("/home/obukowski/Desktop/hft_algo")
+
 import requests
 import websocket
 import threading
@@ -7,21 +10,12 @@ import numpy as np
 import json
 from datetime import datetime
 import gzip
-import requests
-from datetime import datetime
 import time
-from admin.admin_tools import logger_conf
 from operator import itemgetter
-
-import sys
-
-sys.path.append("/home/obukowski/Desktop/hft_algo")
-
+from admin.admin_tools import logger_conf
 
 # TO DO:
-# 1. Create classes for two instruments with inheritance from Client class
-# 2. Modify Client() class to have stable response for given events, deal with WebsocketApp() class response
-# 3. Check the lock() option to get synchronized responses
+# 1. Create decorator that tracks seqNo from push messages
 
 
 class Client(threading.Thread):
@@ -46,14 +40,14 @@ class Client(threading.Thread):
         pass
 
     def on_error(self, *args):
-        print('Error appeared', args)
+        self.LOGGER.error(args, exc_info=True)
 
     def on_close(self, *args):
-        print("### closed ###", args)
+        self.LOGGER.info("### Received closing message ###", args)
 
     def on_open(self, *args):
         """There we need only one argument, because the whole response is <websocket._app.WebSocketApp object>"""
-        self.LOGGER.info(f'Subscribed for {self.exchange}')
+        self.LOGGER.info(f'Subscribed for {self.exchange} websocket')
 
 
 class Zonda(Client):
@@ -75,6 +69,7 @@ class Zonda(Client):
         def heartbeat_sender(self, *args):
             func(self, *args)
             if self.PUSH_COUNTER == 20:
+                self.LOGGER.info("Sending heartbeat request")
                 self.ws.send('{"action": "ping"}')
                 self.PUSH_COUNTER = 0
 
@@ -96,146 +91,120 @@ class Zonda(Client):
     def on_open(self, *args):
         super().on_open()
         self._snapshot()
+        self.LOGGER.info("Sending subscription request")
         self.ws.send('{"action": "subscribe-public","module": "trading","path": "orderbook-limited/btc-pln/10"}')
 
+
     def _snapshot(self):
+        self.LOGGER.info("Sending snapshot request")
         return self.ws.send(
             '{"requestId": "78539fe0-e9b0-4e4e-8c86-70b36aa93d4f","action": "proxy","module": "trading",'
             '"path": "orderbook-limited/btc-pln/10"}')
 
+
+
     def on_message(self, object, response):
         response = json.loads(response)
-        print(response)
-        # try:
-        # self._response_mapping(tuple(list(response.keys())), response)
-        # except KeyError:
-        #     self.LOGGER.info(f'Unable to handle response;: {response}')
+        # print(response)
+        try:
+            self.LOGGER.info("Push response received, starting mapping")
+            self._response_mapping(tuple(list(response.keys())), response)
+        except KeyError:
+            self.LOGGER.error(f'Unable to handle response: {response}', exc_info=True)
 
     def snapshot_handler(self, response):  # WORKS CORRECTLY
-        self.LOGGER.info(f'Snapshot handler activated')
+        self.LOGGER.info(f'Activating snapshot handler')
         with self.lock:
-            for i in range(5):
-                self.internal_ob['ask'][i] = [float(response['body']['sell'][i][a]) for a in ['ra', 'ca']]
-                self.internal_ob['bid'][i] = [float(response['body']['buy'][-(i + 1)][a]) for a in ['ra', 'ca']]
-
+            self.internal_ob['ask'] = {i: [[float(e['ra']), float(e['ca'])] for e in response['body']['sell']][i] for i in range(10)}
+            self.internal_ob['bid'] = {i: sorted([[float(e['ra']), float(e['ca'])] for e in response['body']['buy']], key=itemgetter(0), reverse=True)[i] for i in range(10)}
             self.orderbook_handler[self.name][0] = [float(response['body']['sell'][0][a]) for a in ['ra', 'ca']]
             self.orderbook_handler[self.name][1] = [float(response['body']['buy'][-1][a]) for a in ['ra', 'ca']]
 
+            self.LOGGER.info("Snapshot handler confirmed")
             self.LOGGER.info(f'Snapshot handler output: {f"{self.name}: {self.orderbook_handler[self.name]}"}')
 
-    @heartbeat
-    def push_handler(self, response):
-        self.LOGGER.info(f'Push handler activated')
-        self.bids = [i for i in self.internal_ob['bid'].values()]
+    def internal_ask(self, push):
         self.asks = [i for i in self.internal_ob['ask'].values()]
-
-        self.LOGGER.info(f"On start push handler asks: {self.asks}")
-        self.LOGGER.info(f"On start push handler bids: {self.bids}")
-
-        for r in response['message']['changes']:
-            if r['entryType'] == 'Sell':
-                self.LOGGER.info(f'Response type Sell')
-                self.LOGGER.info(f'Current orderbook {self.internal_ob["ask"]}')
-                self.LOGGER.info(r)
-                if min([i[0] for i in self.asks]) <= float(r['rate']) <= (max([i[0] for i in self.asks]) + 0.01):
-                    self.LOGGER.info(f'Checking if the price is in the range of orderbook')
-                    if r['action'] == 'update':
-                        self.LOGGER.info(f'Action Update')
-                        try:
-                            index = [i[0] for i in self.asks].index(float(r['rate']))
-                            self.LOGGER.info("-----", float(r['state']['ca']))
-                            self.internal_ob['ask'][index][1] = float(r['state']['ca'])
-                        except ValueError:  # if the element does not exist in list
-                            self.asks.append([float(r['state']['ra']), float(r['state']['ca'])])
-                            self.asks = sorted(self.asks, key=itemgetter(0), reverse=False)
-                            self.asks.remove(self.asks[-1])
-                            self.internal_ob['ask'] = {k: self.asks[k] for k, v in self.internal_ob['ask'].items()}
-
-                    elif r['action'] == 'remove':
-                        self.LOGGER.info(f'Action Remove')
-                        try:
-                            index = [i[0] for i in self.asks].index(float(r['rate']))
-                            self.internal_ob['ask'][index] = [100000000.0, 1000000000.0]
-                            self.asks = sorted([i for i in self.internal_ob['ask'].values()], key=itemgetter(0))
-                            self.internal_ob['ask'] = {k: self.asks[k] for k, v in self.internal_ob['ask'].items()}
-                        except ValueError:
-                            self.LOGGER.info(f'Unable to find value to remove in first 5 lines, continue')
-                            continue
-
-                elif float(r['rate']) < min([i[0] for i in self.asks]):
-                    self.LOGGER.info(f'Checking if the price is lower than min from orderbook')
-                    self.asks.append([float(r['state']['ra']), float(r['state']['ca'])])
-                    self.asks = sorted(self.asks, key=itemgetter(0))
+        if push['action'] == 'update':
+            if min([i[0] for i in self.asks]) <= float(push['rate']) <= max([i[0] for i in self.asks]):
+                try:
+                    index = [i[0] for i in self.asks].index(float(push['rate']))
+                    self.internal_ob['ask'][index][1] = float(push['state']['ca'])
+                except ValueError:
+                    self.asks.append([float(push['state']['ra']), float(push['state']['ca'])])
+                    self.asks = sorted(self.asks, key=itemgetter(0), reverse=False)
                     self.asks.remove(self.asks[-1])
                     self.internal_ob['ask'] = {k: self.asks[k] for k, v in self.internal_ob['ask'].items()}
 
-            elif r['entryType'] == 'Buy':
-                self.LOGGER.info(f'Response type Buy')
-                self.LOGGER.info(f'Current orderbook {self.internal_ob["bid"]}')
-                self.LOGGER.info(r)
-                if min([i[0] for i in self.bids]) <= float(r['rate']) <= (max([i[0] for i in self.bids]) + 0.01):
-                    self.LOGGER.info(f'Checking if the price is in the range of orderbook')
-                    if r['action'] == 'update':
-                        self.LOGGER.info(f'Action Update')
-                        try:
-                            index = [i[0] for i in self.bids].index(float(r['rate']))
-                            self.internal_ob['bid'][index][1] = float(r['state']['ca'])
-                        except ValueError:  # if the element does not exist in list
-                            self.bids.append([float(r['state']['ra']), float(r['state']['ca'])])
-                            self.bids = sorted(self.bids, key=itemgetter(0), reverse=True)
-                            self.bids.remove(self.bids[-1])
-                            self.internal_ob['bid'] = {k: self.bids[k] for k, v in self.internal_ob['bid'].items()}
+            elif float(push['rate']) < min([i[0] for i in self.asks]):
+                self.asks.append([float(push['state']['ra']), float(push['state']['ca'])])
+                self.asks = sorted(self.asks, key=itemgetter(0), reverse=False)
+                self.asks.remove(self.asks[-1])
+                self.internal_ob['ask'] = {k: self.asks[k] for k, v in self.internal_ob['ask'].items()}
 
-                    elif r['action'] == 'remove':
-                        self.LOGGER.info(f'Action Remove')
-                        try:
-                            self.LOGGER.info("Executing before exception 2 ")
-                            index = [i[0] for i in self.bids].index(float(r['rate']))
-                            self.internal_ob['bid'][index] = [0.0, 0.0]
-                            self.bids = sorted([i for i in self.internal_ob['bid'].values()], key=itemgetter(0),
-                                               reverse=True)
-                            self.internal_ob['bid'] = {k: self.bids[k] for k, v in self.internal_ob['bid'].items()}
-                        except ValueError:
-                            continue
+            else:
+                self.LOGGER.info('Unable to find given rate, check seqNo')
 
-                elif float(r['rate']) > max([i[0] for i in self.bids]):
-                    self.LOGGER.info(f'Checking if the price is higher than max from orderbook')
-                    if r['action'] == 'update':
-                        self.LOGGER.info(f'Action Update')
-                        self.bids.append([float(r['state']['ra']), float(r['state']['ca'])])
-                        self.bids = sorted(self.bids, key=itemgetter(0))
-                        self.bids.remove(self.bids[-1])
-                        self.internal_ob['bid'] = {k: self.bids[k] for k, v in self.internal_ob['bid'].items()}
+        elif push['action'] == 'remove':
+            try:
+                index = [i[0] for i in self.asks].index(float(push['rate']))
+                self.internal_ob['ask'][index] = [100000000.0, 1000000000.0]
+                self.asks = sorted([i for i in self.internal_ob['ask'].values()], key=itemgetter(0))
+                self.internal_ob['ask'] = {k: self.asks[k] for k, v in self.internal_ob['ask'].items()}
+            except ValueError:
+                self.LOGGER.info('Unable to find given rate, check seqNo')
 
-                    elif r['action'] == 'remove':
-                        self.LOGGER.info(f'Action Remove')
-                        try:
-                            index = [i[0] for i in self.bids].index(float(r['rate']))
-                            self.internal_ob['bid'][index] = [0.0, 0.0]
-                            self.bids = sorted([i for i in self.internal_ob['bid'].values()], key=itemgetter(0),
-                                               reverse=True)
-                            self.internal_ob['bid'] = {k: self.bids[k] for k, v in self.internal_ob['bid'].items()}
-                        except ValueError:
-                            continue
+    def internal_bid(self, push):
+        self.bids = [i for i in self.internal_ob['bid'].values()]
+        if push['action'] == 'update':
+            if min([i[0] for i in self.bids]) <= float(push['rate']) <= max([i[0] for i in self.bids]):
+                try:
+                    index = [i[0] for i in self.bids].index(float(push['rate']))
+                    self.internal_ob['bid'][index][1] = float(push['state']['ca'])
+                except ValueError:
+                    self.bids.append([float(push['state']['ra']), float(push['state']['ca'])])
+                    self.bids = sorted(self.bids, key=itemgetter(0), reverse=True)
+                    self.bids.remove(self.bids[-1])
+                    self.internal_ob['bid'] = {k: self.bids[k] for k, v in self.internal_ob['bid'].items()}
 
-            self.LOGGER.info(f'Asks after operations: rate: {r["rate"]}, asks: {self.internal_ob["ask"]}')
-            self.LOGGER.info(f'Bids after operations: rate: {r["rate"]}, bids: {self.internal_ob["bid"]}')
+            elif float(push['rate']) > max([i[0] for i in self.bids]):
+                self.bids.append([float(push['state']['ra']), float(push['state']['ca'])])
+                self.bids = sorted(self.bids, key=itemgetter(0), reverse=True)
+                self.bids.remove(self.bids[-1])
+                self.internal_ob['bid'] = {k: self.bids[k] for k, v in self.internal_ob['bid'].items()}
 
-        # self._check_price_match['Sell'] = self.internal_ob['ask'][0]
-        # self._check_price_match['Buy'] = self.internal_ob['bid'][0]
+            else:
+                self.LOGGER.info('Unable to find given rate, check seqNo')
 
-        self.orderbook_handler[self.name][0] = self.internal_ob['ask'][0]
-        self.orderbook_handler[self.name][1] = self.internal_ob['bid'][0]
+        elif push['action'] == 'remove':
+            try:
+                index = [i[0] for i in self.bids].index(float(push['rate']))
+                self.internal_ob['bid'][index] = [0.0, 0.0]
+                self.bids = sorted([i for i in self.internal_ob['bid'].values()], key=itemgetter(0), reverse=True)
+                self.internal_ob['bid'] = {k: self.bids[k] for k, v in self.internal_ob['bid'].items()}
+            except ValueError:
+                self.LOGGER.info('Unable to find given rate, check seqNo')
 
-    def ask_push_handler(self):
-        pass
 
-    def bid_push_handler(self):
-        pass
 
-    @property
-    def _check_price_match(self):
-        return {'Buy': self.orderbook_handler[self.name][1][0], 'Sell': self.orderbook_handler[self.name][0][0]}
+    @heartbeat
+    def push_handler(self, response):
+        self.LOGGER.info(f'Activating push handler')
+        for push in response['message']['changes']:
+            self.LOGGER.debug(f"On start push handler asks: {self.internal_ob['ask']}")
+            self.LOGGER.debug(f"On start push handler bids: {self.internal_ob['bid']}")
+            self.LOGGER.debug(f"Action: {push['action']}, Side: {push['entryType']}, Rate: {push['rate']}")
+            if push['entryType'] == 'Sell':
+                self.internal_ask(push)
+            else:
+                self.internal_bid(push)
+
+            self.orderbook_handler[self.name][0] = self.internal_ob['ask'][0]
+            self.orderbook_handler[self.name][1] = self.internal_ob['bid'][0]
+
+            self.LOGGER.debug(f'Asks after operations: rate: {push["rate"]}, asks: {self.internal_ob["ask"]}')
+            self.LOGGER.debug(f'Bids after operations: rate: {push["rate"]}, bids: {self.internal_ob["bid"]}')
+
 
     def _response_mapping(self, response_keys_tuple, response):
         mapping_dict = {tuple(['action', 'requestId', 'statusCode', 'body']): self.snapshot_handler,
@@ -270,10 +239,10 @@ class Huobi(Client):
 
     def on_message(self, object, response):
         super().on_message()
-        resp = json.loads(gzip.decompress(response).decode('utf-8'))
-        # print(resp)
+        response = json.loads(gzip.decompress(response).decode('utf-8'))
+        # print(response)
         try:
-            self._response_mapping(tuple(list(resp.keys())), resp)
+            self._response_mapping(tuple(list(response.keys())), response)
         except KeyError as unknown_response_type:
             self.LOGGER.info(f'Unknown response: {unknown_response_type}')
 
@@ -310,8 +279,8 @@ class ObProcessing:
     def run(self):
         while True:
             with lock:
-                # print(f"Zonda: {orderbook_handler['Zonda']}  ;  Huobi: {orderbook_handler['Huobi']} ")
-                time.sleep(0.5)
+                print(f"Zonda: {orderbook_handler['Zonda']}  ;  Huobi: {orderbook_handler['Huobi']} ")
+                time.sleep(0.1)
 
 
 if __name__ == '__main__':
