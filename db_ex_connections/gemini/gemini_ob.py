@@ -2,8 +2,7 @@
 
 
 import sys
-sys.path.append("C:/Users/oskar/Desktop/hft_algo/hft_algo")
-sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
+sys.path.append("/home/obukowski/Desktop/hft_algo")
 
 import aiohttp
 from aiohttp import ContentTypeError, ClientOSError, ClientConnectionError
