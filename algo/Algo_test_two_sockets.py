@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import requests
 import websocket
 import threading
@@ -10,6 +12,9 @@ from datetime import datetime
 import time
 from admin.admin_tools import logger_conf
 from operator import itemgetter
+
+import sys
+sys.path.append("/home/obukowski/Desktop/hft_algo")
 
 
 # TO DO:
