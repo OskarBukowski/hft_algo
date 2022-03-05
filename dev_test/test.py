@@ -31,12 +31,10 @@ s = {'action': 'proxy-response',
          'timestamp': '1646414681548',
          'seqNo': '98007871'}}
 
-
 internal_ob = {'ask': {i: [0.0, 0.0] for i in range(10)},
                'bid': {i: [0.0, 0.0] for i in range(10)}}
 
 print(internal_ob)
-
 
 internal_ob['ask'] = {i: [[e['ra'], e['ca']] for e in s['body']['sell']][i] for i in range(10)}
 internal_ob['bid'] = {i: sorted([[e['ra'], e['ca']] for e in s['body']['buy']], key=itemgetter(0), reverse=True)[i] for
@@ -50,32 +48,30 @@ asks = [i for i in internal_ob['ask'].values()]
 p1 = {'action': 'push',
       'topic': 'trading/orderbook-limited/btc-pln/10',
       'message': {'changes': [
-    {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '180205.99', 'action': 'update',
-     'state': {'ra': '180205.99', 'ca': '1.012', 'sa': '1.012', 'pa': '1.012', 'co': 1}},
-    {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '180205.97', 'action': 'remove'},
-    {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '180999.60', 'action': 'update',
-     'state': {'ra': '180999.60', 'ca': '1.0485091', 'sa': '1.0485091', 'pa': '1.0485091', 'co': 1}},
-    {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '181953.19', 'action': 'update',
-     'state': {'ra': '181953.19', 'ca': '0.02208724', 'sa': '0.02208724', 'pa': '0.02208724', 'co': 1}},
-    {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '182741.69', 'action': 'update',
-     'state': {'ra': '182741.69', 'ca': '1.5000', 'sa': '1.5000', 'pa': '1.5000', 'co': 1}},
-    {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '182741.7', 'action': 'update',
-     'state': {'ra': '182741.7', 'ca': '0.74713181', 'sa': '0.74713181', 'pa': '0.74713181', 'co': 1}},
-    {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '180955.56', 'action': 'remove'},
-    {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '180955.57', 'action': 'remove'},
-    {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '180999.61', 'action': 'remove'},
-    {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '181000.00', 'action': 'remove'}],
-    'timestamp': '1646414682601'},
+          {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '180205.99', 'action': 'update',
+           'state': {'ra': '180205.99', 'ca': '1.012', 'sa': '1.012', 'pa': '1.012', 'co': 1}},
+          {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '180205.97', 'action': 'remove'},
+          {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '180999.60', 'action': 'update',
+           'state': {'ra': '180999.60', 'ca': '1.0485091', 'sa': '1.0485091', 'pa': '1.0485091', 'co': 1}},
+          {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '181953.19', 'action': 'update',
+           'state': {'ra': '181953.19', 'ca': '0.02208724', 'sa': '0.02208724', 'pa': '0.02208724', 'co': 1}},
+          {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '182741.69', 'action': 'update',
+           'state': {'ra': '182741.69', 'ca': '1.5000', 'sa': '1.5000', 'pa': '1.5000', 'co': 1}},
+          {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '182741.7', 'action': 'update',
+           'state': {'ra': '182741.7', 'ca': '0.74713181', 'sa': '0.74713181', 'pa': '0.74713181', 'co': 1}},
+          {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '180955.56', 'action': 'remove'},
+          {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '180955.57', 'action': 'remove'},
+          {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '180999.61', 'action': 'remove'},
+          {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '181000.00', 'action': 'remove'}],
+          'timestamp': '1646414682601'},
       'timestamp': '1646414682601',
       'seqNo': 98007873}
-
 
 for c in p1['message']['changes']:
     push_side = c['entryType']
     push_rate = c['state']['ra']
     push_volume = c['state']['ca']
     pass
-
 
 
 def internal_ask(self, push, asks):
@@ -103,9 +99,6 @@ def internal_ask(self, push, asks):
             print('Unable to find given rate, check seqNo')
 
 
-
-
-
 def internal_bid(self, push, bids):
     if push['action'] == 'update':
         if min([i[0] for i in self.bids]) <= float(push['rate']) <= (max([i[0] for i in self.bids]) + 0.01):
@@ -129,38 +122,6 @@ def internal_bid(self, push, bids):
             self.internal_ob['bid'] = {k: self.asks[k] for k, v in self.internal_ob['bid'].items()}
         except ValueError:
             print('Unable to find given rate, check seqNo')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
