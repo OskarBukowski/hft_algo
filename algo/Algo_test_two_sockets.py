@@ -255,16 +255,17 @@ class Huobi(Client):
         except KeyError as unknown_response_type:
             self.LOGGER.info(f'Huobi: Unknown response: {unknown_response_type}')
 
+
     def on_error(self, *args):
         super().on_error()
         self.LOGGER.warning(f"Huobi: Received error, reconnecting to {self.name}")
+        super().on_open()
         self.on_open()
 
     def heartbeat_response_creator(self, response):
         """example heartbeat check: {"ping":1644437537572}"""
-        with self.lock:
-            self.ws.send('{{"pong": {}}}'.format(response['ping']))
-            self.LOGGER.info("Huobi: heartbeat message sent with timestamp {}".format(response['ping']))
+        self.ws.send('{{"pong": {}}}'.format(response['ping']))
+        self.LOGGER.info("Huobi: heartbeat message sent with timestamp {}".format(response['ping']))
 
     def push_handler(self, response):
         self.LOGGER.info(f"Huobi: Activating push handler")
@@ -296,7 +297,6 @@ class ObProcessing:
         while True:
             with self.lock:
                 print(f"Zonda: {self.orderbook_handler['Zonda']}  ;  Huobi: {self.orderbook_handler['Huobi']} ")
-                time.sleep(0.005)
 
 
 
@@ -313,9 +313,11 @@ if __name__ == '__main__':
         h.start()
         z.start()
 
-        ObProcessing(orderbook_handler, lock).run()
+        processor = ObProcessing(orderbook_handler, lock)
+        processor.run()
 
     except KeyboardInterrupt as signal_error:
         h.LOGGER.info("Received closing order from user")
         h.LOGGER.info("Closing application")
+
 
