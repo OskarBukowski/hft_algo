@@ -39,7 +39,7 @@ class Client(threading.Thread):
         self.LOGGER.error(repr(args), exc_info=True)
 
     def on_close(self, *args):
-        self.LOGGER.info("### Received closing message ###")
+        self.LOGGER.info(f"### Received closing message for {self.exchange}###")
 
     def on_open(self, *args):
         """There we need only one argument, because the whole response is <websocket._app.WebSocketApp object>"""
@@ -66,7 +66,7 @@ class Zonda(Client):
         def heartbeat_sender(self, *args):
             func(self, *args)
             if self.PUSH_COUNTER == 20:
-                self.LOGGER.info("Sending heartbeat request")
+                self.LOGGER.info("Zonda: Sending heartbeat request")
                 self.ws.send('{"action": "ping"}')
                 self.PUSH_COUNTER = 0
 
@@ -79,8 +79,8 @@ class Zonda(Client):
             previous_seqNo = self.seq_no
             func(self, *args)
             if int(self.seq_no) != int(previous_seqNo) + 1:
-                self.LOGGER.warning("!!! Missed push sequence !!!")
-                self.LOGGER.warning(f"Current sequence number {self.seq_no}, previous: {previous_seqNo}")
+                self.LOGGER.warning("Zonda: !!! Missed push sequence !!!")
+                self.LOGGER.warning(f"Zonda: Current sequence number {self.seq_no}, previous: {previous_seqNo}")
 
         return handler
 
@@ -100,7 +100,7 @@ class Zonda(Client):
     def on_open(self, *args):
         super().on_open()
         self._snapshot()
-        self.LOGGER.info("Sending subscription request")
+        self.LOGGER.info("Zonda: Sending subscription request")
         self.ws.send('{"action": "subscribe-public","module": "trading","path": "orderbook-limited/btc-pln/10"}')
 
     def _snapshot(self):
@@ -113,13 +113,13 @@ class Zonda(Client):
         response = json.loads(response)
         # print(response)
         try:
-            self.LOGGER.info("Push response received, starting mapping")
+            self.LOGGER.info("Zonda: Push response received, starting mapping")
             self._response_mapping(tuple(list(response.keys())), response)
         except KeyError:
-            self.LOGGER.error(f'Unable to handle response: {response}', exc_info=True)
+            self.LOGGER.error(f'Zonda: Unable to handle response: {response}', exc_info=True)
 
     def snapshot_handler(self, response):
-        self.LOGGER.info(f'Activating snapshot handler')
+        self.LOGGER.info(f'Zonda: Activating snapshot handler')
         with self.lock:
             self.seq_no = response['body']['seqNo']
             self.internal_ob['ask'] = {i: [[float(e['ra']), float(e['ca'])] for e in response['body']['sell']][i] for i
@@ -129,8 +129,8 @@ class Zonda(Client):
             self.orderbook_handler[self.name][0] = [float(response['body']['sell'][0][a]) for a in ['ra', 'ca']]
             self.orderbook_handler[self.name][1] = [float(response['body']['buy'][-1][a]) for a in ['ra', 'ca']]
 
-            self.LOGGER.info("Snapshot handler confirmed")
-            self.LOGGER.info(f'Snapshot handler output: {f"{self.name}: {self.orderbook_handler[self.name]}"}')
+            self.LOGGER.info("Zonda: Snapshot handler confirmed")
+            self.LOGGER.info(f'Zonda: Snapshot handler output: {f"{self.name}: {self.orderbook_handler[self.name]}"}')
 
     def internal_ask(self, push):
         self.asks = [i for i in self.internal_ob['ask'].values()]
@@ -152,7 +152,7 @@ class Zonda(Client):
                 self.internal_ob['ask'] = {k: self.asks[k] for k, v in self.internal_ob['ask'].items()}
 
             else:
-                self.LOGGER.info('Unable to find given rate, check seqNo')
+                self.LOGGER.info('Zonda: Unable to find given rate, check seqNo')
 
         elif push['action'] == 'remove':
             try:
@@ -161,7 +161,7 @@ class Zonda(Client):
                 self.asks = sorted([i for i in self.internal_ob['ask'].values()], key=itemgetter(0))
                 self.internal_ob['ask'] = {k: self.asks[k] for k, v in self.internal_ob['ask'].items()}
             except ValueError:
-                self.LOGGER.info('Unable to find given rate, check seqNo')
+                self.LOGGER.info('Zonda: Unable to find given rate, check seqNo')
 
     def internal_bid(self, push):
         self.bids = [i for i in self.internal_ob['bid'].values()]
@@ -183,7 +183,7 @@ class Zonda(Client):
                 self.internal_ob['bid'] = {k: self.bids[k] for k, v in self.internal_ob['bid'].items()}
 
             else:
-                self.LOGGER.info('Unable to find given rate, check seqNo')
+                self.LOGGER.info('Zonda: Unable to find given rate, check seqNo')
 
         elif push['action'] == 'remove':
             try:
@@ -192,12 +192,12 @@ class Zonda(Client):
                 self.bids = sorted([i for i in self.internal_ob['bid'].values()], key=itemgetter(0), reverse=True)
                 self.internal_ob['bid'] = {k: self.bids[k] for k, v in self.internal_ob['bid'].items()}
             except ValueError:
-                self.LOGGER.info('Unable to find given rate, check seqNo')
+                self.LOGGER.info('Zonda: Unable to find given rate, check seqNo')
 
     @heartbeat
     @seqNo_follower
     def push_handler(self, response):
-        self.LOGGER.info(f'Activating push handler')
+        self.LOGGER.info(f'Zonda: Activating push handler')
         self.seq_no = response['seqNo']
         for push in response['message']['changes']:
             self.LOGGER.debug(f"On start push handler asks: {self.internal_ob['ask']}")
@@ -211,8 +211,8 @@ class Zonda(Client):
             self.orderbook_handler[self.name][0] = self.internal_ob['ask'][0]
             self.orderbook_handler[self.name][1] = self.internal_ob['bid'][0]
 
-            self.LOGGER.debug(f'Asks after operations: rate: {push["rate"]}, asks: {self.internal_ob["ask"]}')
-            self.LOGGER.debug(f'Bids after operations: rate: {push["rate"]}, bids: {self.internal_ob["bid"]}')
+            self.LOGGER.debug(f'Zonda: Asks after operations: rate: {push["rate"]}, asks: {self.internal_ob["ask"]}')
+            self.LOGGER.debug(f'Zonda: Bids after operations: rate: {push["rate"]}, bids: {self.internal_ob["bid"]}')
 
     def _response_mapping(self, response_keys_tuple, response):
         mapping_dict = {tuple(['action', 'requestId', 'statusCode', 'body']): self.snapshot_handler,
@@ -223,7 +223,7 @@ class Zonda(Client):
         return mapping_dict[response_keys_tuple](response)
 
     def subscription_confirm(self, response):
-        self.LOGGER.info(f'Subscription confirmed for {response["path"].split("/")[1]}')
+        self.LOGGER.info(f'Zonda: Subscription confirmed for {response["path"].split("/")[1]}')
 
 
 class Huobi(Client):
@@ -248,15 +248,16 @@ class Huobi(Client):
     def on_message(self, object, response):
         super().on_message()
         response = json.loads(gzip.decompress(response).decode('utf-8'))
-        print(response)
+        # print(response)
+        self.LOGGER.info(f"Huobi: Push response received, starting mapping")
         try:
             self._response_mapping(tuple(list(response.keys())), response)
         except KeyError as unknown_response_type:
-            self.LOGGER.info(f'Unknown response: {unknown_response_type}')
+            self.LOGGER.info(f'Huobi: Unknown response: {unknown_response_type}')
 
     def on_error(self, *args):
         super().on_error()
-        self.LOGGER.warning(f"Received error, reconnecting to {self.name}")
+        self.LOGGER.warning(f"Huobi: Received error, reconnecting to {self.name}")
         self.on_open()
 
     def heartbeat_response_creator(self, response):
@@ -266,6 +267,7 @@ class Huobi(Client):
             self.LOGGER.info("Huobi: heartbeat message sent with timestamp {}".format(response['ping']))
 
     def push_handler(self, response):
+        self.LOGGER.info(f"Huobi: Activating push handler")
         with self.lock:
             self.orderbook_handler[self.name][0] = response['tick']['asks'][0]
             self.orderbook_handler[self.name][1] = response['tick']['bids'][0]
@@ -282,7 +284,7 @@ class Huobi(Client):
         return mapping_dict[response_keys_tuple](response)
 
     def subscription_confirm(self, response):
-        self.LOGGER.info(f'Subscription confirmed for {response["subbed"].split(".")[1]}')
+        self.LOGGER.info(f'Huobi: Subscription confirmed for {response["subbed"].split(".")[1]}')
 
 
 class ObProcessing:
