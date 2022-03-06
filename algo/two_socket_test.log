@@ -1,37 +1,173 @@
-14:41:09.730 INFO  Subscribed for zonda websocket
-14:41:09.731 INFO  Sending snapshot request
-14:41:09.732 INFO  Sending subscription request
-14:41:09.760 INFO  Push response received, starting mapping
-14:41:09.760 INFO  Subscription confirmed for btc-pln
-14:41:09.769 INFO  Push response received, starting mapping
-14:41:09.769 INFO  Activating snapshot handler
-14:41:10.843 INFO  Subscribed for huobi websocket
-14:41:11.017 INFO  Snapshot handler confirmed
-14:41:11.017 INFO  Snapshot handler output: Zonda: [[1.7534699e+05 1.0120000e+00]
- [1.7480000e+05 1.9569500e-03]]
-14:41:11.019 INFO  Push response received, starting mapping
-14:41:11.019 INFO  Activating push handler
-14:41:11.019 INFO  Unable to find given rate, check seqNo
-14:41:11.020 INFO  Push response received, starting mapping
-14:41:11.020 INFO  Activating push handler
-14:41:11.020 INFO  Unable to find given rate, check seqNo
-14:41:11.250 INFO  Subscription confirmed for btcusdt
-14:41:11.251 INFO  Push response received, starting mapping
-14:41:11.252 INFO  Activating push handler
-14:41:11.252 INFO  Unable to find given rate, check seqNo
-14:41:11.703 INFO  Huobi: heartbeat message sent with timestamp 1646487671382
-14:41:11.758 INFO  Push response received, starting mapping
-14:41:11.759 INFO  Activating push handler
-14:41:11.760 INFO  Unable to find given rate, check seqNo
-14:41:11.760 INFO  Unable to find given rate, check seqNo
-14:41:12.480 INFO  Push response received, starting mapping
-14:41:12.480 INFO  Activating push handler
-14:41:12.480 INFO  Unable to find given rate, check seqNo
-14:41:12.991 INFO  Push response received, starting mapping
-14:41:12.992 INFO  Activating push handler
-14:41:13.605 INFO  Push response received, starting mapping
-14:41:13.605 INFO  Activating push handler
-14:41:13.922 INFO  Received closing order from user
-14:41:13.922 INFO  Closing application
-14:41:14.014 INFO  Push response received, starting mapping
-14:41:14.015 INFO  Activating push handler
+08:29:23.730 INFO  Subscribed for zonda websocket
+08:29:23.730 INFO  Sending snapshot request
+08:29:23.730 INFO  Zonda: Sending subscription request
+08:29:23.770 INFO  Zonda: Push response received, starting mapping
+08:29:23.772 INFO  Zonda: Subscription confirmed for btc-pln
+08:29:23.773 INFO  Zonda: Push response received, starting mapping
+08:29:23.773 INFO  Zonda: Activating snapshot handler
+08:29:23.890 INFO  Zonda: Snapshot handler confirmed
+08:29:23.891 INFO  Zonda: Snapshot handler output: Zonda: [[1.7754808e+05 3.2165300e-03]
+ [1.7660003e+05 8.9803380e-02]]
+08:29:24.298 INFO  Zonda: Push response received, starting mapping
+08:29:24.299 INFO  Zonda: Activating push handler
+08:29:24.299 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:24.300 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:24.303 INFO  Subscribed for huobi websocket
+08:29:24.708 INFO  Huobi: Push response received, starting mapping
+08:29:24.709 INFO  Zonda: Push response received, starting mapping
+08:29:24.709 INFO  Huobi: Subscription confirmed for btcusdt
+08:29:24.710 INFO  Zonda: Activating push handler
+08:29:24.713 INFO  Huobi: Push response received, starting mapping
+08:29:24.713 INFO  Huobi: Activating push handler
+08:29:25.322 INFO  Zonda: Push response received, starting mapping
+08:29:25.322 INFO  Zonda: Activating push handler
+08:29:25.324 INFO  Huobi: Push response received, starting mapping
+08:29:25.324 INFO  Huobi: Activating push handler
+08:29:25.834 INFO  Zonda: Push response received, starting mapping
+08:29:25.834 INFO  Zonda: Activating push handler
+08:29:25.835 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:25.836 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:26.244 INFO  Huobi: Push response received, starting mapping
+08:29:26.244 INFO  Huobi: Activating push handler
+08:29:26.266 INFO  Zonda: Push response received, starting mapping
+08:29:26.266 INFO  Zonda: Activating push handler
+08:29:26.961 INFO  Zonda: Push response received, starting mapping
+08:29:26.961 INFO  Zonda: Activating push handler
+08:29:26.962 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:27.268 INFO  Huobi: Push response received, starting mapping
+08:29:27.268 INFO  Huobi: Activating push handler
+08:29:27.356 INFO  Zonda: Push response received, starting mapping
+08:29:27.356 INFO  Zonda: Activating push handler
+08:29:27.357 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:27.357 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:27.985 INFO  Zonda: Push response received, starting mapping
+08:29:27.985 INFO  Zonda: Activating push handler
+08:29:27.986 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:27.986 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:28.292 INFO  Huobi: Push response received, starting mapping
+08:29:28.292 INFO  Huobi: Activating push handler
+08:29:28.389 INFO  Zonda: Push response received, starting mapping
+08:29:28.389 INFO  Zonda: Activating push handler
+08:29:28.389 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:28.390 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:28.390 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:28.390 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:28.849 INFO  Huobi: Push response received, starting mapping
+08:29:28.889 INFO  Huobi: heartbeat message sent with timestamp 1646551767975
+08:29:28.919 INFO  Zonda: Push response received, starting mapping
+08:29:28.919 INFO  Zonda: Activating push handler
+08:29:29.213 INFO  Huobi: Push response received, starting mapping
+08:29:29.214 INFO  Huobi: Activating push handler
+08:29:29.623 INFO  Zonda: Push response received, starting mapping
+08:29:29.623 INFO  Zonda: Activating push handler
+08:29:30.136 INFO  Zonda: Push response received, starting mapping
+08:29:30.136 INFO  Zonda: Activating push handler
+08:29:30.137 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:30.139 INFO  Huobi: Push response received, starting mapping
+08:29:30.139 INFO  Huobi: Activating push handler
+08:29:30.648 INFO  Zonda: Push response received, starting mapping
+08:29:30.648 INFO  Zonda: Activating push handler
+08:29:30.649 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:31.262 INFO  Zonda: Push response received, starting mapping
+08:29:31.263 INFO  Zonda: Activating push handler
+08:29:31.265 INFO  Huobi: Push response received, starting mapping
+08:29:31.265 INFO  Huobi: Activating push handler
+08:29:31.671 INFO  Zonda: Push response received, starting mapping
+08:29:31.672 INFO  Zonda: Activating push handler
+08:29:32.286 INFO  Zonda: Push response received, starting mapping
+08:29:32.286 INFO  Zonda: Activating push handler
+08:29:32.287 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:32.478 INFO  Huobi: Push response received, starting mapping
+08:29:32.478 INFO  Huobi: Activating push handler
+08:29:32.798 INFO  Zonda: Push response received, starting mapping
+08:29:32.798 INFO  Zonda: Activating push handler
+08:29:33.310 INFO  Zonda: Push response received, starting mapping
+08:29:33.310 INFO  Zonda: Activating push handler
+08:29:33.311 INFO  Huobi: Push response received, starting mapping
+08:29:33.312 INFO  Huobi: Activating push handler
+08:29:33.329 INFO  Huobi: Push response received, starting mapping
+08:29:33.513 INFO  Huobi: heartbeat message sent with timestamp 1646551773028
+08:29:33.923 INFO  Zonda: Push response received, starting mapping
+08:29:33.924 INFO  Zonda: Activating push handler
+08:29:34.232 INFO  Huobi: Push response received, starting mapping
+08:29:34.232 INFO  Huobi: Activating push handler
+08:29:34.278 INFO  Zonda: Push response received, starting mapping
+08:29:34.279 INFO  Zonda: Activating push handler
+08:29:34.280 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:34.281 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:34.949 INFO  Zonda: Push response received, starting mapping
+08:29:34.949 INFO  Zonda: Activating push handler
+08:29:34.950 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:35.105 INFO  Huobi: Push response received, starting mapping
+08:29:35.105 INFO  Huobi: Activating push handler
+08:29:35.460 INFO  Zonda: Push response received, starting mapping
+08:29:35.460 INFO  Zonda: Activating push handler
+08:29:35.972 INFO  Zonda: Push response received, starting mapping
+08:29:35.972 INFO  Zonda: Activating push handler
+08:29:35.973 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:36.279 INFO  Huobi: Push response received, starting mapping
+08:29:36.279 INFO  Huobi: Activating push handler
+08:29:36.586 INFO  Zonda: Push response received, starting mapping
+08:29:36.586 INFO  Zonda: Activating push handler
+08:29:37.098 INFO  Zonda: Push response received, starting mapping
+08:29:37.098 INFO  Zonda: Activating push handler
+08:29:37.106 INFO  Huobi: Push response received, starting mapping
+08:29:37.107 INFO  Huobi: Activating push handler
+08:29:37.610 INFO  Zonda: Push response received, starting mapping
+08:29:37.611 INFO  Zonda: Activating push handler
+08:29:37.611 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:38.225 INFO  Zonda: Push response received, starting mapping
+08:29:38.226 INFO  Zonda: Activating push handler
+08:29:38.226 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:38.229 INFO  Huobi: Push response received, starting mapping
+08:29:38.229 INFO  Huobi: Activating push handler
+08:29:38.527 INFO  Zonda: Push response received, starting mapping
+08:29:38.527 INFO  Zonda: Activating push handler
+08:29:38.532 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:38.532 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:38.708 INFO  Huobi: Push response received, starting mapping
+08:29:38.730 INFO  Huobi: heartbeat message sent with timestamp 1646551778133
+08:29:39.148 INFO  Zonda: Push response received, starting mapping
+08:29:39.149 INFO  Huobi: Push response received, starting mapping
+08:29:39.149 INFO  Zonda: Activating push handler
+08:29:39.149 INFO  Huobi: Activating push handler
+08:29:39.151 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:39.151 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:39.151 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:39.761 INFO  Zonda: Push response received, starting mapping
+08:29:39.761 INFO  Zonda: Activating push handler
+08:29:40.273 INFO  Zonda: Push response received, starting mapping
+08:29:40.273 INFO  Zonda: Activating push handler
+08:29:40.275 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:40.276 INFO  Huobi: Push response received, starting mapping
+08:29:40.276 INFO  Huobi: Activating push handler
+08:29:40.596 INFO  Zonda: Push response received, starting mapping
+08:29:40.596 INFO  Zonda: Activating push handler
+08:29:41.299 INFO  Zonda: Push response received, starting mapping
+08:29:41.299 INFO  Zonda: Activating push handler
+08:29:41.300 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:41.300 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:41.302 INFO  Huobi: Push response received, starting mapping
+08:29:41.302 INFO  Huobi: Activating push handler
+08:29:41.809 INFO  Zonda: Push response received, starting mapping
+08:29:41.809 INFO  Zonda: Activating push handler
+08:29:41.809 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:42.219 INFO  Zonda: Push response received, starting mapping
+08:29:42.220 INFO  Huobi: Push response received, starting mapping
+08:29:42.221 INFO  Zonda: Activating push handler
+08:29:42.221 INFO  Huobi: Activating push handler
+08:29:42.223 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:42.833 INFO  Zonda: Push response received, starting mapping
+08:29:42.833 INFO  Zonda: Activating push handler
+08:29:42.834 INFO  Zonda: Unable to find given rate, check seqNo
+08:29:43.243 INFO  Zonda: Push response received, starting mapping
+08:29:43.243 INFO  Zonda: Activating push handler
+08:29:43.245 INFO  Huobi: Push response received, starting mapping
+08:29:43.245 INFO  Huobi: Activating push handler
+08:29:43.805 INFO  Received closing order from user
+08:29:43.806 INFO  Closing application
+08:29:43.806 INFO  Huobi: Push response received, starting mapping
+08:29:43.810 INFO  Huobi: heartbeat message sent with timestamp 1646551783203
+08:29:43.814 INFO  Zonda: Push response received, starting mapping
+08:29:43.814 INFO  Zonda: Activating push handler
+08:29:43.815 INFO  Zonda: Unable to find given rate, check seqNo
