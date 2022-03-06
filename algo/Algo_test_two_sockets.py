@@ -2,6 +2,7 @@
 
 import sys
 sys.path.append("/home/obukowski/Desktop/hft_algo")
+sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import websocket
 import threading
