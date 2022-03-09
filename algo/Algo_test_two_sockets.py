@@ -6,6 +6,7 @@ sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import websocket
 import threading
+import multiprocessing
 import numpy as np
 import json
 import gzip
@@ -36,7 +37,7 @@ class Client(threading.Thread):
         pass
 
     def on_error(self, *args):
-        self.LOGGER.error(repr(args), exc_info=True)
+        self.LOGGER.error("Error appeared: ", repr(args), exc_info=True)
 
     def on_close(self, *args):
         self.LOGGER.info(f"### Received closing message for {self.exchange}###")
@@ -289,14 +290,14 @@ class Huobi(Client):
 
 
 class ObProcessing:
-    def __init__(self, orderbook_handler, lock):
+    def __init__(self, orderbook_handler):
         self.orderbook_handler = orderbook_handler
-        self.lock = lock
 
     def run(self):
         while True:
-            with self.lock:
-                print(f"Zonda: {self.orderbook_handler['Zonda']}  ;  Huobi: {self.orderbook_handler['Huobi']} ")
+            print(f"Zonda: {self.orderbook_handler['Zonda']}  ;  Huobi: {self.orderbook_handler['Huobi']} ")
+
+
 
 
 
@@ -313,7 +314,7 @@ if __name__ == '__main__':
         h.start()
         z.start()
 
-        processor = ObProcessing(orderbook_handler, lock)
+        processor = ObProcessing(orderbook_handler)
         processor.run()
 
     except KeyboardInterrupt as signal_error:
