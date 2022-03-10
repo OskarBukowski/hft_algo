@@ -165,23 +165,15 @@
 # #       'timestamp': '1646414684207', 'seqNo': 98007876}
 
 import psycopg2
-from sshtunnel import SSHTunnelForwarder
+import pandas as pd
 
-# PORT = 5432
-# ssh = SSHTunnelForwarder(('192.169.0.52', 5432),
-#                          ssh_username='obukowski',
-#                          ssh_password='remiksow',
-#                          remote_bind_address=('localhost', 5432),
-#                          local_bind_address=('localhost', 5432))
-#
-# ssh.start()
 
 def remote_connection():
     conn = psycopg2.connect(
-        host= '192.168.0.52',
+        host='***',
         database='postgres',
         user='postgres',
-        password='remiksow'
+        password='***'
     )
     conn.autocommit = True
     cursor = conn.cursor()
@@ -189,6 +181,10 @@ def remote_connection():
     return cursor
 
 
-cursor = remote_connection()
+df = pd.read_sql_query("SELECT * FROM bitso.aaveusd_ob", psycopg2.connect(
+        host='***',
+        database='postgres',
+        user='postgres',
+        password='***'))
 
-print(cursor.execute('SELECT * FROM zonda.trxpln_ob'))
+print(df)
