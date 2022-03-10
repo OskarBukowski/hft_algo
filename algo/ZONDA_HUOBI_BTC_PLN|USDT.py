@@ -1,28 +1,26 @@
 #!/usr/bin/env python3
 
 import sys
+
 sys.path.append("/home/obukowski/Desktop/hft_algo")
 sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import websocket
 import threading
+import multiprocessing
 import numpy as np
 import json
-import asyncio
 import gzip
 import time
-import requests
 from operator import itemgetter
 from admin.admin_tools import logger_conf
-from pycoingecko import CoinGeckoAPI
 
 
-
-class Client(threading.Thread):
+class Client(multiprocessing.Process):
     LOGGER = logger_conf("../algo/two_socket_test.log")
 
     def __init__(self, url, exchange):
-        super().__init__()
+        multiprocessing.Process.__init__(self)
         self.ws = websocket.WebSocketApp(
             url=url,
             on_message=self.on_message,
@@ -31,6 +29,8 @@ class Client(threading.Thread):
             on_open=self.on_open)
 
         self.exchange = exchange
+        self.orderbook_handler = {'Zonda': np.array([[0., 0.], [0., 0.]]),
+                                  'Huobi': np.array([[0., 0.], [0., 0.]])}
 
     def run(self, *args):
         while True:
@@ -50,19 +50,15 @@ class Client(threading.Thread):
         self.LOGGER.info(f'Subscribed for {self.exchange} websocket')
 
 
-
-
 class Zonda(Client):
     LOGGER = logger_conf("../algo/two_socket_test.log")
     PUSH_COUNTER = 0
 
-    def __init__(self, url, exchange, orderbook_handler, lock):
+    def __init__(self, url, exchange):
         super().__init__(url, exchange)
 
         self.url = url
         self.exchange = exchange
-        self.orderbook_handler = orderbook_handler
-        self.lock = lock
         self.internal_ob = self.model_ob_creator()
         self.seq_no = None
 
@@ -117,7 +113,7 @@ class Zonda(Client):
 
     def on_message(self, object, response):
         response = json.loads(response)
-        # print(response)
+        print(response)
         try:
             self.LOGGER.info("Zonda: Push response received, starting mapping")
             self._response_mapping(tuple(list(response.keys())), response)
@@ -126,17 +122,16 @@ class Zonda(Client):
 
     def snapshot_handler(self, response):
         self.LOGGER.info(f'Zonda: Activating snapshot handler')
-        with self.lock:
-            self.seq_no = response['body']['seqNo']
-            self.internal_ob['ask'] = {i: [[float(e['ra']), float(e['ca'])] for e in response['body']['sell']][i] for i
-                                       in range(10)}
-            self.internal_ob['bid'] = {i: sorted([[float(e['ra']), float(e['ca'])] for e in response['body']['buy']],
-                                                 key=itemgetter(0), reverse=True)[i] for i in range(10)}
-            self.orderbook_handler[self.name][0] = [float(response['body']['sell'][0][a]) for a in ['ra', 'ca']]
-            self.orderbook_handler[self.name][1] = [float(response['body']['buy'][-1][a]) for a in ['ra', 'ca']]
+        self.seq_no = response['body']['seqNo']
+        self.internal_ob['ask'] = {i: [[float(e['ra']), float(e['ca'])] for e in response['body']['sell']][i] for i
+                                   in range(10)}
+        self.internal_ob['bid'] = {i: sorted([[float(e['ra']), float(e['ca'])] for e in response['body']['buy']],
+                                             key=itemgetter(0), reverse=True)[i] for i in range(10)}
+        self.orderbook_handler[self.name][0] = [float(response['body']['sell'][0][a]) for a in ['ra', 'ca']]
+        self.orderbook_handler[self.name][1] = [float(response['body']['buy'][-1][a]) for a in ['ra', 'ca']]
 
-            self.LOGGER.info("Zonda: Snapshot handler confirmed")
-            self.LOGGER.info(f'Zonda: Snapshot handler output: {f"{self.name}: {self.orderbook_handler[self.name]}"}')
+        self.LOGGER.info("Zonda: Snapshot handler confirmed")
+        self.LOGGER.info(f'Zonda: Snapshot handler output: {f"{self.name}: {self.orderbook_handler[self.name]}"}')
 
     def internal_ask(self, push):
         self.asks = [i for i in self.internal_ob['ask'].values()]
@@ -235,13 +230,11 @@ class Zonda(Client):
 class Huobi(Client):
     LOGGER = logger_conf("../algo/two_socket_test.log")
 
-    def __init__(self, url, exchange, orderbook_handler, lock):
+    def __init__(self, url, exchange):
         super().__init__(url, exchange)
 
         self.url = url
         self.exchange = exchange
-        self.orderbook_handler = orderbook_handler
-        self.lock = lock
 
     @property
     def name(self):
@@ -254,13 +247,12 @@ class Huobi(Client):
     def on_message(self, object, response):
         super().on_message()
         response = json.loads(gzip.decompress(response).decode('utf-8'))
-        # print(response)
+        print(response)
         self.LOGGER.info(f"Huobi: Push response received, starting mapping")
         try:
             self._response_mapping(tuple(list(response.keys())), response)
         except KeyError as unknown_response_type:
             self.LOGGER.info(f'Huobi: Unknown response: {unknown_response_type}')
-
 
     def on_error(self, *args):
         super().on_error()
@@ -275,9 +267,8 @@ class Huobi(Client):
 
     def push_handler(self, response):
         self.LOGGER.info(f"Huobi: Activating push handler")
-        with self.lock:
-            self.orderbook_handler[self.name][0] = response['tick']['asks'][0]
-            self.orderbook_handler[self.name][1] = response['tick']['bids'][0]
+        self.orderbook_handler[self.name][0] = response['tick']['asks'][0]
+        self.orderbook_handler[self.name][1] = response['tick']['bids'][0]
 
     @property
     def _check_price_match(self):
@@ -294,37 +285,27 @@ class Huobi(Client):
         self.LOGGER.info(f'Huobi: Subscription confirmed for {response["subbed"].split(".")[1]}')
 
 
-class ObProcessing:
-    def __init__(self, orderbook_handler, lock):
-        self.orderbook_handler = orderbook_handler
-        self.lock = lock
-
+class ObProcessing(Client):
+    def __init__(self):
+        super().__init__(url='XXX', exchange='XXX')
 
     def run(self):
         while True:
-            with self.lock:
-                print(f"Zonda: {self.orderbook_handler['Zonda']}  ;  Huobi: {self.orderbook_handler['Huobi']}")
-
+            print(f"Zonda: {self.orderbook_handler['Zonda']}  ;  Huobi: {self.orderbook_handler['Huobi']} ")
 
 
 if __name__ == '__main__':
 
     try:
-        lock = threading.Lock()
-        orderbook_handler = {'Zonda': np.array([[0., 0.], [0., 0.]]),
-                             'Huobi': np.array([[0., 0.], [0., 0.]])}
-
-        h = Huobi('wss://api.huobi.pro/ws', 'huobi', orderbook_handler, lock)
-        z = Zonda("wss://api.zonda.exchange/websocket/", 'zonda', orderbook_handler, lock)
-        processor = ObProcessing(orderbook_handler, lock)
-
+        h = Huobi('wss://api.huobi.pro/ws', 'huobi')
+        z = Zonda("wss://api.zonda.exchange/websocket/", 'zonda')
+        p = ObProcessing()
 
         h.start()
         z.start()
-        processor.run()
+        p.start()
+
 
     except KeyboardInterrupt as signal_error:
         h.LOGGER.info("Received closing order from user")
         h.LOGGER.info("Closing application")
-
-
