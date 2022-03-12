@@ -150,19 +150,6 @@
 # #     {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '181952.18', 'action': 'remove'},
 # #     {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '181953.19', 'action': 'remove'}],
 # #                                                                                      'timestamp': '1646414683676'},
-# #       'timestamp': '1646414683676', 'seqNo': 98007875}
-# # p4 = {'action': 'push', 'topic': 'trading/orderbook-limited/btc-pln/10', 'message': {'changes': [
-# #     {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '180206.00', 'action': 'update',
-# #      'state': {'ra': '180206.00', 'ca': '0.01499059', 'sa': '0.01499059', 'pa': '0.01499059', 'co': 1}},
-# #     {'marketCode': 'BTC-PLN', 'entryType': 'Buy', 'rate': '180205.98', 'action': 'remove'},
-# #     {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '180999.54', 'action': 'update',
-# #      'state': {'ra': '180999.54', 'ca': '1.0485091', 'sa': '1.0485091', 'pa': '1.0485091', 'co': 1}},
-# #     {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '181953.20', 'action': 'update',
-# #      'state': {'ra': '181953.20', 'ca': '0.44740879', 'sa': '0.44740879', 'pa': '0.44740879', 'co': 1}},
-# #     {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '180999.55', 'action': 'remove'},
-# #     {'marketCode': 'BTC-PLN', 'entryType': 'Sell', 'rate': '180999.56', 'action': 'remove'}],
-# #                                                                                      'timestamp': '1646414684207'},
-# #       'timestamp': '1646414684207', 'seqNo': 98007876}
 
 import psycopg2
 import pandas as pd
