@@ -1946,3 +1946,594 @@ Traceback (most recent call last):
   File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_trades.py", line 71, in response_mapping
     return mapping_dict[response_keys_tuple](response)
 KeyError: ('type', 'book', 'payload')
+08:03:19.866 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=aave_usd') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=aave_usd')
+08:03:20.000 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=mana_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=mana_mxn')
+08:03:20.199 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=link_usd') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=link_usd')
+08:03:20.426 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn')
+08:03:20.613 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn')
+08:03:20.760 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_mxn')
+08:03:20.962 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn')
+08:03:21.204 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn')
+08:03:21.385 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn')
+08:03:21.913 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_brl') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_brl')
+08:03:22.135 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn')
+08:03:22.338 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=ltc_usd') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=ltc_usd')
+08:03:22.510 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=mana_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=mana_mxn')
+08:03:22.749 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn')
+08:03:22.988 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=mana_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=mana_mxn')
+08:03:23.183 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn')
+08:03:23.384 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn')
+08:03:23.718 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_mxn')
+08:03:23.891 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn')
+08:03:24.084 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=ltc_usd') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=ltc_usd')
+08:03:24.261 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_mxn')
+08:03:24.450 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_brl') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_brl')
+08:03:24.647 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_mxn')
+08:03:24.882 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_brl') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_brl')
+08:03:25.170 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn')
+08:03:25.395 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_mxn')
+08:03:25.807 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn')
+08:03:26.076 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn')
+08:03:26.251 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn')
+08:03:26.452 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_brl') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_brl')
+08:03:26.698 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn')
+08:03:26.911 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_mxn')
+08:03:27.104 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn')
+08:03:27.275 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn')
+08:03:27.517 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn')
+08:03:27.800 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=mana_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=mana_mxn')
+08:03:28.050 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn')
+08:03:28.284 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=link_usd') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=link_usd')
+08:03:28.499 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=mana_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=mana_mxn')
+08:03:28.733 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn')
+08:03:28.947 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_mxn')
+08:03:29.132 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_mxn')
+08:03:29.306 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn')
+08:03:29.498 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=ltc_usd') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=ltc_usd')
+08:03:29.687 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn')
+08:03:29.940 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn')
+08:03:30.228 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn')
+08:03:30.508 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn')
+08:03:30.784 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn')
+08:03:31.160 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn')
+08:03:31.297 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=btc_mxn')
+08:03:31.488 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn')
+08:03:32.074 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn')
+08:03:32.205 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn')
+08:03:32.661 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=link_usd') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=link_usd')
+08:03:33.119 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn')
+08:03:33.287 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=ltc_usd') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=ltc_usd')
+08:03:33.617 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=sand_usd') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=sand_usd')
+08:03:33.916 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=ftm_usd') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=ftm_usd')
+08:03:34.302 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=aave_usd') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=aave_usd')
+08:03:34.688 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_mxn')
+08:03:35.463 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn')
+08:03:35.666 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_usd') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=xrp_usd')
+08:03:35.808 ERROR   $$ 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn') $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 62, in main
+    responses = await asyncio.gather(*tasks)
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 22, in single_url_getter
+    message = await response.json()
+  File "/home/obukowski/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1103, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.bitso.com/v3/order_book/?book=eth_mxn')
+08:03:36.187 ERROR   $$ Connection kill, error:  $$ 
+Traceback (most recent call last):
+  File "/home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py", line 136, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 603, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 570, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 1823, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/usr/lib/python3.8/selectors.py", line 468, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
