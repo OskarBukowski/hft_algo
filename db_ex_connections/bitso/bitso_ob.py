@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 # !!! BE AWARE OF STRICT RATE LIMITS, THE CONSEQUENCE IS BAN FOR 24H
-
 import sys
 
 sys.path.append("//")
