@@ -14,10 +14,13 @@ pipeline {
   agent {label "$HOST"}
 
   stages {
+
+
     stage("Authorization") {
+    /*
       when {
           equals(actual: "$PASSWORD", expected: "%{CREDENTIALS_PSW}")
-      }
+      } */
       steps {
         echo "Authorized"
       }
