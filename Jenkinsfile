@@ -17,10 +17,9 @@ pipeline {
     stage("Authorization") {
       when {
           equals(actual: "$PASSWORD", expected: "%{CREDENTIALS_PSW}")
-          equals(actual: "$USER", expected: "${CREDENTIALS_USR}")
       }
       steps {
-        echo "Hello World"
+        echo "Authorized"
       }
     }
 
