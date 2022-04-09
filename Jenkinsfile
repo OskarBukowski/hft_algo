@@ -31,7 +31,6 @@ pipeline {
         sh '''
         sudo su &&
         cd /opt &&
-        rm -rf "$DIR_NAME" &&
         cp -r /home/ubuntu/workspace/"$DIR_NAME" /opt/"$JOB_NAME"
         '''
       }
