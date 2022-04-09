@@ -8,7 +8,7 @@ pipeline {
 
   environment {
     CREDENTIALS = credentials("$USER")
-    DIR_NAME = "${JOB_NAME}_${BRANCH}"
+    DIR_NAME = "hft_${BRANCH}"
   }
 
   agent {label "$HOST"}
