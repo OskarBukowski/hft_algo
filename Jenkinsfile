@@ -17,10 +17,9 @@ pipeline {
 
 
     stage("Authorization") {
-    /*
       when {
           equals(actual: "$PASSWORD", expected: "%{CREDENTIALS_PSW}")
-      } */
+      }
       steps {
         echo "Authorized"
       }
@@ -31,7 +30,6 @@ pipeline {
       /* ./opt/"$JOB_NAME"/db_ex_connections/stop_all.sh */
         sh '''
         sudo su &&
-
         cd /opt &&
         rm -rf "$DIR_NAME" &&
         cp -r /home/ubuntu/workspace/"$DIR_NAME" /opt/"$JOB_NAME" &&
