@@ -22,7 +22,6 @@ pipeline {
       }
       steps {
         echo "Authorized"
-        sh '$(whoami) > t.txt'
       }
     }
 
