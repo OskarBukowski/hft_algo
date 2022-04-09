@@ -1,0 +1,17 @@
+obukowski started gemini_ob.py on 02/21/22 06:16:32 
+obukowski started gemini_trades.py on 02/21/22 06:16:36 
+obukowski stoppped gemini_trades.py on 02/21/22 06:17:08 
+obukowski started gemini_trades.py on 02/21/22 06:18:03 
+obukowski started gemini_ob.py on 03/09/22 21:29:47 
+obukowski started gemini_trades.py on 03/09/22 21:29:52 
+obukowski stoppped gemini_ob.py on 03/10/22 05:56:34 
+obukowski stoppped gemini_trades.py on 03/10/22 05:56:39 
+obukowski started gemini_trades.py on 03/10/22 05:56:51 
+obukowski started gemini_ob.py on 03/10/22 05:56:57 
+obukowski stoppped gemini_ob.py on 03/13/22 07:57:31 
+obukowski stoppped gemini_trades.py on 03/13/22 07:57:38 
+obukowski started gemini_trades.py on 03/13/22 07:57:46 
+obukowski started gemin_ob.py on 03/13/22 07:57:54 
+obukowski started gemini_ob.py on 03/13/22 07:57:58 
+obukowski stoppped gemini_ob.py on 04/04/22 08:25:21 
+obukowski stoppped gemini_trades.py on 04/04/22 08:25:24 

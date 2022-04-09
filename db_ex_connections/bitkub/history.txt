@@ -1,0 +1,10 @@
+obukowski started bitkub_ob.py on 02/21/22 06:25:10 
+obukowski started bitkub_trades.py on 02/21/22 06:25:14 
+obukowski started bitkub_ob.py on 03/09/22 21:30:14 
+obukowski started bitkub_trades.py on 03/09/22 21:30:19 
+obukowski stoppped bitkub_ob.py on 03/10/22 05:57:25 
+obukowski stoppped bitkub_trades.py on 03/10/22 05:57:30 
+obukowski started bitkub_trades.py on 03/10/22 05:57:39 
+obukowski started bitkub_ob.py on 03/10/22 05:57:45 
+obukowski stoppped bitkub_ob.py on 04/04/22 08:25:32 
+obukowski stoppped bitkub_trades.py on 04/04/22 08:25:37 

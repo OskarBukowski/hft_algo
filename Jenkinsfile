@@ -8,23 +8,56 @@ pipeline {
 
   environment {
     CREDENTIALS = credentials("$USER")
+    DIR_NAME = "${JOB_NAME}_${BRANCH}"
   }
 
   agent {label "$HOST"}
 
   stages {
+
+
     stage("Authorization") {
+    /*
       when {
-        allOf {
-          expression { "$PASSWORD" == "%{CREDENTIALS_PSW}" && "$USER" == "${CREDENTIALS_USR}" }
-        }
-      }
-
-
+          equals(actual: "$PASSWORD", expected: "%{CREDENTIALS_PSW}")
+      } */
       steps {
-        echo "Hello World"
+        echo "Authorized"
       }
     }
+
+    stage("Preparing workspace") {
+      steps {
+      /* ./opt/"$JOB_NAME"/db_ex_connections/stop_all.sh */
+        sh '''
+        sudo su &&
+
+        cd /opt &&
+        rm -rf "$DIR_NAME" &&
+        cp -r /home/ubuntu/workspace/"$DIR_NAME" /opt/"$JOB_NAME" &&
+        '''
+      }
+    }
+
+    /*
+    stage("Running workspace") {
+      steps {
+        sh '''
+        sudo su &&
+        ./opt/"$JOB_NAME"/db_ex_connections/start_all.sh
+        '''
+      }
+    } */
+
+
+
+
+
+
+
+
+
+
   }
 }
 

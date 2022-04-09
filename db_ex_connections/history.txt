@@ -1,2 +1,0 @@
-Stoppped zonda_trades.py nie, 13 lut 2022, 11:26:32 CET
-Started zonda_trades.py nie, 13 lut 2022, 11:26:38 CET
