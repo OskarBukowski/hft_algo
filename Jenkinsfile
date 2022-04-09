@@ -32,6 +32,7 @@ pipeline {
         sudo su &&
         cd /opt &&
         cp -r /home/ubuntu/workspace/"$DIR_NAME" /opt/hft
+        rm /opt/hft/Jenkinsfile
         '''
       }
     }
