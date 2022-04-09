@@ -1,5 +1,5 @@
 pipeline {
-  agent {label: 'aws-virginia'}
+  agent {label 'aws-virginia'}
   
   stages {
     stage("Hello") {
