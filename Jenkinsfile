@@ -29,8 +29,8 @@ pipeline {
       steps {
         sh '''
         sudo su &&
-        bash /opt/"$JOB_NAME"/db_ex_connections/stop_all.sh &&
-        cp -r /home/ubuntu/workspace/"$DIR_NAME" /opt/hft &&
+        bash /opt/hft/db_ex_connections/stop_all.sh &&
+        cp -r /home/ubuntu/workspace/"$DIR_NAME"/* /opt/hft &&
         rm /opt/hft/Jenkinsfile
         '''
       }
@@ -40,7 +40,7 @@ pipeline {
       steps {
         sh '''
         sudo su &&
-        bash opt/"$JOB_NAME"/db_ex_connections/start_all.sh
+        bash opt/hft/db_ex_connections/start_all.sh
         '''
       }
     }
