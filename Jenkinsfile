@@ -29,9 +29,11 @@ pipeline {
       steps {
         sh '''
         sudo su &&
+        chmod +x /opt/hft/db_ex_connections/stop_all.sh &&
         bash /opt/hft/db_ex_connections/stop_all.sh &&
         cp -r /home/ubuntu/workspace/"$DIR_NAME"/* /opt/hft &&
         rm /opt/hft/Jenkinsfile
+        rm /opt/hft/Dockerfile
         '''
       }
     }
@@ -40,7 +42,8 @@ pipeline {
       steps {
         sh '''
         sudo su &&
-        bash opt/hft/db_ex_connections/start_all.sh
+        chmod +x /opt/hft/db_ex_connections/start_all.sh &&
+        bash /opt/hft/db_ex_connections/start_all.sh
         '''
       }
     }
