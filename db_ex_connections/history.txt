@@ -284,3 +284,7 @@ obukowski stoppped /home/obukowski/Desktop/hft_algo/db_ex_connections/zonda/zond
 obukowski stoppped /home/obukowski/Desktop/hft_algo/db_ex_connections/zonda/zonda_trades.py on 04/10/22 10:02:50 
 obukowski started /home/obukowski/Desktop/hft_algo/db_ex_connections/zonda/zonda_ob.py on 04/10/22 10:02:55 
 obukowski started /home/obukowski/Desktop/hft_algo/db_ex_connections/zonda/zonda_trades.py on 04/10/22 10:02:55 
+obukowski stoppped /home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py on 04/10/22 10:19:44 
+obukowski stoppped /home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_trades.py on 04/10/22 10:19:44 
+obukowski started /home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_ob.py on 04/10/22 10:19:50 
+obukowski started /home/obukowski/Desktop/hft_algo/db_ex_connections/bitso/bitso_trades.py on 04/10/22 10:19:50 

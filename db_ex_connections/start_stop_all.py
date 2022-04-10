@@ -1,8 +1,10 @@
 import os
+import sys
 import argparse
 import subprocess
+print(sys.path[0])
 
-path = '/home/obukowski/Desktop/hft_algo/db_ex_connections/'
+path = f'{sys.path[0]}/'
 
 
 def get_python_files():
