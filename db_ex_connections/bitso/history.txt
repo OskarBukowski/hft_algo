@@ -16,3 +16,5 @@ obukowski stoppped bitso_ob.py on 03/13/22 10:08:14
 obukowski started bitso_ob.py on 03/14/22 07:16:44 
 obukowski started bitso_trades.py on 03/14/22 07:17:01 
 obukowski stoppped bitso_ob.py on 04/04/22 08:25:08 
+obukowski started  on 04/10/22 08:20:46 
+obukowski started bitso_ob.py on 04/10/22 08:21:09 
