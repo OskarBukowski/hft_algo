@@ -1,10 +1,5 @@
 #!/bin/bash
 
-EX="python3"
-
-echo "Starting processes for exchange: $1"
-
-
-sh $1/start.sh "$1_ob.py" "$1_trades.py"
-
-
+for arg in "$@"; do
+  python3 /home/obukowski/Desktop/hft_algo/db_ex_connections/start_stop_all.py --start_ex "$arg"
+done

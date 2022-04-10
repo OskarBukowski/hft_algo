@@ -17,18 +17,24 @@ def get_python_files():
 
 def parser():
     files = get_python_files()
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--stop", action="store_true", help="stop all running processes")
-    parser.add_argument("--start", action="store_true", help="start all processes")
+    parser = argparse.ArgumentParser(description="Start/stop all exchanges using 'all' or do it with the single one using 'name' argument")
+    parser.add_argument("exchange", type=str, help="exchange name if single, 'all' if the whole application")
+    parser.add_argument("--start_ex", action="store_true", help="start all processes for exchange")
+    parser.add_argument("--stop_ex", action="store_true", help="start all processes for exchange")
     args = parser.parse_args()
-    if args.stop:
+    if args.stop_ex:
         for k, v in files.items():
-            subprocess.call(["bash", f"{path}{v}/stop.sh", f"{path}{v}/{k}"])
+            if args.exchange == 'all':
+                subprocess.call(["bash", f"{path}{v}/stop.sh", f"{path}{v}/{k}"])
+            if v == args.exchange:
+                subprocess.call(["bash", f"{path}{args.exchange}/stop.sh", f"{path}{args.exchange}/{k}"])
 
-
-    elif args.start:
+    elif args.start_ex:
         for k, v in files.items():
-            subprocess.run(["bash", f"{path}{v}/start.sh", f"{path}{v}/{k}"])
+            if args.exchange == 'all':
+                subprocess.call(["bash", f"{path}{v}/start.sh", f"{path}{v}/{k}"])
+            if v == args.exchange:
+                subprocess.call(["bash", f"{path}{args.exchange}/start.sh", f"{path}{args.exchange}/{k}"])
 
 
 if __name__ == '__main__':
