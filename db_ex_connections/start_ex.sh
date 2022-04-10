@@ -1,10 +1,7 @@
 #!/bin/bash
 
-EX="python3"
+PATH_TO_EX=$(pwd)
 
-echo "Starting processes for exchange: $1"
-
-
-sh $1/start.sh "$1_ob.py" "$1_trades.py"
-
-
+for arg in "$@"; do
+  python3 "$PATH_TO_EX"/start_stop_all.py --start_ex "$arg"
+done

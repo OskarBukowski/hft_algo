@@ -27,35 +27,23 @@ pipeline {
 
     stage("Preparing workspace") {
       steps {
-      /* ./opt/"$JOB_NAME"/db_ex_connections/stop_all.sh */
         sh '''
         sudo su &&
-        cd /opt &&
-        cp -r /home/ubuntu/workspace/"$DIR_NAME" /opt/hft
+        bash /opt/"$JOB_NAME"/db_ex_connections/stop_all.sh &&
+        cp -r /home/ubuntu/workspace/"$DIR_NAME" /opt/hft &&
         rm /opt/hft/Jenkinsfile
         '''
       }
     }
 
-    /*
     stage("Running workspace") {
       steps {
         sh '''
         sudo su &&
-        ./opt/"$JOB_NAME"/db_ex_connections/start_all.sh
+        bash opt/"$JOB_NAME"/db_ex_connections/start_all.sh
         '''
       }
-    } */
-
-
-
-
-
-
-
-
-
-
+    }
   }
 }
 

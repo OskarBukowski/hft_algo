@@ -13,3 +13,10 @@ obukowski started zonda_ob.py on 03/13/22 07:59:18
 obukowski stoppped  on 04/04/22 08:24:49 
 obukowski stoppped zonda_ob.py on 04/04/22 08:24:54 
 obukowski stoppped zonda_trades.py on 04/04/22 08:25:00 
+obukowski started  on 04/10/22 08:28:53 
+obukowski started zonda_ob.py on 04/10/22 08:29:01 
+obukowski stoppped zonda_trades.py on 04/10/22 08:29:20 
+obukowski stoppped zonda_trades.py on 04/10/22 08:29:32 
+obukowski started zonda_trades.py on 04/10/22 08:29:37 
+obukowski started zonda_ob.py on 04/10/22 08:33:24 
+obukowski started zonda_ob.py on 04/10/22 08:45:41 
