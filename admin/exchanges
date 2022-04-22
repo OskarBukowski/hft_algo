@@ -6,8 +6,6 @@
       "websocket_url": "wss://api.zonda.exchange/websocket/",
       "api_key": "",
       "secret_key": "",
-      "maker_fee": 0.003,
-      "taker_fee":  0.0043,
       "coingecko": "https://www.coingecko.com/en/exchanges/bitbay"
     },
 
@@ -16,8 +14,6 @@
       "websocket_url": "wss://api.bitkub.com/websocket-api/",
       "api_key": "",
       "secret_key": "",
-      "maker_fee": 0.0,
-      "taker_fee":  0.0,
       "coingecko": "https://www.coingecko.com/en/exchanges/bitkub"
     },
 
@@ -26,8 +22,6 @@
       "websocket_url": "wss://stream.wazirx.com/stream",
       "api_key": "",
       "secret_key": "",
-      "maker_fee": 0.0,
-      "taker_fee":  0.0,
       "coingecko": "https://www.coingecko.com/en/exchanges/wazirx"
     },
 
@@ -36,8 +30,6 @@
       "websocket_url": "wss://ws.cex.io/ws",
       "api_key": "",
       "secret_key": "",
-      "maker_fee": 0.0,
-      "taker_fee":  0.0,
       "coingecko": "https://www.coingecko.com/en/exchanges/cex"
     },
 
@@ -46,8 +38,6 @@
       "websocket_url": "wss://api.gemini.com/v1",
       "api_key": "",
       "secret_key": "",
-      "maker_fee": 0.0,
-      "taker_fee":  0.0,
       "coingecko": "https://www.coingecko.com/en/exchanges/gemini"
     },
 
@@ -56,8 +46,6 @@
       "websocket_url": "wss://api.huobi.pro/ws",
       "api_key": "",
       "secret_key": "",
-      "maker_fee": 0.0,
-      "taker_fee":  0.0,
       "coingecko": "https://www.coingecko.com/en/exchanges/huobi"
     },
 
@@ -66,8 +54,6 @@
       "websocket_url": "wss://ws.bitso.com",
       "api_key": "",
       "secret_key": "",
-      "maker_fee": 0.0,
-      "taker_fee":  0.0,
       "coingecko": "https://www.coingecko.com/en/exchanges/bitso"
     },
 
@@ -76,8 +62,6 @@
       "websocket_url": "wss://api-pub.bitfinex.com/",
       "api_key": "",
       "secret_key": "",
-      "maker_fee": 0.0,
-      "taker_fee":  0.0,
       "coingecko": "https://www.coingecko.com/en/exchanges/bitfinex"
     }
   },
