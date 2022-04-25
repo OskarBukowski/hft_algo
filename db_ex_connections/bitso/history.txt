@@ -49,3 +49,7 @@ obukowski stoppped  on 04/25/22 05:53:48
 obukowski stoppped ./bitso_ob.py on 04/25/22 05:54:45 
 obukowski stoppped ./bitso_ob.py on 04/25/22 05:55:48 
 obukowski stoppped ./bitso_trades.py on 04/25/22 05:55:48 
+obukowski started ./bitso_ob.py on 04/25/22 06:20:42 
+obukowski started ./bitso_trades.py on 04/25/22 06:20:42 
+obukowski started ./bitso_ob.py on 04/25/22 06:21:52 
+obukowski started ./bitso_trades.py on 04/25/22 06:21:52 

@@ -45,3 +45,7 @@ obukowski stoppped  on 04/25/22 05:53:48
 obukowski stoppped  on 04/25/22 05:53:48 
 obukowski stoppped ./gemini_trades.py on 04/25/22 05:55:48 
 obukowski stoppped ./gemini_ob.py on 04/25/22 05:55:48 
+obukowski started ./gemini_trades.py on 04/25/22 06:20:42 
+obukowski started ./gemini_ob.py on 04/25/22 06:20:42 
+obukowski started ./gemini_trades.py on 04/25/22 06:21:52 
+obukowski started ./gemini_ob.py on 04/25/22 06:21:52 
