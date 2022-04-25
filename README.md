@@ -9,7 +9,7 @@ All of this data is automatically stored in Postgresql database hosted on the sa
 
 ***db_ex_connections** --> directory where the data collectors are divied by exchanges.
 For each exchange works two scripts saving orderbooks and last trades.
-All parameters are saved into ***exchanges.txt*** file and data collectors maps values from this file.
+All parameters are saved into ***exchanges.txt*** file and data collectors map values from this file.
 The output of each application is a log file allowing to control the applications
 
 ### **automation scripts**
