@@ -11,3 +11,33 @@ obukowski started wazirx_trades.py on 03/10/22 05:54:30
 obukowski started wazirx_ob.py on 03/13/22 07:47:20 
 obukowski stoppped wazirx_ob.py on 04/04/22 08:24:29 
 obukowski stoppped wazirx_trades.py on 04/04/22 08:24:33 
+obukowski stoppped  on 04/25/22 05:40:03 
+obukowski stoppped  on 04/25/22 05:40:03 
+obukowski stoppped  on 04/25/22 05:41:50 
+obukowski stoppped  on 04/25/22 05:41:50 
+obukowski stoppped  on 04/25/22 05:42:26 
+obukowski stoppped  on 04/25/22 05:42:26 
+obukowski stoppped  on 04/25/22 05:42:56 
+obukowski stoppped  on 04/25/22 05:42:56 
+obukowski stoppped  on 04/25/22 05:43:42 
+obukowski stoppped  on 04/25/22 05:43:42 
+obukowski stoppped  on 04/25/22 05:43:59 
+obukowski stoppped  on 04/25/22 05:43:59 
+obukowski stoppped  on 04/25/22 05:45:08 
+obukowski stoppped  on 04/25/22 05:45:08 
+obukowski stoppped  on 04/25/22 05:45:44 
+obukowski stoppped  on 04/25/22 05:45:44 
+obukowski stoppped  on 04/25/22 05:46:19 
+obukowski stoppped  on 04/25/22 05:46:19 
+obukowski stoppped  on 04/25/22 05:46:38 
+obukowski stoppped  on 04/25/22 05:46:38 
+obukowski stoppped  on 04/25/22 05:47:14 
+obukowski stoppped  on 04/25/22 05:47:14 
+obukowski stoppped  on 04/25/22 05:52:02 
+obukowski stoppped  on 04/25/22 05:52:02 
+obukowski stoppped  on 04/25/22 05:52:27 
+obukowski stoppped  on 04/25/22 05:52:27 
+obukowski stoppped  on 04/25/22 05:53:48 
+obukowski stoppped  on 04/25/22 05:53:48 
+obukowski stoppped ./wazirx_trades.py on 04/25/22 05:55:48 
+obukowski stoppped ./wazirx_ob.py on 04/25/22 05:55:48 
