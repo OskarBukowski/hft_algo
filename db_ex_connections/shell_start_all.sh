@@ -9,22 +9,8 @@ for dir in $dirs; do
   cdir=(${dir////})
   cd "$cdir"
   for pfile in $(find . | grep .py); do
-    echo "Stopping $pfile"
-    bash stop.sh "$pfile"
+    echo "Starting $pfile"
+    bash start.sh "$pfile"
     done
   cd ..
 done
-
-
-
-
-
-
-
-
-
-
-
-
-
-
