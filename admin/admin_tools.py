@@ -17,8 +17,6 @@ env_path = Path('C:/Users/oskar/Desktop/hft_algo/admin') / '.env'
 load_dotenv(dotenv_path=env_path)
 
 
-
-
 # def connection():
 #     conn = psycopg2.connect(
 #         host=os.environ['HOST'],
@@ -65,10 +63,6 @@ def logger_conf(logfile_name):
     logger.setLevel(logging.INFO)
 
     return logger
-
-
-# def coins_mapping(exchange_name: str, dictionary: dict, url: str):
-#     for k, v in dictionary.items():
 
 
 class SqlConst:
