@@ -48,9 +48,17 @@ pipeline {
         cd /opt &&
         bash /opt/hft/db_ex_connections/stop_all.sh &&
         cp -r /home/ubuntu/workspace/"$DIR_NAME"/* /opt/hft &&
-        rm /opt/hft/Jenkinsfile
+        '''
+
+        try {
+        sh '''
+        rm /opt/hft/Jenkinsfile &&
         rm /opt/hft/Dockerfile
         '''
+        } catch (Exception e) {
+        e.toString()
+        echo 'Files are already deleted'
+        }
       }
     }
 
