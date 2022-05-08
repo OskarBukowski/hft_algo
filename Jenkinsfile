@@ -3,7 +3,7 @@ pipeline {
     choice(name: "HOST", choices: ['aws-virginia', 'other'], description: "Choose host")
     string(name: "BRANCH", defaultValue: "", description: "Choose branch")
     string(name: "USER", defaultValue: "", description: "Username")
-    string(name: "PASSWORD", defaultValue: "", description: "Password")
+    password(name: "PASSWORD", defaultValue: "SECRET", description: "Password")
   }
 
   environment {
@@ -18,11 +18,26 @@ pipeline {
 
     stage("Authorization") {
       when {
-          equals(actual: "$PASSWORD", expected: "${CREDENTIALS_PSW}")
-      }
-      steps {
-        echo "Authorized"
-      }
+                equals(actual: "$PASSWORD", expected: "${CREDENTIALS_PSW}")
+            }
+            steps {
+                echo "Starting authorization"
+                script {
+                    try {
+                        if ("$PASSWORD" == "${CREDENTIALS_PSW}") {
+                            echo 'Authorization successful'
+                        }
+
+                        else {
+                            echo 'Wrong password, try again !'
+                        }
+                    } catch (Exception e) {
+                        e.toString()
+                        echo 'Cannot find given credentials, connect with administrator'
+
+                    }
+                }
+            }
     }
 
     stage("Preparing workspace") {
