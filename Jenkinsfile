@@ -44,7 +44,6 @@ pipeline {
       steps {
         sh '''
         sudo su &&
-        chmod +x /opt/hft/db_ex_connections/start_stop_all.py &&
         chmod +x /opt/hft/db_ex_connections/stop_all.sh &&
         cd /opt &&
         bash /opt/hft/db_ex_connections/stop_all.sh &&
