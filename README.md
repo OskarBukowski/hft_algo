@@ -2,15 +2,15 @@
 
 ## **main purpose**
 
-Asynchronous functions and classes download data from cryptocurrency exchanges using REST API and Websocket methods.
+Asynchronous functions download data from cryptocurrency exchanges using REST API and Websocket methods.
 All of this data is automatically stored in Postgresql database hosted on the same remote server.
 
 ### **key directory**
 
 ***db_ex_connections** --> directory where the data collectors are divied by exchanges.
-For each exchange works two scripts saving orderbooks and last trades.
+For each exchange running two scripts saving orderbooks and last trades.
 All parameters are saved into ***exchanges.txt*** file and data collectors map values from this file.
-The output of each application is a log file allowing to control the applications
+The output of each application is a .log file allowing to control the applications
 
 ### **automation scripts**
 
@@ -22,5 +22,3 @@ All infrastructure is easily managable with Bash scripts that allow to start/sto
 ### **CI/CD with Jenkins + Docker**
 
 Whole application is a Docker image which is build and deploy with Jenkins multibranch pipeline.
-
-<sub>*repository includes Dockerfile and Jenkinsfile</sub> 
