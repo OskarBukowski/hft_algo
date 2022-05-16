@@ -33,7 +33,7 @@ pipeline {
                         }
                     } catch (Exception e) {
                         e.toString()
-                        echo 'Cannot find given credentials, connect with administrator'
+                        echo 'Cannot find given credentials, contact with administrator'
 
                     }
                 }
