@@ -13,3 +13,4 @@ RUN pip install -r /opt/hft/requirements.txt
 
 COPY . /opt/hft
 
+CMD ["/bin/bash", "/opt/hft/start_all.sh"]
