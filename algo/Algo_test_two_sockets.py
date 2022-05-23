@@ -6,7 +6,6 @@ sys.path.append("/home/obukowski/Desktop/repo/hft_algo")
 
 import websocket
 import threading
-import multiprocessing
 import numpy as np
 import json
 import gzip
