@@ -19,6 +19,6 @@ All infrastructure is easily managable with Bash scripts that allow to start/sto
 ![start](https://user-images.githubusercontent.com/89335034/164598448-e08ce0d8-9cd9-4fb6-ad68-325ebb389be8.png)
 
 
-### **CI/CD with Jenkins + Docker**
+### **DevOps part with Jenkins + Docker**
 
 Whole application is a Docker image which is build and deploy with Jenkins multibranch pipeline.
