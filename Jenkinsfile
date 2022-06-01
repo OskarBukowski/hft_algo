@@ -44,9 +44,9 @@ pipeline {
       steps {
         sh '''
         sudo su &&
+        cp -r /home/obukowski/workspace/"$DIR_NAME"/* /opt/hft
         chmod +x /opt/hft/db_ex_connections/stop_all.sh &&
         /bin/bash /opt/hft/db_ex_connections/stop_all.sh &&
-        cp -r /home/obukowski/workspace/"$DIR_NAME"/* /opt/hft
         '''
 
         script {
