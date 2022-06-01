@@ -17,7 +17,6 @@ pipeline {
 
 
     stage("Authorization") {
-    echo "Working on branch ${BRANCH_NAME}"
       when {
                 equals(actual: "$PASSWORD", expected: "${CREDENTIALS_PSW}")
             }
@@ -43,6 +42,7 @@ pipeline {
 
     stage("Preparing workspace") {
       steps {
+        echo "Working on branch ${BRANCH_NAME}"
         sh '''
         echo whoami &&
         sudo su &&
