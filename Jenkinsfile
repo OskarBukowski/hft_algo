@@ -17,6 +17,7 @@ pipeline {
 
 
     stage("Authorization") {
+    echo "Working on branch ${BRANCH_NAME}"
       when {
                 equals(actual: "$PASSWORD", expected: "${CREDENTIALS_PSW}")
             }
@@ -43,6 +44,7 @@ pipeline {
     stage("Preparing workspace") {
       steps {
         sh '''
+        echo whoami &&
         sudo su &&
         rm /opt/hft/* > /dev/null  2>&1 &&
         cp -r /home/obukowski/workspace/"$DIR_NAME"/* /opt/hft &&
