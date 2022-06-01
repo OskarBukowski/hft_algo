@@ -43,7 +43,6 @@ pipeline {
     stage("Preparing workspace") {
       steps {
         sh '''
-        sudo su &&
         rm /opt/hft/* > /dev/null  2>&1 &&
         cp -r /home/obukowski/workspace/"$DIR_NAME"/* /opt/hft &&
         chmod +x /opt/hft/db_ex_connections/stop_all.sh &&
