@@ -1,6 +1,6 @@
 pipeline {
   parameters {
-    choice(name: "HOST", choices: ['aws-virginia', 'other'], description: "Choose host")
+    choice(name: "HOST", choices: ['aws-virginia', 'server'], description: "Choose host")
     string(name: "BRANCH", defaultValue: "", description: "Choose branch")
     string(name: "USER", defaultValue: "", description: "Username")
     password(name: "PASSWORD", defaultValue: "SECRET", description: "Password")
