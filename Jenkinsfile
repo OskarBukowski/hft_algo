@@ -41,7 +41,7 @@ pipeline {
     stage("Preparing workspace") {
       steps {
         sh '''
-        sudo rm /opt/hft/* > /dev/null  2>&1 &&
+        sudo rm -rf /opt/hft/* > /dev/null  2>&1 &&
         sudo cp -r /home/obukowski/workspace/hft_"${BRANCH_NAME}"/db_ex_connections/* /opt/hft &&
         sudo chmod +x /opt/hft/db_ex_connections/stop_all.sh &&
         /bin/bash /opt/hft/db_ex_connections/stop_all.sh
