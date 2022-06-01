@@ -50,7 +50,7 @@ pipeline {
         cp -r /home/ubuntu/workspace/"$DIR_NAME"/* /opt/hft &&
         '''
 
-        script {}
+        script {
             try {
             sh '''
             rm /opt/hft/Jenkinsfile &&
