@@ -1,14 +1,12 @@
 pipeline {
   parameters {
     choice(name: "HOST", choices: ['aws-virginia', 'server'], description: "Choose host")
-    string(name: "BRANCH", defaultValue: "dev", description: "Choose branch")
     string(name: "USER", defaultValue: "admin", description: "Username")
-    password(name: "PASSWORD", defaultValue: "SECRET", description: "Password")
+    password(name: "PASSWORD", defaultValue: "password", description: "Password")
   }
 
   environment {
     CREDENTIALS = credentials("$USER")
-    DIR_NAME = "hft_${BRANCH}"
   }
 
   agent {label "$HOST"}
@@ -42,21 +40,18 @@ pipeline {
 
     stage("Preparing workspace") {
       steps {
-        echo "Working on branch ${BRANCH_NAME}"
         sh '''
-        whoami &&
-        sudo su &&
-        rm /opt/hft/* > /dev/null  2>&1 &&
-        cp -r /home/obukowski/workspace/"$DIR_NAME"/* /opt/hft &&
-        chmod +x /opt/hft/db_ex_connections/stop_all.sh &&
+        sudo rm /opt/hft/* > /dev/null  2>&1 &&
+        sudo cp -r /home/obukowski/workspace/hft_"${BRANCH_NAME}"/* /opt/hft &&
+        sudo chmod +x /opt/hft/db_ex_connections/stop_all.sh &&
         /bin/bash /opt/hft/db_ex_connections/stop_all.sh
         '''
 
         script {
             try {
                 sh '''
-                rm /opt/hft/Jenkinsfile &&
-                rm /opt/hft/Dockerfile
+                sudo rm /opt/hft/Jenkinsfile &&
+                sudo rm /opt/hft/Dockerfile
                 '''
             } catch (Exception e) {
                 e.toString()
