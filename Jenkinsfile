@@ -1,8 +1,8 @@
 pipeline {
   parameters {
     choice(name: "HOST", choices: ['aws-virginia', 'server'], description: "Choose host")
-    string(name: "BRANCH", defaultValue: "", description: "Choose branch")
-    string(name: "USER", defaultValue: "", description: "Username")
+    string(name: "BRANCH", defaultValue: "dev", description: "Choose branch")
+    string(name: "USER", defaultValue: "admin", description: "Username")
     password(name: "PASSWORD", defaultValue: "SECRET", description: "Password")
   }
 
@@ -43,6 +43,7 @@ pipeline {
     stage("Preparing workspace") {
       steps {
         sh '''
+        sudo su &&
         rm /opt/hft/* > /dev/null  2>&1 &&
         cp -r /home/obukowski/workspace/"$DIR_NAME"/* /opt/hft &&
         chmod +x /opt/hft/db_ex_connections/stop_all.sh &&
