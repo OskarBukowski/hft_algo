@@ -45,20 +45,19 @@ pipeline {
         sh '''
         sudo su &&
         chmod +x /opt/hft/db_ex_connections/stop_all.sh &&
-        cd /opt &&
-        bash /opt/hft/db_ex_connections/stop_all.sh &&
-        cp -r /home/ubuntu/workspace/"$DIR_NAME"/* /opt/hft &&
+        /bin/bash /opt/hft/db_ex_connections/stop_all.sh &&
+        cp -r /home/obukowski/workspace/"$DIR_NAME"/* /opt/hft
         '''
 
         script {
             try {
-            sh '''
-            rm /opt/hft/Jenkinsfile &&
-            rm /opt/hft/Dockerfile
-            '''
+                sh '''
+                rm /opt/hft/Jenkinsfile &&
+                rm /opt/hft/Dockerfile
+                '''
             } catch (Exception e) {
-            e.toString()
-            echo 'Files are already deleted'
+                e.toString()
+                echo 'Files are already deleted'
             }
         }
       }
