@@ -44,7 +44,7 @@ pipeline {
       steps {
         echo "Working on branch ${BRANCH_NAME}"
         sh '''
-        echo whoami &&
+        whoami &&
         sudo su &&
         rm /opt/hft/* > /dev/null  2>&1 &&
         cp -r /home/obukowski/workspace/"$DIR_NAME"/* /opt/hft &&
