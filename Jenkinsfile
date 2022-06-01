@@ -50,14 +50,16 @@ pipeline {
         cp -r /home/ubuntu/workspace/"$DIR_NAME"/* /opt/hft &&
         '''
 
-        try {
-        sh '''
-        rm /opt/hft/Jenkinsfile &&
-        rm /opt/hft/Dockerfile
-        '''
-        } catch (Exception e) {
-        e.toString()
-        echo 'Files are already deleted'
+        script {}
+            try {
+            sh '''
+            rm /opt/hft/Jenkinsfile &&
+            rm /opt/hft/Dockerfile
+            '''
+            } catch (Exception e) {
+            e.toString()
+            echo 'Files are already deleted'
+            }
         }
       }
     }
