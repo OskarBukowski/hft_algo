@@ -38,6 +38,14 @@ pipeline {
             }
     }
 
+    stage("Installing requirements") {
+      steps {
+        sh '''
+        pip install -r /home/obukowski/workspace/hft_"${BRANCH_NAME}"/requirements.txt > /dev/null 2>&1
+        '''
+      }
+    }
+
     stage("Preparing workspace") {
       steps {
         sh '''
