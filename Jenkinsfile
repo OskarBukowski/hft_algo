@@ -41,6 +41,7 @@ pipeline {
     stage("Preparing workspace") {
       steps {
         sh '''
+        cd /opt/hft/ &&
         sudo rm -rf /opt/hft/* > /dev/null  2>&1 &&
         sudo mkdir /opt/hft/db_ex_connections /opt/hft/admin &&
         sudo cp -r /home/obukowski/workspace/hft_"${BRANCH_NAME}"/requirements.txt /opt/hft/ &&
