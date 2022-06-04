@@ -38,19 +38,13 @@ pipeline {
             }
     }
 
-    stage("Installing requirements") {
-      steps {
-        sh '''
-        pip install -r requirements.txt
-        '''
-      }
-    }
-
     stage("Preparing workspace") {
       steps {
         sh '''
         sudo rm -rf /opt/hft/* > /dev/null  2>&1 &&
         sudo mkdir /opt/hft/db_ex_connections /opt/hft/admin &&
+        sudo cp -r /home/obukowski/workspace/hft_"${BRANCH_NAME}"/requirements.txt /opt/hft/ &&
+        pip install -r requirements.txt &&
         sudo cp -r /home/obukowski/workspace/hft_"${BRANCH_NAME}"/db_ex_connections/* /opt/hft/db_ex_connections &&
         sudo cp -r /home/obukowski/workspace/hft_"${BRANCH_NAME}"/admin/* /opt/hft/admin &&
         sudo chmod +x /opt/hft/db_ex_connections/stop_all.sh &&
