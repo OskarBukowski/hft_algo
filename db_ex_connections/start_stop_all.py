@@ -4,7 +4,7 @@ import argparse
 import subprocess
 print(sys.path[0])
 
-path = f'{sys.path[0]}/db_ex_connections/'
+path = f'{sys.path[0]}/'
 
 
 def get_python_files():
