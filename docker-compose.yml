@@ -1,0 +1,23 @@
+version: '3'
+services:
+
+  postgresql:
+    image: postgres:14
+    container_name: postgresql_database
+    ports:
+      - "5050:5432"
+    networks:
+      - net
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+
+  hft_algo_script:
+    image: hft_algo:1.0
+    container_name: hft_algo
+    networks:
+      - net
+
+networks:
+  net:
+
