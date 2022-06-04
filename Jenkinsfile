@@ -66,7 +66,7 @@ pipeline {
       steps {
         sh '''
         sudo su &&
-        chmod +x /opt/hft/db_ex_connections/start_all.sh &&
+        sudo chmod +x /opt/hft/db_ex_connections/start_all.sh &&
         /bin/bash /opt/hft/db_ex_connections/start_all.sh
         '''
       }
